@@ -1,0 +1,17 @@
+@use 'sprucecss/scss/spruce';
+
+.header {
+  padding: spruce.spacer(l) 0;
+
+  &__container {
+    @include spruce.layout-center(clamp(spruce.spacer(m), 5vw, spruce.spacer(l)));
+  }
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: spruce.spacer(m);
+  }
+}

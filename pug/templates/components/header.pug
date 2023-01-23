@@ -1,0 +1,10 @@
+include ../../assets/mixins
+
+header(class='header')
+  div(class='header__container')
+    div(class='header__inner')
+      a(href='index.html' class='header__logo')
+        img(src='../../assets/img/spruce-logo-dark.svg' alt='Spruce CSS' width='140')
+      a(href='https://sprucecss.com/docs/getting-started/introduction' class='btn btn--primary')
+        | Documentation
+        +icon('arrow-forward', 'btn__icon btn__icon--sm')

@@ -1,0 +1,21 @@
+block variables
+-var time = Date.now();
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Spruce CSS Starter Kit - #{title}
+    link(rel='icon' href='../../assets/img/favicon.png' sizes='32x32')
+    link(rel='stylesheet' href=`../../assets/css/main.css?time=${time}`)
+
+    block styles
+  body
+    include components/header
+    main(id='content')
+      block content
+    include components/footer
+
+    include ../../assets/icon/icons.svg
+    script(src='../../assets/js/main.js')

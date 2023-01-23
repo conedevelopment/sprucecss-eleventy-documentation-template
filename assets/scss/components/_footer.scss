@@ -1,0 +1,14 @@
+@use 'sprucecss/scss/spruce';
+
+.footer {
+  padding: spruce.spacer(l) 0;
+
+  &__container {
+    @include spruce.layout-center(clamp(spruce.spacer(m), 5vw, spruce.spacer(l)));
+  }
+
+  &__copyright {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}

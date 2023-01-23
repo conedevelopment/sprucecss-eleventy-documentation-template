@@ -1,0 +1,28 @@
+{
+  "docs": [
+    {
+      "title": "Introduction",
+      "link" : "https://sprucecss.com/docs/getting-started/introduction"
+    },
+    {
+      "title": "Themes",
+      "link" : "https://sprucecss.com/docs/customization/themes"
+    },
+    {
+      "title": "Mixins",
+      "link" : "https://sprucecss.com/docs/sass/mixins"
+    },
+    {
+      "title": "Typography",
+      "link" : "https://sprucecss.com/docs/elements/typography"
+    },
+    {
+      "title": "Buttons",
+      "link" : "https://sprucecss.com/docs/elements/buttons"
+    },
+    {
+      "title": "Forms",
+      "link" : "https://sprucecss.com/docs/elements/forms"
+    }
+  ]
+}

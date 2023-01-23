@@ -1,0 +1,7 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="arrow-forward" viewBox="0 0 24 24">
+      <path d="M12,0l-2.115,2.115l8.37,8.385l-18.255,0l-0,3l18.255,0l-8.37,8.385l2.115,2.115l12,-12l-12,-12Z" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>

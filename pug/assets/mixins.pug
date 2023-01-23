@@ -1,0 +1,6 @@
+mixin icon(name, className, size)
+    - var size = size || 24;
+    - var className = className || '';
+
+    svg(class='icon' + ' ' + className aria-hidden='true' role='img' viewBox='0 0 ' + size + ' ' + size width=size height=size fill='currentColor')
+        use(xlink:href='#' + name)
