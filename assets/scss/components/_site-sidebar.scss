@@ -1,0 +1,64 @@
+@use 'sprucecss/scss/spruce';
+
+@mixin sidebar-active-menu-marker {
+  color: spruce.color(heading);
+  font-weight: 700;
+  position: relative;
+
+  &::before {
+    background-color: spruce.color(primary);
+    border-radius: 0 spruce.$border-radius-sm spruce.$border-radius-sm 0;
+    bottom: 0;
+    content: '';
+    inset-inline-start: -1rem;
+    position: absolute;
+    top: 0;
+    width: 0.3rem;
+  }
+}
+
+@mixin sidebar-title {
+  color: spruce.color(heading);
+  font-size: spruce.$font-size-base;
+  margin-block: 0;
+}
+
+.sidebar {
+  @include spruce.layout-stack(spruce.spacer(l));
+  @include spruce.scrollbar(
+    spruce.color(thumb-background, scrollbar),
+    spruce.color(thumb-background-hover, scrollbar),
+    spruce.color(track-background, scrollbar),
+    0.5rem,
+    0.15rem
+  );
+  inset-block-start: 2rem;
+  overflow-y: auto;
+  padding-inline-end: spruce.spacer(m);
+}
+
+.sidebar-section {
+  &__title {
+    @include sidebar-title;
+  }
+
+  &__navigation {
+    border-inline-start: 1px solid spruce.color(border);
+    font-size: 1rem;
+    margin-block-start: 1rem;
+    padding-inline-start: 1rem;
+
+    ul {
+      @include spruce.clear-list;
+    }
+
+    a {
+      color: spruce.color(text);
+      text-decoration: none;
+
+      &[aria-current='page'] {
+        @include sidebar-active-menu-marker;
+      }
+    }
+  }
+}
