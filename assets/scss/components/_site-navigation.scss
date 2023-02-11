@@ -1,0 +1,62 @@
+@use 'sprucecss/scss/spruce';
+
+.site-navigation {
+  --inset-block-start: 6rem;
+  font-family: spruce.$font-family-heading;
+
+  &__btn {
+    @include spruce.breakpoint(md) {
+      display: none;
+    }
+
+    &[aria-expanded='true'] + ul {
+      display: flex;
+    }
+  }
+
+  ul {
+    background-color: spruce.color(background);
+    display: none;
+    flex-direction: column;
+    gap: spruce.spacer(s);
+    inset: var(--inset-block-start) 0 auto 0;
+    list-style: none;
+    margin: 0;
+    padding-block: spruce.spacer(m);
+    padding-inline: spruce.spacer-clamp(m, l);
+    position: absolute;
+
+    @include spruce.breakpoint(md) {
+      align-items: center;
+      background-color: transparent;
+      display: flex !important;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: spruce.spacer(m);
+      inset: auto;
+      padding: 0;
+      position: relative;
+    }
+
+    @include spruce.breakpoint(lg) {
+      gap: spruce.spacer(l);
+    }
+  }
+
+  li {
+    margin-block: 0;
+  }
+
+  a {
+    color: spruce.color(heading);
+    text-decoration: none;
+
+    &:hover {
+      color: spruce.color(primary);
+    }
+
+    &[aria-current='page'] {
+      font-weight: 700;
+    }
+  }
+}
