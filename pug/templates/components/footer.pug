@@ -1,6 +1,43 @@
 -var year = new Date().getFullYear();
 
-footer(class='footer')
-  div(class='footer__container')
-    div(class='footer__inner')
-      p(class='footer__copyright') © #{year} Cone
+footer(class='site-footer')
+  div(class='container')
+    div(class='site-footer__top')
+      div(class='site-footer__col')
+        a(class='site-footer__logo' href='#')
+          img(src=`${url}/img/cone-made-logo-dark.svg` alt='Cone Made' data-theme-mode data-light-asset=`${url}/img/cone-made-logo-dark.svg` data-dark-asset=`${url}/img/cone-made-logo-light.svg`)
+      div(class='site-footer__col')
+        h3(id='site-footer-title-01' class='site-footer__title') Getting Started
+        ul(class='site-footer__navigation' aria-labelledby='site-footer-title-01')
+          li
+            a(href='#') Introduction
+          li
+            a(href='#') Installation
+          li
+            a(href='#') Structure and Code
+          li
+            a(href='#') Sass
+      div(class='site-footer__col')
+        h3(id='site-footer-title-02' class='site-footer__title') Elements
+        ul(class='site-footer__navigation' aria-labelledby='site-footer-title-02')
+          li
+            a(href='#') Typography
+          li
+            a(href='#') Tables
+          li
+            a(href='#') Buttons
+          li
+            a(href='#') Forms
+      div(class='site-footer__col')
+        h3(id='site-footer-title-03' class='site-footer__title') More From Us
+        ul(class='site-footer__navigation' aria-labelledby='site-footer-title-03')
+          li
+            a(href='#') Services
+          li
+            a(href='#') Pine - A web development blog
+          li
+            a(href='#') Root - An admin package for Laravel
+          li
+            a(href='#') Bite-Sized Accessibility
+    div(class='site-footer__bottom')
+      p(class='site-footer__copyright') © 2022 Cone Made - Some rights are reserved.

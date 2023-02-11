@@ -1,0 +1,57 @@
+@use 'sprucecss/scss/spruce';
+
+.site-footer {
+  padding-block: spruce.spacer-clamp(xl, xxl);
+
+  &__top {
+    @include spruce.layout-grid(spruce.spacer(l), 14rem);
+  }
+
+  &__logo {
+    --dimension: 4rem;
+    display: inline-flex;
+    height: var(--dimension);
+    width: var(--dimension);
+  }
+
+  &__title {
+    font-size: spruce.font-size(h4);
+    margin-block: 0 spruce.spacer(m);
+  }
+
+  &__navigation {
+    @include spruce.clear-list;
+    @include spruce.layout-stack(spruce.spacer(xs));
+
+    a {
+      color: spruce.color(text);
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &[aria-current='page'] {
+        color: spruce.color(primary);
+      }
+
+      &[aria-current='page'] {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__bottom {
+    padding-block-start: spruce.spacer(l);
+
+    @include spruce.breakpoint(md) {
+      align-items: center;
+      display: flex;
+      gap: spruce.spacer(s);
+      justify-content: space-between;
+    }
+  }
+
+  &__copyright {
+    margin-block: 0;
+  }
+}

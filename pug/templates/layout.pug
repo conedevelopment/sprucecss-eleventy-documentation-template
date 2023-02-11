@@ -12,10 +12,13 @@ html(lang='en')
 
     block styles
   body
-    include components/header
-    main(id='content')
-      block content
-    include components/footer
+    main(id='content' class='site-main')
+      div(class='site-main__sidebar')
+        include components/sidebar
+      div(class='site-main__body')
+        include components/header
+        block content
+        include components/footer
 
     include ../../assets/icon/icons.svg
     script(src='../../assets/js/main.js')
