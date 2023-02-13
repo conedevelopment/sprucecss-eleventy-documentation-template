@@ -2,6 +2,7 @@
 
 .docs {
   @include spruce.layout-grid(spruce.spacer(l), 22.5rem);
+  max-width: 65rem;
 }
 
 .doc-card {
