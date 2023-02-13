@@ -24,15 +24,18 @@
 }
 
 .sidebar {
-  @include spruce.layout-stack(spruce.spacer(l));
   padding-inline-end: spruce.get-css-variable(--container-gap);
   margin-block: spruce.spacer(l);
+  display: flex;
+  gap: spruce.spacer(m);
+  flex-direction: column;
 
   &__header {
-
+    background-color: spruce.color(background);
   }
 
   &__body {
+    @include spruce.layout-stack(m);
     overflow-y: auto;
     @include spruce.scrollbar(
       spruce.color(thumb-background, scrollbar),
@@ -41,7 +44,7 @@
       0.5rem,
       0.15rem
     );
-
+    flex-grow: 2;
   }
 }
 

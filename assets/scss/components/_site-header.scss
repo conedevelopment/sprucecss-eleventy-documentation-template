@@ -8,9 +8,9 @@
   gap: spruce.spacer-clamp(s, l);
   height: var(--height);
   justify-content: space-between;
-  position: sticky;
   inset-block-start: 0;
   z-index: 1;
+  border-block-end: 1px solid hsl(0 0% 0% / 5%);
 
   &__column {
     align-items: center;

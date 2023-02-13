@@ -19,6 +19,11 @@ $color-secondary: hsl(14, 100%, 49%);
     card: (
       background: hsl(0, 0%, 100%),
       border: hsl(220 32% 87%)
+    ),
+    scrollbar: (
+      thumb-background: hsla(229, 26%, 48%, 0.15),
+      thumb-background-hover:	hsl(0 0% 0% / 0.25),
+      track-background:	hsla(226, 100%, 87%, 0.15)
     )
   ),
   $font-family-base: #{'Open Sans', sans-serif},

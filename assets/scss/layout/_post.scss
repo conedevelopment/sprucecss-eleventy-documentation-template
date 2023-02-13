@@ -1,0 +1,7 @@
+@use 'sprucecss/scss/spruce';
+
+.l-post {
+  display: grid;
+  gap: spruce.get-css-variable(--container-gap);
+  grid-template-columns: 1fr 20rem;
+}
