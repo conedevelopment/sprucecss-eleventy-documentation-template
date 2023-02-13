@@ -1,3 +1,11 @@
 @forward 'config';
 @forward 'layout';
 @forward 'components';
+
+@use 'sprucecss/scss/spruce';
+
+:root {
+  @include spruce.set-css-variable((
+    --container-gap: spruce.spacer-clamp(m, l)
+  ));
+}

@@ -1,19 +1,16 @@
 @use 'sprucecss/scss/spruce';
 
 .site-header {
+  --height: 6rem;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: spruce.spacer-clamp(s, l);
+  height: var(--height);
+  justify-content: space-between;
   position: sticky;
   inset-block-start: 0;
   z-index: 1;
-
-  &__inner {
-    --height: 6rem;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: spruce.spacer-clamp(s, l);
-    height: var(--height);
-    justify-content: space-between;
-  }
 
   &__column {
     align-items: center;

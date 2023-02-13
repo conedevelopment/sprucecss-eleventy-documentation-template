@@ -1,6 +1,6 @@
 @use 'sass:color';
 
-$color-primary: hsl(224, 96%, 43%);
+$color-primary: #0008FF;
 $color-secondary: hsl(14, 100%, 49%);
 
 @use 'sprucecss/scss/spruce' with (
@@ -11,10 +11,9 @@ $color-secondary: hsl(14, 100%, 49%);
   $color-secondary: $color-secondary,
   $colors: (
     base: (
-      background: hsl(0 0% 0% / 5%),
       border: hsl(224 65% 90%),
       heading: hsl(232 68% 11%),
-      text: hsl(253 7% 41%),
+      text: #435769,
       code-background: hsl(224 94% 97%)
     ),
     card: (

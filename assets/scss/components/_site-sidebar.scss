@@ -25,16 +25,24 @@
 
 .sidebar {
   @include spruce.layout-stack(spruce.spacer(l));
-  @include spruce.scrollbar(
-    spruce.color(thumb-background, scrollbar),
-    spruce.color(thumb-background-hover, scrollbar),
-    spruce.color(track-background, scrollbar),
-    0.5rem,
-    0.15rem
-  );
-  inset-block-start: 2rem;
-  overflow-y: auto;
-  padding-inline-end: spruce.spacer(m);
+  padding-inline-end: spruce.get-css-variable(--container-gap);
+  margin-block: spruce.spacer(l);
+
+  &__header {
+
+  }
+
+  &__body {
+    overflow-y: auto;
+    @include spruce.scrollbar(
+      spruce.color(thumb-background, scrollbar),
+      spruce.color(thumb-background-hover, scrollbar),
+      spruce.color(track-background, scrollbar),
+      0.5rem,
+      0.15rem
+    );
+
+  }
 }
 
 .sidebar-section {

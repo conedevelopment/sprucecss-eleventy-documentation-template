@@ -2,7 +2,7 @@
 
 .container {
   --container-width: #{spruce.$container-width};
-  --container-gap: #{spruce.spacer-clamp(m, l)};
+  --container-gap: #{spruce.get-css-variable(--container-gap)};
 
   @include spruce.layout-center(
     var(--container-gap),

@@ -12,10 +12,9 @@ html(lang='en')
 
     block styles
   body
-    main(id='content' class='site-main')
-      div(class='site-main__sidebar')
-        include components/sidebar
-      div(class='site-main__body')
+    main(id='content' class='l-documentation')
+      include components/sidebar
+      div(class='l-documentation__body')
         include components/header
         block content
         include components/footer
