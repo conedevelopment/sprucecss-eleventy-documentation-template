@@ -1,7 +1,7 @@
 @use 'sprucecss/scss/spruce';
 
 .site-footer {
-  padding-block: spruce.spacer-clamp(xl, xxl);
+  padding-block: spruce.spacer-clamp(xl, xxl, 10vw);
 
   &__top {
     @include spruce.layout-grid(spruce.spacer(l), 14rem);

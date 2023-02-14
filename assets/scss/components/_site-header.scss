@@ -1,7 +1,7 @@
 @use 'sprucecss/scss/spruce';
 
 .site-header {
-  --height: 4rem;
+  --height: 5rem;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -11,8 +11,6 @@
   inset-block-start: 0;
   z-index: 1;
   border-block-end: 1px solid hsl(0 0% 0% / 5%);
-  position: sticky;
-  top: 0;
 
   &__column {
     align-items: center;
