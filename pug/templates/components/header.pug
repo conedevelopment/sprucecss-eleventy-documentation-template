@@ -12,9 +12,16 @@ header(class='site-header')
         li
           a(href='#') Integrations
   div(class='site-header__actions')
-    div(class='form-group--row')
-      label(class='form-label' for='front-end-frameworks') Language
+    div(class='form-group')
+      label(class='form-label sr-only' for='front-end-frameworks') Language
       select(id='front-end-frameworks' class='form-control form-control--sm')
         option(value='english') English
         option(value='deutsch') Deutsch
+    div(class='site-header__socials')
+      a(href='#')
+        +icon('github')
+      a(href='#')
+        +icon('discord')
+      a(href='#')
+        +icon('twitter')
 

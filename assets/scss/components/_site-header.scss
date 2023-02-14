@@ -1,7 +1,7 @@
 @use 'sprucecss/scss/spruce';
 
 .site-header {
-  --height: 6rem;
+  --height: 4rem;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +11,8 @@
   inset-block-start: 0;
   z-index: 1;
   border-block-end: 1px solid hsl(0 0% 0% / 5%);
+  position: sticky;
+  top: 0;
 
   &__column {
     align-items: center;
@@ -22,7 +24,7 @@
   &__actions {
     align-items: center;
     display: flex;
-    gap: spruce.spacer-clamp(s, l);
+    gap: spruce.spacer-clamp(s, m);
   }
 
   &__logo {
@@ -38,6 +40,23 @@
 
     @include spruce.breakpoint(sm) {
       display: inline-block;
+    }
+  }
+
+  &__socials {
+    align-items: center;
+    display: flex;
+    gap: spruce.spacer(s);
+
+    a {
+      color: spruce.color(heading);
+      display: inline-flex;
+    }
+
+    svg {
+      --dimenstion: 1.25rem;
+      height: var(--dimenstion);
+      width: var(--dimenstion);
     }
   }
 
