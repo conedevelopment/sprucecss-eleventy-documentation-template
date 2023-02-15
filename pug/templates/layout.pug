@@ -6,8 +6,8 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title Spruce CSS Starter Kit - #{title}
-    link(rel='icon' href='../../assets/img/favicon.png' sizes='32x32')
+    title #{title} - CONE DOCS
+    link(rel='icon' href='../../assets/img/favicon.svg' sizes='32x32')
     link(rel='stylesheet' href=`../../assets/css/main.css?time=${time}`)
 
     block styles
@@ -16,7 +16,8 @@ html(lang='en')
       include components/sidebar
       div(class='l-documentation__body')
         include components/header
-        block content
+        div(class='l-documentation__content')
+          block content
         include components/footer
 
     include ../../assets/icon/icons.svg

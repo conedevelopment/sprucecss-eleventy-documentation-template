@@ -1,0 +1,33 @@
+@use 'sprucecss/scss/spruce';
+
+.docs-header {
+  --height: 5rem;
+
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: spruce.spacer-clamp(s, l);
+  height: var(--height);
+  justify-content: space-between;
+  border-block-end: 1px solid spruce.color(border);
+
+  &__column {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    gap: spruce.spacer-clamp(s, m);
+  }
+
+  &__actions {
+    align-items: center;
+    display: flex;
+    gap: spruce.spacer-clamp(s, m);
+  }
+
+  &__logo {
+    --dimension: 4rem;
+    display: inline-flex;
+    height: var(--dimension);
+    width: var(--dimension);
+  }
+}

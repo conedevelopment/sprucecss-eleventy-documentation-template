@@ -14,6 +14,23 @@
     width: var(--dimension);
   }
 
+  &__socials {
+    align-items: center;
+    display: flex;
+    gap: spruce.spacer(s);
+
+    a {
+      color: spruce.color(heading);
+      display: inline-flex;
+    }
+
+    svg {
+      --dimenstion: 1.25rem;
+      height: var(--dimenstion);
+      width: var(--dimenstion);
+    }
+  }
+
   &__title {
     font-size: spruce.font-size(h4);
     margin-block: 0 spruce.spacer(m);
@@ -38,20 +55,5 @@
         font-weight: 700;
       }
     }
-  }
-
-  &__bottom {
-    padding-block-start: spruce.spacer(l);
-
-    @include spruce.breakpoint(md) {
-      align-items: center;
-      display: flex;
-      gap: spruce.spacer(s);
-      justify-content: space-between;
-    }
-  }
-
-  &__copyright {
-    margin-block: 0;
   }
 }

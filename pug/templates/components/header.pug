@@ -1,8 +1,8 @@
 include ../../assets/mixins
 
-header(class='site-header')
-  div(class='site-header__column')
-    nav(class='site-navigation site-header__navigation' aria-label='Site')
+header(class='docs-header')
+  div(class='docs-header__column')
+    nav(class='site-navigation docs-header__navigation' aria-label='Site')
       button(class='btn btn--primary btn--icon site-navigation__btn' data-action='navigation-toggle' aria-controls='primary-menu' aria-expanded='false' aria-label='Menu')
         svg(class='icon btn__icon' aria-hidden='true' focusable='false' role='img' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewbox='0 0 18 18' width='18' height='18' style='fill:currentColor;')
           path(d='M1,15l16,0c0.55,0 1,-0.45 1,-1c0,-0.55 -0.45,-1 -1,-1l-16,-0c-0.55,-0 -1,0.45 -1,1c0,0.55 0.45,1 1,1Zm-0,-5l16,-0c0.55,-0 1,-0.45 1,-1c0,-0.55 -0.45,-1 -1,-1l-16,0c-0.55,0 -1,0.45 -1,1c0,0.55 0.45,1 1,1Zm-1,-6c0,0.55 0.45,1 1,1l16,0c0.55,0 1,-0.45 1,-1c0,-0.55 -0.45,-1 -1,-1l-16,0c-0.55,0 -1,0.45 -1,1Z')
@@ -11,7 +11,7 @@ header(class='site-header')
           a(href='#') Guides
         li
           a(href='#') Integrations
-  div(class='site-header__actions')
+  div(class='docs-header__actions')
     div(class='form-group')
       label(class='form-label sr-only' for='front-end-frameworks') Language
       select(id='front-end-frameworks' class='form-control form-control--sm')
