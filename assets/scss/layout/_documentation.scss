@@ -4,7 +4,6 @@
   display: grid;
   gap: spruce.get-css-variable(--container-gap);
   grid-template-columns: minmax(0, 1fr);
-  margin-inline: spruce.get-css-variable(--container-gap);
 
   @include spruce.breakpoint(md) {
     grid-template-columns: minmax(0, 17.5rem) minmax(0, 1fr);

@@ -1,15 +1,12 @@
 @use 'sprucecss/scss/spruce';
 
-.site-footer {
-  padding-block: spruce.spacer-clamp(xl, xxl, 10vw);
-
-  &__top {
-    @include spruce.layout-grid(spruce.spacer(l), 14rem);
-  }
+.docs-footer {
+  @include spruce.layout-grid(spruce.spacer(l), 14rem);
+  padding-block: spruce.get-css-variable(--section-gap);
 
   &__logo {
     --dimension: 4rem;
-    display: inline-flex;
+    display: flex;
     height: var(--dimension);
     width: var(--dimension);
   }
@@ -22,6 +19,11 @@
     a {
       color: spruce.color(heading);
       display: inline-flex;
+
+      &:hover,
+      &:focus {
+        color: spruce.color(primary);
+      }
     }
 
     svg {
@@ -33,12 +35,11 @@
 
   &__title {
     font-size: spruce.font-size(h4);
-    margin-block: 0 spruce.spacer(m);
   }
 
   &__navigation {
     @include spruce.clear-list;
-    @include spruce.layout-stack(spruce.spacer(xs));
+    @include spruce.layout-stack(xs);
 
     a {
       color: spruce.color(text);
@@ -55,5 +56,9 @@
         font-weight: 700;
       }
     }
+  }
+
+  &__column {
+    @include spruce.layout-stack(m);
   }
 }

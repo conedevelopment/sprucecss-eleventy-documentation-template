@@ -1,7 +1,7 @@
 @use 'sass:color';
 
-$color-primary: #0008ff;
-$color-secondary: #31eaff;
+$color-primary: hsl(238 100% 50%);
+$color-secondary: hsl(186 100% 60%);
 
 @use 'sprucecss/scss/spruce' with (
   $settings: (

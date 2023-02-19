@@ -6,19 +6,20 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title #{title} - CONE DOCS
+    title #{title} - Documentation
     link(rel='icon' href='../../assets/img/favicon.svg' sizes='32x32')
     link(rel='stylesheet' href=`../../assets/css/main.css?time=${time}`)
 
     block styles
   body
-    main(id='content' class='l-docs')
-      include components/sidebar
-      div(class='l-docs__body')
-        include components/header
-        div(class='l-docs__content')
-          block content
-        include components/footer
+    div(class='container container--wide')
+      main(id='content' class='l-docs')
+        include components/sidebar
+        div(class='l-docs__body')
+          include components/header
+          div(class='l-docs__content')
+            block content
+          include components/footer
 
     include ../../assets/icon/icons.svg
-    script(src='../../assets/js/main.js')
+    script(src='../../assets/js/navigation.js')

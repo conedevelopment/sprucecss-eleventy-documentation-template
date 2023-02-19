@@ -6,8 +6,10 @@
 
 :root {
   @include spruce.set-css-variable((
+    --section-gap: clamp(5rem, 7vw, 7rem),
     --container-gap: spruce.spacer-clamp(m, l),
-    --max-content-width: 65rem
+    --max-content-width: 67.5rem,
+    --box-shadow: 0 0.75rem 1.25rem hsl(0 0% 0% / 5%)
   ));
 }
 
