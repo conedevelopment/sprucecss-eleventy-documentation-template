@@ -12,8 +12,13 @@ header(class='docs-header')
         li
           a(href='#') Integrations
   div(class='docs-header__actions')
-    div(class='form-group')
-      label(class='form-label sr-only' for='front-end-frameworks') Language
-      select(id='front-end-frameworks' class='form-control form-control--sm')
-        option(value='english') English
-        option(value='deutsch') Deutsch
+    div(id='theme-switcher' class='theme-switcher')
+      span(class='theme-switcher__icon')
+        +icon('system-mode', 'icon-system')
+        +icon('light-mode', 'icon-light')
+        +icon('dark-mode', 'icon-dark')
+      select(id='select-theme-mode' class='form-control form-control--sm theme-switcher__select' aria-label='Select a theme')
+        option(value='system') System
+        option(value='light') Light
+        option(value='dark') Dark
+

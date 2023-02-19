@@ -1,7 +1,10 @@
 @use 'sprucecss/scss/spruce';
 
 .l-post {
+  --gtc: minmax(0, 1fr);
+
   display: grid;
   gap: spruce.get-css-variable(--container-gap);
-  grid-template-columns: 1fr 20rem;
+
+  @include spruce.breakpoint(md) { --gtc: minmax(0, 1fr) minmax(0, 20rem); }
 }

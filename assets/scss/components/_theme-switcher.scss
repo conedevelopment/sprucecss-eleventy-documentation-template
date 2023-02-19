@@ -1,0 +1,32 @@
+@use 'sprucecss/scss/spruce';
+
+.theme-switcher {
+  color: spruce.color(text);
+  display: inline-flex;
+  position: relative;
+
+  &[data-theme-mode='system'] .icon-system { display: inline-block; }
+  &[data-theme-mode='light'] .icon-light { display: inline-block; }
+  &[data-theme-mode='dark'] .icon-dark { display: inline-block; }
+
+  &__icon {
+    align-items: center;
+    color: spruce.color(heading);
+    display: flex;
+    inset: 0 auto 0 0;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    width: 2em;
+
+    svg {
+      display: none;
+      height: 0.85em;
+      width: 0.85em;
+    }
+  }
+
+  &__select {
+    padding-inline-start: 2em;
+  }
+}
