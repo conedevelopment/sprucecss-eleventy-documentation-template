@@ -23,7 +23,7 @@
   margin-block: 0;
 }
 
-.sidebar {
+.docs-sidebar {
   padding-inline-end: spruce.get-css-variable(--container-gap);
   margin-block: spruce.spacer(l);
   display: flex;
@@ -31,6 +31,13 @@
   flex-direction: column;
 
   &__header {
+  }
+
+  &__logo {
+    --dimension: 4rem;
+    display: inline-flex;
+    height: var(--dimension);
+    width: var(--dimension);
   }
 
   &__body {

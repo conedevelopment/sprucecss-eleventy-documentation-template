@@ -23,11 +23,4 @@
     display: flex;
     gap: spruce.spacer-clamp(s, m);
   }
-
-  &__logo {
-    --dimension: 4rem;
-    display: inline-flex;
-    height: var(--dimension);
-    width: var(--dimension);
-  }
 }

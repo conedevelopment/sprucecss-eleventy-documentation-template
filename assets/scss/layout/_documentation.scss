@@ -3,8 +3,12 @@
 .l-documentation {
   display: grid;
   gap: spruce.get-css-variable(--container-gap);
-  grid-template-columns: 20rem 1fr;
+  grid-template-columns: minmax(0, 1fr);
   margin-inline: spruce.get-css-variable(--container-gap);
+
+  @include spruce.breakpoint(md) {
+    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+  }
 
   &__sidebar {
     border-inline-end: 1px solid hsl(0 0% 0% / 5%);

@@ -3,14 +3,15 @@
 .docs-heading {
   @include spruce.layout-stack(s);
   margin-block: spruce.spacer-clamp(xl, xxl) spruce.spacer-clamp(m, l);
-  max-width: 30rem;
 
   &__title {
     font-size: spruce.responsive-font-size(4.25rem);
     line-height: spruce.$line-height-sm;
+    max-width: 50rem;
   }
 
   &__description {
     font-size: spruce.font-size(h4);
+    max-width: 30rem;
   }
 }
