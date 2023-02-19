@@ -6,7 +6,8 @@
 
 :root {
   @include spruce.set-css-variable((
-    --container-gap: spruce.spacer-clamp(m, l)
+    --container-gap: spruce.spacer-clamp(m, l),
+    --max-content-width: 65rem
   ));
 }
 

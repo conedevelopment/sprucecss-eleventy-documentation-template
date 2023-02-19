@@ -1,12 +1,16 @@
 @use 'sprucecss/scss/spruce';
 
-.l-documentation {
+.l-docs {
   display: grid;
   gap: spruce.get-css-variable(--container-gap);
   grid-template-columns: minmax(0, 1fr);
   margin-inline: spruce.get-css-variable(--container-gap);
 
   @include spruce.breakpoint(md) {
+    grid-template-columns: minmax(0, 17.5rem) minmax(0, 1fr);
+  }
+
+  @include spruce.breakpoint(lg) {
     grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
   }
 
@@ -15,5 +19,10 @@
     position: sticky;
     inset-block-start: spruce.spacer(l);
     max-height: calc(100vh - #{spruce.spacer(l)} * 2);
+  }
+
+  &__cards {
+    @include spruce.layout-grid(spruce.spacer(l), 22.5rem);
+    max-width: spruce.get-css-variable(--max-content-width);
   }
 }
