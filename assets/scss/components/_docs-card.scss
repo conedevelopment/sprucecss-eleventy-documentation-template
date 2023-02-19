@@ -4,9 +4,9 @@
   $this: &;
 
   @include spruce.a11y-card-link('.doc-card__link', true);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px;
   background-color: spruce.color(background, card);
   border-radius: spruce.$border-radius-sm;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 10px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

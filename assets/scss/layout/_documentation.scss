@@ -15,10 +15,12 @@
   }
 
   &__sidebar {
-    border-inline-end: 1px solid hsl(0 0% 0% / 5%);
-    position: sticky;
-    inset-block-start: spruce.spacer(l);
-    max-height: calc(100vh - #{spruce.spacer(l)} * 2);
+    @include spruce.breakpoint(md) {
+      border-inline-end: 1px solid spruce.color(border);
+      inset-block-start: spruce.spacer(l);
+      max-height: calc(100vh - #{spruce.spacer(l)} * 2);
+      position: sticky;
+    }
   }
 
   &__cards {

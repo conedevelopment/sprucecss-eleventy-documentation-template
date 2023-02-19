@@ -24,11 +24,11 @@
 }
 
 .docs-sidebar {
-  padding-inline-end: spruce.get-css-variable(--container-gap);
-  margin-block: spruce.spacer(l);
   display: flex;
-  gap: spruce.spacer(m);
   flex-direction: column;
+  gap: spruce.spacer(m);
+  margin-block: spruce.spacer(l);
+  padding-inline-end: spruce.get-css-variable(--container-gap);
 
   &__header {
   }
@@ -42,7 +42,6 @@
 
   &__body {
     @include spruce.layout-stack(m);
-    overflow-y: auto;
     @include spruce.scrollbar(
       spruce.color(thumb-background, scrollbar),
       spruce.color(thumb-background-hover, scrollbar),
@@ -51,6 +50,7 @@
       0.15rem
     );
     flex-grow: 2;
+    overflow-y: auto;
   }
 }
 

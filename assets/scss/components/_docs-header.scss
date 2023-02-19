@@ -4,12 +4,12 @@
   --height: 5rem;
 
   align-items: center;
+  border-block-end: 1px solid spruce.color(border);
   display: flex;
   flex-wrap: wrap;
   gap: spruce.spacer-clamp(s, l);
   height: var(--height);
   justify-content: space-between;
-  border-block-end: 1px solid spruce.color(border);
 
   &__column {
     align-items: center;
