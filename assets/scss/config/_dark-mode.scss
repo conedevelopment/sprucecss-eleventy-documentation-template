@@ -1,0 +1,25 @@
+@use 'sprucecss/scss/spruce';
+
+@include spruce.generate-color-variables(
+  spruce.$dark-colors,
+  ':root[data-theme-mode="dark"]'
+);
+
+[data-theme-mode='dark'] {
+  color-scheme: dark;
+
+  body {
+    background: none;
+  }
+
+  .docs-card {
+    border: 1px solid spruce.color(border);
+  }
+
+  select.form-control:not([multiple]):not([size]) {
+    @include spruce.field-icon(
+      spruce.$select-icon,
+      spruce.color(select-foreground, form, true, spruce.$dark-colors)
+    );
+  }
+}
