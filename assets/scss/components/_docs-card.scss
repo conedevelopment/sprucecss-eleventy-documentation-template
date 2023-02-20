@@ -1,9 +1,9 @@
 @use 'sprucecss/scss/spruce';
 
-.doc-card {
+.docs-card {
   $this: &;
 
-  @include spruce.a11y-card-link('.doc-card__link', true);
+  @include spruce.a11y-card-link('.docs-card__link', true);
   background-color: spruce.color(background, card);
   border-radius: spruce.$border-radius-sm;
   box-shadow: spruce.get-css-variable(--box-shadow);

@@ -14,5 +14,13 @@
 }
 
 body {
-  background: linear-gradient(324deg, #f5f7ff, transparent);
+  position: relative;
+
+  &::before {
+    background: linear-gradient(325deg, #f5f7ff, transparent);
+    content: '';
+    inset: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }

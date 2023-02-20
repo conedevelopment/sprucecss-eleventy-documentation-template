@@ -6,15 +6,12 @@
 );
 
 [data-theme-mode='dark'] {
+  @include spruce.selection(primary, black);
+
   color-scheme: dark;
 
-  body {
-    background: none;
-  }
-
-  .docs-card {
-    border: 1px solid spruce.color(border);
-  }
+  body::before { display: none; }
+  .docs-card { border: 1px solid spruce.color(border); }
 
   select.form-control:not([multiple]):not([size]) {
     @include spruce.field-icon(

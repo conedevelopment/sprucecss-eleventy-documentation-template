@@ -1,9 +1,9 @@
 @use 'sass:color';
 
-$dark-color-primary: hsl(261 54% 70%);
+$dark-color-primary: hsl(186 100% 60%);
 $dark-color-secondary: hsl(227 92% 55%);
 
-$dark-color-black: hsl(206 100% 7%);
+$dark-color-black: hsl(245 46% 6%);
 $dark-color-white: hsl(0 0% 95%);
 
 $dark-color-gray: hsl(0 0% 97%);
@@ -35,17 +35,12 @@ $colors: (
     arrow: hsl(0 0% 100% / 0.1)
   ),
   btn: (
-    primary-background: hsl(261 52% 59%),
-    primary-background-hover: hsl(261 52% 65%),
-    primary-foreground: $dark-color-white,
+    primary-background: $dark-color-primary,
+    primary-background-hover: hsl(186 100% 45%),
+    primary-foreground: hsl(186 100% 5%),
     secondary-background: $dark-color-secondary,
     secondary-background-hover: color.adjust($dark-color-secondary, $lightness: 5%),
-    secondary-foreground: $dark-color-white,
-    pagination-background: hsl(207deg 97% 12%),
-    pagination-background-hover: hsl(261 52% 59%),
-    pagination-foreground: hsl(0 0% 100%),
-    pagination-foreground-hover: hsl(0 0% 100%),
-    pagination-focus-ring: hsl(261 52% 59%)
+    secondary-foreground: $dark-color-white
   ),
   card: (
     background: $dark-color-black
