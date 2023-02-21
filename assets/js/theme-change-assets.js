@@ -1,15 +1,23 @@
-function changeAssets(theme) {
-  if (!theme) return;
-  const themeAssets = document.querySelectorAll('img[data-theme-mode]');
+(() => {
+  const htmlElement = document.querySelector('html');
+  const systemMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-  themeAssets.forEach((el) => {
-    el.src = el.getAttribute(`data-${theme}-asset`);
+  function changeAssets(theme) {
+    console.log(theme);
+    if (!theme) return;
+    const themeAssets = document.querySelectorAll('img[data-theme-mode]');
+
+    themeAssets.forEach((el) => {
+      el.src = el.getAttribute(`data-${theme}-asset`);
+    });
+  }
+
+  changeAssets(htmlElement.getAttribute('data-theme-mode') === 'system' ? systemMode : htmlElement.getAttribute('data-theme-mode'));
+
+  const observer = new MutationObserver(() => {
+    console.log(systemMode);
+    changeAssets(htmlElement.getAttribute('data-theme-mode') === 'system' ? systemMode : htmlElement.getAttribute('data-theme-mode'));
   });
-}
 
-const htmlElement = document.querySelector('html');
-changeAssets(htmlElement.getAttribute('data-theme-mode') || null);
-
-const observer = new MutationObserver(() => {
-  changeAssets(htmlElement.getAttribute('data-theme-mode') || null);
-});
+  observer.observe(htmlElement, { attributes: true });
+})();

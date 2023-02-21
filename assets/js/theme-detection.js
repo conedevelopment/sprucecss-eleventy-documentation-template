@@ -2,8 +2,6 @@
   const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
   const preferredTheme = localStorage.getItem('preferred-theme');
 
-  console.log('prefered theme', preferredTheme);
-
   function setTheme(theme) {
     if (theme === 'dark') {
       document.documentElement.setAttribute('data-theme-mode', 'dark');

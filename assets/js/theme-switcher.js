@@ -1,6 +1,7 @@
 (() => {
   const themeSwitcher = document.querySelector('#theme-switcher');
-  const selected = localStorage.getItem('preferred-theme') ?? 'system';
+  const systemMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const selected = localStorage.getItem('preferred-theme') ?? systemMode;
 
   themeSwitcher.addEventListener('input', (e) => {
     localStorage.setItem('preferred-theme', e.target.value);
