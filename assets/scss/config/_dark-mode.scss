@@ -6,7 +6,7 @@
 );
 
 [data-theme-mode='dark'] {
-  @include spruce.selection(primary, black);
+  @include spruce.selection(primary);
 
   color-scheme: dark;
 
