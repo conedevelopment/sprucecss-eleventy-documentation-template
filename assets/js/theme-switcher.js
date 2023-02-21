@@ -5,7 +5,7 @@
 
   themeSwitcher.addEventListener('input', (e) => {
     localStorage.setItem('preferred-theme', e.target.value);
-    document.documentElement.setAttribute('data-theme-mode', e.target.value);
+    document.documentElement.setAttribute('data-theme-mode', e.target.value === 'system' ? systemMode : e.target.value);
     themeSwitcher.setAttribute('data-theme-mode', e.target.value);
   });
 
