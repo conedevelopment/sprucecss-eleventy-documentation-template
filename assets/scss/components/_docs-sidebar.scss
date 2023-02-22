@@ -27,17 +27,33 @@
   display: flex;
   flex-direction: column;
   gap: spruce.spacer(m);
-  margin-block: spruce.spacer(l);
-  padding-inline-end: spruce.get-css-variable(--container-gap);
+  margin-block: spruce.spacer(m);
+
+  @include spruce.breakpoint(md) {
+    margin-block: spruce.spacer(l);
+    padding-inline-end: spruce.get-css-variable(--container-gap);
+  }
 
   &__header {
+    height: 3.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    @include spruce.breakpoint(md) {
+      height: 4rem;
+    }
   }
 
   &__logo {
-    --dimension: 4rem;
+    --dimension: 3.5rem;
     display: inline-flex;
     height: var(--dimension);
     width: var(--dimension);
+
+    @include spruce.breakpoint(md) {
+      --dimension: 4rem;
+    }
   }
 
   &__body {
@@ -49,8 +65,13 @@
       0.5rem,
       0.15rem
     );
+    max-height: calc(100vh - 3.5rem - 1.5rem - 1.5rem - 1.5rem);
     flex-grow: 2;
     overflow-y: auto;
+
+    @include spruce.breakpoint(md) {
+      max-height: initial;
+    }
   }
 }
 

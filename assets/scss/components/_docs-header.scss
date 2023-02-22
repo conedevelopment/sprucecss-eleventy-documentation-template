@@ -1,15 +1,14 @@
 @use 'sprucecss/scss/spruce';
 
 .docs-header {
-  --height: 5rem;
-
   align-items: center;
   border-block-end: 1px solid spruce.color(border);
   display: flex;
   flex-wrap: wrap;
-  gap: spruce.spacer-clamp(s, l);
+  gap: spruce.spacer(xs) spruce.spacer-clamp(s, l);
   height: var(--height);
   justify-content: space-between;
+  padding-block: spruce.spacer(m);
 
   &__column {
     align-items: center;
@@ -22,5 +21,41 @@
     align-items: center;
     display: flex;
     gap: spruce.spacer-clamp(s, m);
+  }
+
+  &__navigation {
+    ul {
+      @include spruce.clear-list;
+      align-items: center;
+      background-color: transparent;
+      display: flex !important;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: spruce.spacer(m);
+      inset: auto;
+      padding: 0;
+      position: relative;
+
+      @include spruce.breakpoint(lg) {
+        gap: spruce.spacer(l);
+      }
+    }
+
+    li {
+      margin-block: 0;
+    }
+
+    a {
+      color: spruce.color(heading);
+      text-decoration: none;
+
+      &:hover {
+        color: spruce.color(primary);
+      }
+
+      &[aria-current='page'] {
+        font-weight: 700;
+      }
+    }
   }
 }
