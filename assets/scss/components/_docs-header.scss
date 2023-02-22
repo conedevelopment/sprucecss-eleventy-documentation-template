@@ -5,10 +5,11 @@
   border-block-end: 1px solid spruce.color(border);
   display: flex;
   flex-wrap: wrap;
-  gap: spruce.spacer(xs) spruce.spacer-clamp(s, l);
+  gap: spruce.spacer(xs) spruce.spacer-clamp(m, l);
   height: var(--height);
   justify-content: space-between;
   padding-block: spruce.spacer(m);
+  order: 2;
 
   &__column {
     align-items: center;

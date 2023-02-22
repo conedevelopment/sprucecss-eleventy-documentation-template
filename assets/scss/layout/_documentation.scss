@@ -7,11 +7,12 @@
   gap: spruce.get-css-variable(--container-gap);
   grid-template-columns: var(--gtc);
 
+  @include spruce.breakpoint(sm) { --gtc: minmax(0, 15rem) minmax(0, 1fr); }
   @include spruce.breakpoint(md) { --gtc: minmax(0, 17.5rem) minmax(0, 1fr); }
   @include spruce.breakpoint(lg) { --gtc: minmax(0, 20rem) minmax(0, 1fr); }
 
   &__sidebar {
-    @include spruce.breakpoint(md) {
+    @include spruce.breakpoint(sm) {
       border-inline-end: 1px solid spruce.color(border);
       inset-block-start: spruce.spacer(l);
       max-height: calc(100vh - #{spruce.spacer(l)} * 2);
@@ -22,5 +23,10 @@
   &__cards {
     @include spruce.layout-grid(l, 22.5rem);
     max-width: spruce.get-css-variable(--max-content-width);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
   }
 }
