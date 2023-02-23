@@ -1,6 +1,6 @@
 (() => {
-  const button = document.querySelector('[data-action="navigation-toggle"]');
-  const menu = document.querySelector('.navigation-menu');
+  const button = document.querySelector('[data-action="sidebar-toggle"]');
+  const menu = document.querySelector('.docs-sidebar__body');
   const mq = window.matchMedia('(max-width: 64em)');
 
   if (!menu || typeof button === 'undefined') return;

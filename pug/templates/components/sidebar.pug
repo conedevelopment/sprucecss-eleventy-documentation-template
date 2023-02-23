@@ -4,7 +4,7 @@ aside.docs-sidebar.l-docs__sidebar
   .docs-sidebar__header
     a(class='docs-sidebar__logo' href='#')
       img(src=`${url}/assets/img/cone-docs-logo-dark.svg` alt='Cone Docs' width='72' height='72' data-theme-mode='data-theme-mode' data-light-asset=`${url}/assets/img/cone-docs-logo-dark.svg` data-dark-asset=`${url}/assets/img/cone-docs-logo-light.svg`)
-    button(class='btn btn--primary btn--icon site-navigation__btn' data-action='navigation-toggle' aria-controls='primary-menu' aria-expanded='false' aria-label='Menu')
+    button(class='btn btn--primary btn--icon docs-sidebar__toggle' data-action='sidebar-toggle' aria-controls='primary-menu' aria-expanded='false' aria-label='Menu')
       +icon('menu', 'btn__icon')
   div(class='docs-sidebar__body')
     section.docs-sidebar-section

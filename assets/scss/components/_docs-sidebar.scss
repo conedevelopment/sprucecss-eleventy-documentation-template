@@ -24,6 +24,8 @@
 }
 
 .docs-sidebar {
+  $this: &;
+
   display: flex;
   flex-direction: column;
   gap: spruce.spacer(m);
@@ -43,6 +45,12 @@
     @include spruce.breakpoint(md) {
       height: 4rem;
     }
+
+    &:has([aria-expanded='true']) {
+      + #{$this}__body {
+        display: block;
+      }
+    }
   }
 
   &__logo {
@@ -54,6 +62,10 @@
     @include spruce.breakpoint(md) {
       --dimension: 4rem;
     }
+  }
+
+  &__toggle {
+    @include spruce.breakpoint(sm) { display: none; }
   }
 
   &__body {
@@ -70,9 +82,7 @@
     flex-grow: 2;
     overflow-y: auto;
 
-    @include spruce.breakpoint(sm) {
-      display: block;
-    }
+    @include spruce.breakpoint(sm) { display: block; }
 
     @include spruce.breakpoint(md) {
       max-height: initial;
