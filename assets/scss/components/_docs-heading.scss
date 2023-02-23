@@ -9,13 +9,13 @@
   }
 
   &__title {
-    font-size: spruce.responsive-font-size(4.25rem, 40, '3.5vw');
+    font-size: spruce.responsive-font-size(4rem, 40, '4.5vw');
     line-height: spruce.$line-height-sm;
-    max-width: 25ch;
+    max-width: 18ch;
   }
 
   &__description {
     font-size: spruce.responsive-font-size(1.2rem, 40, '0.1vw + 1rem');
-    max-width: 40ch;
+    max-width: 50ch;
   }
 }
