@@ -1,7 +1,7 @@
 @use 'sprucecss/scss/spruce';
 
 .sidebar {
-  $this: &;
+  --dimension: 3.5rem;
 
   display: flex;
   flex-direction: column;
@@ -16,94 +16,43 @@
   &__header {
     align-items: center;
     display: flex;
-    height: 3.5rem;
-    justify-content: space-between;
-
-    @include spruce.breakpoint(md) {
-      height: 4rem;
-    }
-
-    &:has([aria-expanded='true']) {
-      + #{$this}__body {
-        display: block;
-      }
-    }
-  }
-
-  &__logo {
-    --dimension: 3.5rem;
-    display: inline-flex;
     height: var(--dimension);
-    width: var(--dimension);
+    justify-content: space-between;
 
     @include spruce.breakpoint(md) {
       --dimension: 4rem;
     }
   }
 
+  &__logo {
+    display: inline-flex;
+    height: var(--dimension);
+    width: var(--dimension);
+  }
+
   &__toggle {
-    @include spruce.breakpoint(sm) { display: none; }
+    @include spruce.breakpoint(sm) {
+      display: none;
+    }
   }
 
   &__body {
     @include spruce.layout-stack(m);
     @include spruce.scrollbar(
-      spruce.color(thumb-background, scrollbar),
-      spruce.color(thumb-background-hover, scrollbar),
-      spruce.color(track-background, scrollbar),
-      0.5rem,
-      0.15rem
+      $border-radius: 0.05rem
     );
     display: none;
-    flex-grow: 2;
-    max-height: calc(100vh - 3.5rem - 1.5rem - 1.5rem - 1.5rem);
+    flex-grow: 1;
+    max-height: calc(100vh - var(--dimension) - #{spruce.spacer(m)} * 3);
     overflow-y: auto;
 
-    @include spruce.breakpoint(sm) { display: block; }
+    &--open {
+      display: block;
+    }
 
-    @include spruce.breakpoint(md) {
+    @include spruce.breakpoint(sm) {
+      display: block;
       max-height: initial;
-    }
-  }
-}
-
-.sidebar-section {
-  &__title {
-    color: spruce.color(heading);
-    font-size: spruce.$font-size-base;
-    margin-block: 0;
-  }
-
-  &__navigation {
-    border-inline-start: 1px solid spruce.color(border);
-    font-size: 1rem;
-    margin-block-start: 1rem;
-    padding-inline-start: 1rem;
-
-    ul {
-      @include spruce.clear-list;
-    }
-
-    a {
-      color: spruce.color(text);
-      text-decoration: none;
-
-      &[aria-current='page'] {
-        color: spruce.color(heading);
-        font-weight: 700;
-        position: relative;
-
-        &::before {
-          background-color: spruce.color(primary);
-          border-radius: 0 spruce.$border-radius-sm spruce.$border-radius-sm 0;
-          bottom: 0;
-          content: '';
-          inset-inline-start: -1rem;
-          position: absolute;
-          top: 0;
-          width: 0.3rem;
-        }
-      }
     }
   }
 }

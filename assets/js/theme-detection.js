@@ -8,7 +8,7 @@
 
   window
     .matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', function(e) {
+    .addEventListener('change', (e) => {
       if (localStorage.getItem('preferred-theme') === 'system' || localStorage.getItem('preferred-theme') === null) {
         setTheme(e.matches ? 'dark' : 'light');
       }
