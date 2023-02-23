@@ -5,9 +5,6 @@ $color-primary: hsl(238 100% 50%);
 $color-secondary: hsl(186 100% 60%);
 
 @use 'sprucecss/scss/spruce' with (
-  $settings: (
-    hyphens:  false
-  ),
   $color-primary: $color-primary,
   $color-secondary: $color-secondary,
   $colors: (

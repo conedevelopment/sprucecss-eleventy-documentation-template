@@ -2,7 +2,11 @@
 
 .docs-heading {
   @include spruce.layout-stack(s);
-  margin-block: spruce.spacer-clamp(xl, xxl) spruce.spacer-clamp(m, l);
+  margin-block: spruce.spacer-clamp(xl, xxl);
+
+  @include spruce.breakpoint(sm) {
+    margin-block: spruce.spacer-clamp(xl, xxl) spruce.spacer-clamp(m, l);
+  }
 
   &__title {
     font-size: spruce.responsive-font-size(4.25rem, 40, '3.5vw');
@@ -11,7 +15,7 @@
   }
 
   &__description {
-    font-size: spruce.font-size(h4);
+    font-size: spruce.responsive-font-size(1.2rem, 40, '0.1vw + 1rem');
     max-width: 40ch;
   }
 }

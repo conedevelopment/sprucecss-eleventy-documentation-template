@@ -4,10 +4,12 @@
   --gtc: minmax(0, 1fr);
 
   display: grid;
-  gap: spruce.get-css-variable(--container-gap);
   grid-template-columns: var(--gtc);
 
-  @include spruce.breakpoint(sm) { --gtc: minmax(0, 15rem) minmax(0, 1fr); }
+  @include spruce.breakpoint(sm) {
+    --gtc: minmax(0, 15rem) minmax(0, 1fr);
+    gap: spruce.get-css-variable(--container-gap);
+  }
   @include spruce.breakpoint(md) { --gtc: minmax(0, 17.5rem) minmax(0, 1fr); }
   @include spruce.breakpoint(lg) { --gtc: minmax(0, 20rem) minmax(0, 1fr); }
 

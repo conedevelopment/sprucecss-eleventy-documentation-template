@@ -65,9 +65,14 @@
       0.5rem,
       0.15rem
     );
+    display: none;
     max-height: calc(100vh - 3.5rem - 1.5rem - 1.5rem - 1.5rem);
     flex-grow: 2;
     overflow-y: auto;
+
+    @include spruce.breakpoint(sm) {
+      display: block;
+    }
 
     @include spruce.breakpoint(md) {
       max-height: initial;

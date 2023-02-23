@@ -11,6 +11,10 @@
   padding-block: spruce.spacer(m);
   order: 2;
 
+  @include spruce.breakpoint(sm) {
+    order: -1;
+  }
+
   &__column {
     align-items: center;
     display: flex;
