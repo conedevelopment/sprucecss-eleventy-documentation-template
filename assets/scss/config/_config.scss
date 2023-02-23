@@ -11,16 +11,16 @@ $color-secondary: hsl(186 100% 60%);
     base: (
       border: hsl(0 0% 0% / 5%),
       heading: hsl(232 68% 11%),
-      text: #435769,
+      text: hsl(208 22% 34%),
       code-background: hsl(224 94% 97%)
     ),
     card: (
       background: hsl(0, 0%, 100%)
     ),
     scrollbar: (
-      thumb-background: hsla(229, 26%, 48%, 0.15),
-      thumb-background-hover:	hsl(0 0% 0% / 0.25),
-      track-background:	hsla(226, 100%, 87%, 0.15)
+      thumb-background: hsl(229 26% 48% / 15%),
+      thumb-background-hover:	hsl(0 0% 0% / 25%),
+      track-background:	hsl(226 100% 87% / 15%)
     )
   ),
   $dark-colors: dark.$colors,

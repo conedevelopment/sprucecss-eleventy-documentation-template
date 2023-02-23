@@ -1,6 +1,6 @@
 @use 'sprucecss/scss/spruce';
 
-.l-docs {
+.l-main {
   --gtc: minmax(0, 1fr);
 
   display: grid;
@@ -20,11 +20,6 @@
       max-height: calc(100vh - #{spruce.spacer(l)} * 2);
       position: sticky;
     }
-  }
-
-  &__cards {
-    @include spruce.layout-grid(l, 22.5rem);
-    max-width: spruce.get-css-variable(--max-content-width);
   }
 
   &__body {

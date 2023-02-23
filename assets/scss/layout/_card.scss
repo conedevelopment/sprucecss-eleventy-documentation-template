@@ -1,0 +1,6 @@
+@use 'sprucecss/scss/spruce';
+
+.l-card {
+  @include spruce.layout-grid(l, 22.5rem);
+  max-width: spruce.get-css-variable(--max-content-width);
+}

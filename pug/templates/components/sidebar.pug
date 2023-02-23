@@ -1,67 +1,67 @@
 include ../../assets/mixins
 
-aside.docs-sidebar.l-docs__sidebar
-  .docs-sidebar__header
-    a(class='docs-sidebar__logo' href='#')
+aside(class='sidebar l-main__sidebar')
+  div(class='sidebar__header')
+    a(class='sidebar__logo' href='/html/index.html')
       img(src=`${url}/assets/img/cone-docs-logo-dark.svg` alt='Cone Docs' width='72' height='72' data-theme-mode='data-theme-mode' data-light-asset=`${url}/assets/img/cone-docs-logo-dark.svg` data-dark-asset=`${url}/assets/img/cone-docs-logo-light.svg`)
-    button(class='btn btn--primary btn--icon docs-sidebar__toggle' data-action='sidebar-toggle' aria-controls='primary-menu' aria-expanded='false' aria-label='Menu')
+    button(class='btn btn--primary btn--icon sidebar__toggle' data-action='sidebar-toggle' aria-controls='primary-menu' aria-expanded='false' aria-label='Toogle navigation')
       +icon('menu', 'btn__icon')
-  div(class='docs-sidebar__body')
-    section.docs-sidebar-section
-      h3.docs-sidebar-section__title Getting Started
-      nav.docs-sidebar-section__navigation
+  div(class='sidebar__body')
+    div(class='sidebar-section')
+      h3(class='sidebar-section__title') Getting Started
+      nav(class='sidebar-section__navigation')
         ul
           li
-            a(aria-current='page' href='/docs/getting-started/introduction/') Introduction
+            a(aria-current='page' href='#') Introduction
           li
-            a(href='/docs/getting-started/installation/') Installation
+            a(href='#') Installation
           li
-            a(href='/docs/getting-started/structure-and-code/') Structure and Code
+            a(href='#') Structure and Code
           li
-            a(href='/docs/getting-started/sass/') Sass
+            a(href='#') Sass
           li
-            a(href='/docs/getting-started/accessibility/') Accessibility
+            a(href='#') Accessibility
           li
-            a(href='/docs/getting-started/internationalization/') Internationalization
+            a(href='#') Internationalization
           li
-            a(href='/docs/getting-started/print/') Print
+            a(href='#') Print
           li
-            a(href='/docs/getting-started/js/') JS
+            a(href='#') JS
           li
-            a(href='/docs/getting-started/contribution/') Contribution
+            a(href='#') Contribution
           li
-            a(href='/docs/getting-started/appendix/') Appendix
-    section.docs-sidebar-section
-      h3.docs-sidebar-section__title Customization
-      nav.docs-sidebar-section__navigation
+            a(href='#') Appendix
+    div(class='sidebar-section')
+      h3(class='sidebar-section__title') Customization
+      nav(class='sidebar-section__navigation')
         ul
           li
-            a(href='/docs/customization/settings/') Settings
+            a(href='#') Settings
           li
-            a(href='/docs/customization/themes/') Themes
-    section.docs-sidebar-section
-      h3.docs-sidebar-section__title Sass
-      nav.docs-sidebar-section__navigation
+            a(href='#') Themes
+    div(class='sidebar-section')
+      h3(class='sidebar-section__title') Sass
+      nav(class='sidebar-section__navigation')
         ul
           li
-            a(href='/docs/sass/variables/') Variables
+            a(href='#') Variables
           li
-            a(href='/docs/sass/mixins/') Mixins
+            a(href='#') Mixins
           li
-            a(href='/docs/sass/functions/') Functions
-    section.docs-sidebar-section
-      h3.docs-sidebar-section__title Elements
-      nav.docs-sidebar-section__navigation
+            a(href='#') Functions
+    div(class='sidebar-section')
+      h3(class='sidebar-section__title') Elements
+      nav(class='sidebar-section__navigation')
         ul
           li
-            a(href='/docs/elements/generators/') Generators
+            a(href='#') Generators
           li
-            a(href='/docs/elements/typography/') Typography
+            a(href='#') Typography
           li
-            a(href='/docs/elements/tables/') Tables
+            a(href='#') Tables
           li
-            a(href='/docs/elements/buttons/') Buttons
+            a(href='#') Buttons
           li
-            a(href='/docs/elements/forms/') Forms
+            a(href='#') Forms
           li
-            a(href='/docs/elements/media/') Media
+            a(href='#') Media

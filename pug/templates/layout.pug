@@ -14,14 +14,13 @@ html(lang='en')
     block styles
   body
     div(class='container container--wide')
-      main(id='content' class='l-docs')
+      main(id='content' class='l-main')
         include components/sidebar
-        div(class='l-docs__body')
+        div(class='l-main__body')
           include components/header
-          div(class='l-docs__content')
-            block content
+          block content
           include components/footer
 
-    script(src='../../assets/js/navigation.js')
-    script(src='../../assets/js/theme-switcher.js')
-    script(src='../../assets/js/theme-change-assets.js')
+    script(src=`../../assets/js/navigation.js?time=${time}`)
+    script(src=`../../assets/js/theme-switcher.js?time=${time}`)
+    script(src=`../../assets/js/theme-change-assets.js?time=${time}`)

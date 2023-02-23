@@ -8,8 +8,8 @@
   gap: spruce.spacer(xs) spruce.spacer-clamp(m, l);
   height: var(--height);
   justify-content: space-between;
-  padding-block: spruce.spacer(m);
   order: 2;
+  padding-block: spruce.spacer(m);
 
   @include spruce.breakpoint(sm) {
     order: -1;

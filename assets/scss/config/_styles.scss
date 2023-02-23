@@ -7,8 +7,8 @@
 .btn--outline-primary { @include spruce.btn-variant-outline(primary); }
 
 @include spruce.generate-form-control(
-    '.form-control',
-    true,
-    true,
-    true
-  );
+  '.form-control',
+  true,
+  true,
+  true
+);
