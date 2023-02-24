@@ -88,6 +88,9 @@ $colors: (
     foreground: $dark-color-white,
     background: $dark-color-primary
   ),
+  search: (
+    icon: hsla(0, 0%, 100%, 0.25)
+  ),
   scrollbar: (
     thumb-background: hsl(0 0% 100% / 0.15),
     thumb-background-hover:	hsl(0 0% 100% / 0.25),
