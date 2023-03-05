@@ -14,8 +14,11 @@ $color-secondary: hsl(186 100% 60%);
       text: hsl(208 22% 34%),
       code-background: hsl(224 94% 97%)
     ),
+    breadcrumb: (
+      separator: hsl(0 0% 80%)
+    ),
     card: (
-      background: hsl(0, 0%, 100%)
+      background: hsl(0 0% 100%)
     ),
     search: (
       icon: hsl(229 26% 48% / 25%)

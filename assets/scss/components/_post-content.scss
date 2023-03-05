@@ -1,0 +1,35 @@
+@use 'sprucecss/scss/spruce';
+
+.post-content {
+  @include spruce.layout-stack;
+
+  @include spruce.breakpoint(md) {
+    font-size: 1.0375rem;
+  }
+
+  :is(dd, dl, dl, h1, h2, h3, h4, h5, h6, hr, ul, ol, p, blockquote) {
+    max-width: 40rem;
+  }
+
+  * + h2,
+  * + h3 {
+    margin-top: spruce.spacer(l);
+  }
+
+  h2 + *,
+  h3 + *,
+  h4 + *,
+  h5 + *,
+  h6 + * {
+    margin-top: spruce.spacer(s);
+  }
+
+  img,
+  iframe {
+    border-radius: spruce.$border-radius-sm;
+  }
+
+  iframe {
+    aspect-ratio: 16 / 9;
+  }
+}

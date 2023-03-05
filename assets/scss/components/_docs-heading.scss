@@ -15,7 +15,7 @@
   }
 
   &__description {
-    font-size: spruce.responsive-font-size(1.2rem, 40, '0.1vw + 1rem');
+    font-size: spruce.$font-size-lead;
     max-width: 50ch;
   }
 }
