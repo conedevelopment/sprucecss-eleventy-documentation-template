@@ -1,7 +1,7 @@
 @use 'sprucecss/scss/spruce';
 
 .docs-footer {
-  @include spruce.layout-grid(spruce.spacer(l), 14rem);
+  @include spruce.layout-grid(spruce.spacer(l), 12rem);
   padding-block: spruce.get-css-variable(--section-gap);
 
   &__logo {

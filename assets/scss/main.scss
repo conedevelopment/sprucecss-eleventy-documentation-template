@@ -17,7 +17,31 @@ body {
   position: relative;
 
   &::before {
-    background: linear-gradient(325deg, #f5f7ff, transparent);
+    background-image: linear-gradient(
+      325deg,
+      hsl(228deg 100% 98%) 0%,
+      hsl(228deg 100% 98%) 5%,
+      hsl(228deg 100% 98%) 10%,
+      hsl(228deg 100% 98%) 15%,
+      hsl(228deg 100% 98%) 20%,
+      hsl(228deg 100% 99%) 25%,
+      hsl(228deg 100% 99%) 29%,
+      hsl(228deg 100% 99%) 34%,
+      hsl(228deg 100% 99%) 39%,
+      hsl(228deg 100% 99%) 44%,
+      hsl(228deg 100% 99%) 48%,
+      hsl(228deg 100% 99%) 53%,
+      hsl(228deg 100% 99%) 58%,
+      hsl(228deg 100% 99%) 62%,
+      hsl(228deg 100% 99%) 67%,
+      hsl(228deg 100% 99%) 72%,
+      hsl(228deg 100% 100%) 76%,
+      hsl(228deg 100% 100%) 81%,
+      hsl(228deg 100% 100%) 86%,
+      hsl(228deg 100% 100%) 91%,
+      hsl(228deg 100% 100%) 95%,
+      hsl(0deg 0% 100%) 100%
+    );
     content: '';
     inset: 0;
     position: absolute;
