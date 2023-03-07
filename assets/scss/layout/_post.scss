@@ -5,6 +5,7 @@
 
   display: grid;
   gap: spruce.get-css-variable(--container-gap);
+  grid-template-columns: var(--gtc);
 
   @include spruce.breakpoint(md) { --gtc: minmax(0, 1fr) minmax(0, 20rem); }
 }
