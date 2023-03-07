@@ -25,5 +25,7 @@
   &__body {
     display: flex;
     flex-direction: column;
+    margin-inline: auto;
+    max-width: 70rem;
   }
 }
