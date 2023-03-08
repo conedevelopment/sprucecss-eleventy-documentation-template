@@ -11,7 +11,7 @@
   color-scheme: dark;
 
   body::before { display: none; }
-  .docs-card { border: 1px solid spruce.color(border); }
+  .card { border: 1px solid spruce.color(border); }
 
   select.form-control:not([multiple]):not([size]) {
     @include spruce.field-icon(

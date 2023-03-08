@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 20rem;
-  padding: spruce.spacer-clamp(m, l);
+  padding: spruce.spacer(l) spruce.spacer-clamp(m, l);
 
   &__serial-number {
     color: spruce.color(primary);

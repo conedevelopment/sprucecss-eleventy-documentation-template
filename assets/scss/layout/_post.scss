@@ -22,6 +22,8 @@
   }
 
   .post-heading {
-    grid-column: 1 / 3;
+    @include spruce.breakpoint(md) {
+      grid-column: 1 / 3;
+    }
   }
 }
