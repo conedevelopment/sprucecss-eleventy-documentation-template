@@ -1,11 +1,11 @@
-@forward 'docs-header';
+@forward 'header';
 @forward 'breadcrumb-list';
 @forward 'open-search';
 @forward 'theme-switcher';
-@forward 'docs-heading';
-@forward 'toc';
+@forward 'post-heading';
 @forward 'post-content';
+@forward 'toc';
 @forward 'sidebar';
 @forward 'sidebar-section';
-@forward 'docs-card';
-@forward 'docs-footer';
+@forward 'card';
+@forward 'footer';

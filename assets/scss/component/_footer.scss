@@ -1,14 +1,16 @@
 @use 'sprucecss/scss/spruce';
 
-.docs-footer {
+.footer {
+  --logo-height: 4rem;
+  --logo-width: 4rem;
+
   @include spruce.layout-grid(spruce.spacer(l), 12rem);
   padding-block: spruce.get-css-variable(--section-gap);
 
   &__logo {
-    --dimension: 4rem;
     display: flex;
-    height: var(--dimension);
-    width: var(--dimension);
+    height: var(--logo-height);
+    width: var(--logo-width);
   }
 
   &__socials {

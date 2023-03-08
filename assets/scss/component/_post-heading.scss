@@ -1,12 +1,7 @@
 @use 'sprucecss/scss/spruce';
 
-.docs-heading {
+.post-heading {
   @include spruce.layout-stack(s);
-  margin-block: spruce.spacer-clamp(xl, xxl);
-
-  @include spruce.breakpoint(sm) {
-    margin-block: spruce.spacer-clamp(xl, xxl) spruce.spacer-clamp(m, l);
-  }
 
   &__title {
     font-size: spruce.responsive-font-size(3.5rem, 30, '4.5vw');

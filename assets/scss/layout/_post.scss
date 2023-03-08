@@ -6,6 +6,7 @@
   display: grid;
   gap: spruce.get-css-variable(--container-gap);
   grid-template-columns: var(--gtc);
+  margin-block-start: spruce.spacer-clamp(xl, xxl);
 
   @include spruce.breakpoint(md) { --gtc: minmax(0, 1fr) minmax(0, 15rem); }
 
@@ -15,8 +16,12 @@
     }
 
     .toc {
-      inset-block-start: spruce.spacer(m);
+      inset-block-start: spruce.spacer(l);
       position: sticky;
     }
+  }
+
+  .post-heading {
+    grid-column: 1 / 3;
   }
 }

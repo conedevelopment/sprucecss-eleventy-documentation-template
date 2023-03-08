@@ -1,0 +1,8 @@
+@use 'sprucecss/scss/spruce';
+
+.l-front-page {
+  display: grid;
+  gap: spruce.get-css-variable(--container-gap);
+  grid-template-columns: minmax(0, 1fr);
+  margin-block-start: spruce.spacer-clamp(xl, xxl);
+}

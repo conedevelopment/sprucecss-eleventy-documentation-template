@@ -1,7 +1,8 @@
 @use 'sprucecss/scss/spruce';
 
 .sidebar {
-  --dimension: 3.5rem;
+  --logo-height: 3.5rem;
+  --logo-width: 3.5rem;
 
   display: flex;
   flex-direction: column;
@@ -16,18 +17,18 @@
   &__header {
     align-items: center;
     display: flex;
-    height: var(--dimension);
+    height: var(--logo-height);
     justify-content: space-between;
 
     @include spruce.breakpoint(md) {
-      --dimension: 4rem;
+      --logo-height: 4rem;
     }
   }
 
   &__logo {
     display: inline-flex;
-    height: var(--dimension);
-    width: var(--dimension);
+    height: var(--logo-height);
+    width: var(--logo-width);
   }
 
   &__toggle {

@@ -9,10 +9,11 @@ $color-secondary: hsl(186 100% 60%);
   $color-secondary: $color-secondary,
   $colors: (
     base: (
+      background: hsl(270 100% 99%),
       border: hsl(0 0% 0% / 5%),
+      code-background: hsl(224 94% 97%),
       heading: hsl(232 68% 11%),
-      text: hsl(208 22% 34%),
-      code-background: hsl(224 94% 97%)
+      text: hsl(208 22% 34%)
     ),
     breadcrumb: (
       separator: hsl(0 0% 80%)

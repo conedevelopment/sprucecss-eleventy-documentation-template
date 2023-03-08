@@ -10,7 +10,7 @@
     --gtc: minmax(0, 15rem) minmax(0, 1fr);
     gap: spruce.get-css-variable(--container-gap);
   }
-  @include spruce.breakpoint(md) { --gtc: minmax(0, 17.5rem) minmax(0, 1fr); }
+  @include spruce.breakpoint(md) {--gtc: minmax(0, 17.5rem) minmax(0, 1fr); }
   @include spruce.breakpoint(lg) { --gtc: minmax(0, 20rem) minmax(0, 1fr); }
 
   &__sidebar {

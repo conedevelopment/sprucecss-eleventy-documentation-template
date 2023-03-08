@@ -2,8 +2,8 @@
 
 div(class='l-card')
   each doc in docs
-    div(class='docs-card')
-      span(class='docs-card__serial-number')= `0${n++}`
-      h2(class='docs-card__title')= doc.title
+    div(class='card')
+      span(class='card__serial-number')= `0${n++}`
+      h2(class='card__title')= doc.title
       p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi soluta eum mollitia reprehenderit praesentium hic.
       a(href='#' class='btn btn--primary') Read More

@@ -1,6 +1,6 @@
 @forward 'config';
 @forward 'layout';
-@forward 'components';
+@forward 'component';
 
 @use 'sprucecss/scss/spruce';
 
@@ -15,7 +15,7 @@
 
 body {
   position: relative;
-
+  /*
   &::before {
     background-image: linear-gradient(
       325deg,
@@ -47,4 +47,5 @@ body {
     position: absolute;
     z-index: -1;
   }
+  */
 }
