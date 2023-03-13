@@ -14,12 +14,10 @@ header(class='header')
       span(class='open-search__caption') Search
       span(class='btn btn--outline-primary btn--sm open-search__btn') Ctrl K
     div(id='theme-switcher' class='theme-switcher')
-      span(class='theme-switcher__icon')
-        +icon('system-mode', 'icon-system')
-        +icon('light-mode', 'icon-light')
-        +icon('dark-mode', 'icon-dark')
-      select(id='select-theme-mode' class='form-control form-control--sm theme-switcher__select' aria-label='Select a theme')
-        option(value='system') System
-        option(value='light') Light
-        option(value='dark') Dark
+      button(class='theme-switcher__system-mode' aria-label='Switch to light mode' data-action='light')
+        +icon('system-mode')
+      button(class='switcher__light-mode' aria-label='Switch to dark mode' data-action='dark')
+        +icon('light-mode')
+      button(class='theme-switcher__dark-mode' aria-label='Switch to system mode' data-action='system')
+        +icon('dark-mode')
 
