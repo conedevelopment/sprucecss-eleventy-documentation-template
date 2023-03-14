@@ -22,6 +22,7 @@
 
     @include spruce.breakpoint(md) {
       --logo-height: 4rem;
+      --logo-width: 4rem;
     }
   }
 

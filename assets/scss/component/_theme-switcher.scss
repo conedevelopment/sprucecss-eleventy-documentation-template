@@ -20,6 +20,10 @@
     justify-content: center;
     height: var(--dimension);
     width: var(--dimension);
+
+    > * {
+      pointer-events: none;
+    }
   }
 
   svg {
