@@ -5,11 +5,9 @@
   display: inline-flex;
   position: relative;
 
-  @at-root {
-    [data-theme-mode='system'] &__light-mode { display: flex; }
-    [data-theme-mode='light'] &__dark-mode { display: flex; }
-    [data-theme-mode='dark'] &__system-mode { display: flex; }
-  }
+  &[data-theme-mode='system'] &__system-mode { display: flex; }
+  &[data-theme-mode='light'] &__light-mode { display: flex; }
+  &[data-theme-mode='dark'] &__dark-mode { display: flex; }
 
   button {
     --dimension: 2rem;
