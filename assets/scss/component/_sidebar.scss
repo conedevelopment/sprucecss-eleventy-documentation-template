@@ -33,6 +33,8 @@
   }
 
   &__toggle {
+    border-radius: 2rem;
+
     @include spruce.breakpoint(sm) {
       display: none;
     }
