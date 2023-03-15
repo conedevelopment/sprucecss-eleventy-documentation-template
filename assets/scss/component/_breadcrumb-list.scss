@@ -4,6 +4,7 @@
   @include spruce.clear-list;
   align-items: center;
   display: flex;
+  font-family: spruce.$font-family-heading;
   max-width: 100%;
   overflow-x: auto;
   white-space: nowrap;
@@ -22,6 +23,15 @@
       margin-inline: 0.75em;
       transform: rotate(-45deg);
       width: 0.4em;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
   }
 
