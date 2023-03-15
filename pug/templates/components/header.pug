@@ -14,10 +14,10 @@ header(class='header')
       span(class='open-search__caption') Search
       span(class='btn btn--outline-primary btn--sm open-search__btn') Ctrl K
     div(id='theme-switcher' class='theme-switcher')
-      button(class='theme-switcher__system-mode' title='Switch to light mode' data-action='light')
-        +icon('system-mode')
-      button(class='theme-switcher__light-mode' title='Switch to dark mode' data-action='dark')
-        +icon('light-mode')
-      button(class='theme-switcher__dark-mode' title='Switch to system mode' data-action='system')
-        +icon('dark-mode')
+      button(class='btn btn--outline-primary btn--sm btn--icon theme-switcher__system-mode' aria-label='Switch to light mode' data-action='light')
+        +icon('system-mode', 'btn__icon')
+      button(class='btn btn--outline-primary btn--sm btn--icon theme-switcher__light-mode' aria-label='Switch to dark mode' data-action='dark')
+        +icon('light-mode', 'btn__icon')
+      button(class='btn btn--outline-primary btn--sm btn--icon theme-switcher__dark-mode' aria-label='Switch to system mode' data-action='system')
+        +icon('dark-mode', 'btn__icon')
 

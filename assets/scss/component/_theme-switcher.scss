@@ -10,22 +10,10 @@
   &[data-theme-mode='dark'] &__dark-mode { display: flex; }
 
   button {
-    --dimension: 2rem;
-
-    @include spruce.clear-btn;
-    align-items: center;
     display: none;
-    justify-content: center;
-    height: var(--dimension);
-    width: var(--dimension);
 
     > * {
       pointer-events: none;
     }
-  }
-
-  svg {
-    height: 1.25em;
-    width: 1.25em;
   }
 }

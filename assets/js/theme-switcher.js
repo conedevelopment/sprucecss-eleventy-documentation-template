@@ -1,7 +1,6 @@
 (() => {
   const themeSwitcher = document.querySelector('#theme-switcher');
-  const systemMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  const preferredTheme = localStorage.getItem('preferred-theme') ?? systemMode;
+  const preferredTheme = localStorage.getItem('preferred-theme') ?? 'system';
 
   themeSwitcher.addEventListener('click', (e) => {
     if (!e.target.matches('[data-action]')) {
