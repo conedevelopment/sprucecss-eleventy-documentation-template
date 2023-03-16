@@ -13,6 +13,7 @@
     "start": "npm-run-all --parallel pug:dev sass:dev browser-sync"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
     "browser-sync": "^2.27.11",
     "del-cli": "^5.0.0",
     "js-beautify": "^1.14.7",

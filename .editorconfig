@@ -5,7 +5,16 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-indent_size = 2
+indent_size = 4
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
+block_comment_start = /*
+block_comment = *
+block_comment_end = */
+
+[*.{scss,css,js,json,yml}]
+indent_size = 2
+
+[acf-json/*.json]
+insert_final_newline = unset
