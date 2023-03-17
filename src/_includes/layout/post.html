@@ -1,0 +1,30 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+<div class="l-post">
+    <div class="post-heading">
+      <ol class="breadcrumb-list post-heading__breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><span aria-current="page">Why Mountains Is No Friend to Small Business</span></li>
+      </ol>
+      <h1 class="post-heading__title">{{ title }}</h1>
+    </div>
+    <div class="l-post__toc toc" aria-labelledby="toc-title">
+      <section class="toc" aria-labelledby="toc-title">
+        <h3 class="toc__title" id="toc-title">On this page</h3>
+        <nav class="toc__navigation">
+          <ol>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#patterns-and-components">Patterns and Components</a></li>
+            <li><a href="#spruce-css-is-needed-but-you-can-switch-it">Spruce CSS Is Needed, but You Can Switch It</a></li>
+            <li><a href="#contribution">Contribution</a></li>
+          </ol>
+        </nav>
+      </section>
+    </div>
+    <div class="l-post__content post-content">
+        {{ content | safe }}
+    </div>
+  </div>
+{% endblock %}

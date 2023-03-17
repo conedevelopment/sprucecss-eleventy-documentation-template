@@ -1,27 +1,34 @@
 {
+  "name": "11ty-documentation-theme",
+  "version": "1.0.0",
+  "author": "Cone (https://conedevelopment.com)",
+  "main": ".eleventy.js",
   "scripts": {
-    "beautify": "js-beautify --type html --indent-size 2 --inline i,b,strong,span html/**/*.html",
-    "browser-sync": "browser-sync start --server --startPath \"html/index.html\" --files \"**/*\" --directory --no-notify --no-open",
-    "delete:dev-folder": "del-cli --force assets/css html",
-    "prod": "npm-run-all delete:dev-folder pug:prod sass:prod beautify",
-    "pug:dev": "pug --obj pug/assets/data.json --watch pug/templates/page --out html/ --pretty",
-    "pug:prod": "pug --obj pug/assets/data.json pug/templates/page --out html/ --pretty",
-    "sass:dev": "sass --load-path=node_modules --watch --no-source-map --update --style=expanded assets/scss:assets/css",
-    "sass:prod": "sass --load-path=node_modules --load-path=scss --no-source-map --style=compressed assets/scss:assets/css",
-    "sass:lint": "stylelint assets/scss/**/*.scss",
-    "sass:lint:fix": "stylelint assets/scss/**/*.scss --fix",
-    "start": "npm-run-all --parallel pug:dev sass:dev browser-sync"
+    "delete:dist": "del-cli --force dist",
+    "eleventy:dev": "npx eleventy --serve",
+    "eleventy:prod": "npx eleventy",
+    "prod": "npm-run-all delete:dist eleventy:prod sass:prod",
+    "sass:dev": "sass --load-path=node_modules --watch --no-source-map --update --style=expanded src/scss:src/css",
+    "sass:prod": "sass --load-path=node_modules --no-source-map --style=compressed src/scss:src/css",
+    "sass:lint": "stylelint src/scss/**/*.scss",
+    "sass:lint:fix": "stylelint src/scss/**/*.scss --fix",
+    "start": "npm-run-all --parallel eleventy:dev sass:dev"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "browser-sync": "^2.27.11",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "del-cli": "^5.0.0",
-    "js-beautify": "^1.14.7",
+    "moment": "^2.29.4",
     "npm-run-all": "^4.1.5",
-    "pug-cli": "^1.0.0-alpha6",
     "sass": "^1.58.3",
     "sprucecss": "^1.2.1",
     "stylelint": "^14.16.0",
     "stylelint-config-sass-guidelines": "^9.0.1"
+  },
+  "engines": {
+    "node": "^18.12",
+    "npm": "^9.2",
+    "yarn": "please-use-npm"
   }
 }
