@@ -1186,6 +1186,15 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
   }
 }
 
+.skip-link {
+  inset: -50vh auto auto 1.5rem;
+  position: fixed;
+  z-index: 100;
+}
+.skip-link:focus {
+  inset-block-start: 1.5rem;
+}
+
 .header {
   align-items: center;
   border-block-end: 1px solid var(--spruce-base-color-border);

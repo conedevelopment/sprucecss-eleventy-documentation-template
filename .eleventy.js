@@ -5,6 +5,7 @@ module.exports = config => {
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy('./src/img/');
   config.addPassthroughCopy('./src/css/');
+  config.addPassthroughCopy('./src/js/');
   config.addPassthroughCopy('./src/font/');
 
   // Returns post items, sorted by issue order
