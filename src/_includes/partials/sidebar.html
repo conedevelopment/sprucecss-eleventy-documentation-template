@@ -18,6 +18,12 @@
     </div>
     <div class="sidebar__body">
       <div class="sidebar-section">
+        <ul>
+        {%- for post in collections.posts -%}
+            <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+        {%- endfor -%}
+        </ul>
+
         <h3 class="sidebar-section__title">Getting Started</h3>
         <nav class="sidebar-section__navigation">
           <ul>
