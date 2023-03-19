@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
-        {% include "partial/meta-info.html" %}
+        {% include "partials/meta-info.html" %}
         <link rel="stylesheet" href="/css/main.css?{{ assetHash }}">
     </head>
     <body>
@@ -17,11 +17,11 @@
 
         <div id="content" tabindex="-1" class="container container--wide">
             <main class="l-main" id="content">
-                {% include "partial/sidebar.html" %}
+                {% include "partials/sidebar.html" %}
                 <div class="l-main__body">
-                    {% include "partial/header.html" %}
+                    {% include "partials/header.html" %}
                     {% block content %}{% endblock %}
-                    {% include "partial/footer.html" %}
+                    {% include "partials/footer.html" %}
                 </div>
             </main>
         </div>

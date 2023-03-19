@@ -1,4 +1,4 @@
 ---
 title: "Home page, hey there"
-layout: "layout/front-page.html"
+layout: "layouts/front-page.html"
 ---

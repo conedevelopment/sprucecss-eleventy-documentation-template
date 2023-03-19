@@ -1,4 +1,14 @@
+const markdownIt = require("markdown-it");
+
 module.exports = config => {
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+
+  config.setLibrary("md", markdownIt(options));
+
   // Put robots.txt in root
   config.addPassthroughCopy({ './src/robots.txt': '/robots.txt' });
 
