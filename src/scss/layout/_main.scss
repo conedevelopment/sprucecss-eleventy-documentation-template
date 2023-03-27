@@ -1,4 +1,4 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .l-main {
   --gtc: minmax(0, 1fr);
@@ -6,18 +6,18 @@
   display: grid;
   grid-template-columns: var(--gtc);
 
-  @include spruce.breakpoint(sm) {
+  @include breakpoint(sm) {
     --gtc: minmax(0, 15rem) minmax(0, 1fr);
-    gap: spruce.get-css-variable(--container-gap);
+    gap: get-css-variable(--container-gap);
   }
-  @include spruce.breakpoint(md) {--gtc: minmax(0, 17.5rem) minmax(0, 1fr); }
-  @include spruce.breakpoint(lg) { --gtc: minmax(0, 20rem) minmax(0, 1fr); }
+  @include breakpoint(md) {--gtc: minmax(0, 17.5rem) minmax(0, 1fr); }
+  @include breakpoint(lg) { --gtc: minmax(0, 20rem) minmax(0, 1fr); }
 
   &__sidebar {
-    @include spruce.breakpoint(sm) {
-      border-inline-end: 1px solid spruce.color(border);
-      inset-block-start: spruce.spacer(l);
-      max-height: calc(100vh - #{spruce.spacer(l)} * 2);
+    @include breakpoint(sm) {
+      border-inline-end: 1px solid color(border);
+      inset-block-start: spacer(l);
+      max-height: calc(100vh - #{spacer(l)} * 2);
       position: sticky;
     }
   }
@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     margin-inline: auto;
-    max-width: spruce.get-css-variable(--max-content-width);
+    max-width: get-css-variable(--max-content-width);
     width: 100%;
   }
 }

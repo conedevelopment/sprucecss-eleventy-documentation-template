@@ -1,8 +1,8 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .l-front-page {
   display: grid;
-  gap: spruce.spacer(l);
+  gap: spacer(l);
   grid-template-columns: minmax(0, 1fr);
-  margin-block-start: spruce.spacer-clamp(xl, xxl);
+  margin-block-start: spacer-clamp(xl, xxl);
 }

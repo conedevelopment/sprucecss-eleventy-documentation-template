@@ -1,5 +1,5 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .l-card {
-  @include spruce.layout-grid(l, 22.5rem);
+  @include layout-grid(l, 22.5rem);
 }

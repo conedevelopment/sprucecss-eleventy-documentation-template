@@ -1,17 +1,17 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .header {
   align-items: center;
-  border-block-end: 1px solid spruce.color(border);
+  border-block-end: 1px solid color(border);
   display: flex;
   flex-wrap: wrap;
-  gap: spruce.spacer(xs) spruce.spacer-clamp(m, l);
+  gap: spacer(xs) spacer-clamp(m, l);
   height: var(--height);
   justify-content: space-between;
   order: 2;
-  padding-block: spruce.spacer(m);
+  padding-block: spacer(m);
 
-  @include spruce.breakpoint(sm) {
+  @include breakpoint(sm) {
     order: -1;
   }
 
@@ -19,30 +19,30 @@
     align-items: center;
     display: flex;
     flex-grow: 1;
-    gap: spruce.spacer-clamp(s, m);
+    gap: spacer-clamp(s, m);
   }
 
   &__actions {
     align-items: center;
     display: flex;
-    gap: spruce.spacer-clamp(s, m);
+    gap: spacer-clamp(s, m);
   }
 
   &__navigation {
     ul {
-      @include spruce.clear-list;
+      @include clear-list;
       align-items: center;
       background-color: transparent;
       display: flex !important;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: spruce.spacer(m);
+      gap: spacer(m);
       inset: auto;
       padding: 0;
       position: relative;
 
-      @include spruce.breakpoint(lg) {
-        gap: spruce.spacer(l);
+      @include breakpoint(lg) {
+        gap: spacer(l);
       }
     }
 
@@ -51,11 +51,11 @@
     }
 
     a {
-      color: spruce.color(heading);
+      color: color(heading);
       text-decoration: none;
 
       &:hover {
-        color: spruce.color(primary);
+        color: color(primary);
       }
 
       &[aria-current='page'] {

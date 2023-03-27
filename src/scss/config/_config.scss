@@ -1,43 +1,50 @@
 @use 'sass:color';
 @use 'dark-colors' as dark;
 
-$color-primary: hsl(238 100% 50%);
-$color-secondary: hsl(186 100% 60%);
+$color-primary: hsl(238deg 100% 50%);
+$color-secondary: hsl(186deg 100% 60%);
 
 @use 'sprucecss/scss/spruce' with (
+  $btn: (
+    'font-family': #{'Manrope', sans-serif},
+    'font-weight': 700,
+    'icon-padding-sm': 0.6em,
+    'padding-lg': 1em 2em,
+    'padding-sm': 0.6em,
+    'padding': 0.75em 1.5em,
+  ),
   $color-primary: $color-primary,
   $color-secondary: $color-secondary,
   $colors: (
-    base: (
-      background: hsl(270 100% 99%),
-      border: hsl(0 0% 0% / 5%),
-      code-background: hsl(224 94% 97%),
-      heading: hsl(232 68% 11%),
-      text: hsl(208 22% 34%)
+    'base': (
+      'background': hsl(270deg 100% 99%),
+      'border': hsl(0deg 0% 0% / 5%),
+      'code-background': hsl(224deg 94% 97%),
+      'heading': hsl(232deg 68% 11%),
+      'text': hsl(208deg 22% 34%)
     ),
-    breadcrumb: (
-      separator: hsl(0 0% 80%)
+    'breadcrumb': (
+      'separator': hsl(0deg 0% 80%)
     ),
-    card: (
-      background: hsl(0 0% 100%)
+    'card': (
+      'background': hsl(0deg 0% 100%)
     ),
-    search: (
-      icon: hsl(229 26% 48% / 25%)
+    'search': (
+      'icon': hsl(229deg 26% 48% / 25%)
     ),
-    scrollbar: (
-      thumb-background: hsl(229 26% 48% / 15%),
-      thumb-background-hover:	hsl(0 0% 0% / 25%),
-      track-background:	hsl(226 100% 87% / 15%)
+    'scrollbar': (
+      'thumb-background': hsl(229deg 26% 48% / 15%),
+      'thumb-background-hover':	hsl(0deg 0% 0% / 25%),
+      'track-background':	hsl(226deg 100% 87% / 15%)
     )
   ),
   $dark-colors: dark.$colors,
-  $font-family-base: #{'Open Sans', sans-serif},
-  $font-family-heading: #{'Manrope', sans-serif},
-  $btn-font-weight: 700,
-  $btn-icon-padding-sm: 0.6em,
-  $btn-padding: 0.75em 1.5em,
-  $btn-padding-sm: 0.6em,
-  $btn-padding-lg: 1em 2em,
-  $btn-font-family: #{'Manrope', sans-serif},
-  $heading-font-weight: 800
+  $typography: (
+    'family-base': #{'Open Sans', sans-serif},
+    'family-heading': #{'Manrope', sans-serif},
+    'heading-font-weight': 800,
+  ),
+  $settings: (
+    'css-custom-properties': true,
+  )
 );

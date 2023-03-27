@@ -1,22 +1,22 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
-@include spruce.generate-color-variables(
-  spruce.$dark-colors,
+@include generate-color-variables(
+  $dark-colors,
   ':root[data-theme-mode="dark"]'
 );
 
 [data-theme-mode='dark'] {
-  @include spruce.selection(primary);
+  @include selection(primary);
 
   color-scheme: dark;
 
   body::before { display: none; }
-  .card { border: 1px solid spruce.color(border); }
+  .card { border: 1px solid color(border); }
 
   select.form-control:not([multiple]):not([size]) {
-    @include spruce.field-icon(
-      spruce.$select-icon,
-      spruce.color(select-foreground, form, true, spruce.$dark-colors)
+    @include field-icon(
+      config('select', $form-icon, false),
+      color(select-foreground, form, true, $dark-colors)
     );
   }
 }

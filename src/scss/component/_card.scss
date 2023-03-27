@@ -1,28 +1,28 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .card {
   $this: &;
 
-  @include spruce.a11y-card-link('.card__link', true);
-  background-color: spruce.color(background, card);
-  border-radius: spruce.$border-radius-sm;
-  box-shadow: spruce.get-css-variable(--box-shadow);
+  @include a11y-card-link('.card__link', true);
+  background-color: color(background, card);
+  border-radius: config('border-radius-sm', $display);
+  box-shadow: get-css-variable(--box-shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 20rem;
-  padding: spruce.spacer(l) spruce.spacer-clamp(m, l);
+  padding: spacer(l) spacer-clamp(m, l);
 
   &__serial-number {
-    color: spruce.color(primary);
-    font-family: spruce.$font-family-heading;
-    font-size: spruce.responsive-font-size(4rem, 30, '4vw + 1rem');
+    color: color(primary);
+    font-family: config('family-heading', $typography);
+    font-size: responsive-font-size(4rem, 30, '4vw + 1rem');
     font-weight: 800;
     line-height: 0.8;
   }
 
   &__title {
-    font-size: spruce.font-size(h3);
-    margin-block: spruce.spacer(m) 0;
+    font-size: font-size(h3);
+    margin-block: spacer(m) 0;
   }
 }

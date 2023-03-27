@@ -1,28 +1,28 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .l-post {
   --gtc: minmax(0, 1fr);
 
   display: grid;
-  gap: spruce.get-css-variable(--container-gap);
+  gap: get-css-variable(--container-gap);
   grid-template-columns: var(--gtc);
-  margin-block-start: spruce.spacer-clamp(xl, xxl);
+  margin-block-start: spacer-clamp(xl, xxl);
 
-  @include spruce.breakpoint(md) { --gtc: minmax(0, 1fr) minmax(0, 15rem); }
+  @include breakpoint(md) { --gtc: minmax(0, 1fr) minmax(0, 15rem); }
 
   &__toc {
-    @include spruce.breakpoint(md) {
+    @include breakpoint(md) {
       order: 2;
     }
 
     .toc {
-      inset-block-start: spruce.spacer(l);
+      inset-block-start: spacer(l);
       position: sticky;
     }
   }
 
   .post-heading {
-    @include spruce.breakpoint(md) {
+    @include breakpoint(md) {
       grid-column: 1 / 3;
     }
   }

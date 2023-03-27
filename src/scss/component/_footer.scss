@@ -1,11 +1,11 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .footer {
   --logo-height: 4rem;
   --logo-width: 4rem;
 
-  @include spruce.layout-grid(spruce.spacer(l), 12rem);
-  padding-block: spruce.get-css-variable(--section-gap);
+  @include layout-grid(spacer(l), 12rem);
+  padding-block: get-css-variable(--section-gap);
 
   &__logo {
     display: flex;
@@ -16,15 +16,15 @@
   &__socials {
     align-items: center;
     display: flex;
-    gap: spruce.spacer(s);
+    gap: spacer(s);
 
     a {
-      color: spruce.color(heading);
+      color: color(heading);
       display: inline-flex;
 
       &:hover,
       &:focus {
-        color: spruce.color(primary);
+        color: color(primary);
       }
     }
 
@@ -36,22 +36,22 @@
   }
 
   &__title {
-    font-size: spruce.font-size(h4);
+    font-size: font-size(h4);
   }
 
   &__navigation {
-    @include spruce.clear-list;
-    @include spruce.layout-stack(xs);
+    @include clear-list;
+    @include layout-stack(xs);
 
     a {
-      color: spruce.color(text);
+      color: color(text);
       text-decoration: none;
 
       &:hover,
       &:focus,
       &:active,
       &[aria-current='page'] {
-        color: spruce.color(primary);
+        color: color(primary);
       }
 
       &[aria-current='page'] {
@@ -61,6 +61,6 @@
   }
 
   &__column {
-    @include spruce.layout-stack(m);
+    @include layout-stack(m);
   }
 }

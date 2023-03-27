@@ -1,16 +1,16 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .post-heading {
-  @include spruce.layout-stack(s);
+  @include layout-stack(s);
 
   &__title {
-    font-size: spruce.responsive-font-size(3.5rem, 30, '4.5vw');
-    line-height: spruce.$line-height-sm;
+    font-size: responsive-font-size(3.5rem, 30, '4.5vw');
+    line-height: config('line-height-sm', $typography);
     max-width: 18ch;
   }
 
   &__description {
-    font-size: spruce.$font-size-lead;
+    font-size: config('size-lead', $typography);
     max-width: 50ch;
   }
 }
