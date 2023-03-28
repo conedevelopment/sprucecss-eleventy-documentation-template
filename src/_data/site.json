@@ -1,7 +1,13 @@
 {
+  "authorEmail": "hello@conedevelopment.com",
+  "authorName": "Cone",
+  "copyright": "Some rights reserved",
   "name": "Eleventy Documentation Theme",
   "slogen": "An Eleventy theme for documentation sites",
-  "url": "https://conedevelopment.com",
-  "authorName": "Adam Laki",
-  "authorEmail": "info@adamlaki.com"
+  "social": {
+    "twitter": "https://twitter.com/conedevelopment",
+    "github": "https://github.com/conedevelopment",
+    "discord": "https://github.com/conedevelopment"
+  },
+  "url": "https://conedevelopment.com"
 }

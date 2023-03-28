@@ -4,7 +4,6 @@
 <html lang="en">
     <head>
         <script src="/js/theme-detection.js?{{ assetHash }}"></script>
-        <script src="/js/theme-change-assets.js?{{ assetHash }}"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -15,16 +14,19 @@
     <body>
         <a class="btn btn--primary skip-link" href="#content">Skip to content</a>
 
-        <div id="content" tabindex="-1" class="container container--wide">
-            <main class="l-main" id="content">
+        <div class="container container--wide">
+            <div class="l-main">
                 {% include "partials/sidebar.html" %}
                 <div class="l-main__body">
                     {% include "partials/header.html" %}
-                    {% block content %}{% endblock %}
+                    <main id="content">
+                        {% block content %}{% endblock %}
+                    </main>
                     {% include "partials/footer.html" %}
                 </div>
-            </main>
+            </div>
         </div>
+        <script src="/js/theme-change-assets.js?{{ assetHash }}"></script>
         <script src="/js/navigation.js?{{ assetHash }}"></script>
         <script src="/js/theme-switcher.js?{{ assetHash }}"></script>
     </body>

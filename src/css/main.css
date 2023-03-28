@@ -461,8 +461,7 @@ template {
   --spruce-size-lg: 1.125rem;
   --spruce-size-ratio: 1.25;
   --spruce-size-sm: 0.875rem;
-  --spruce-weight-heading: 700;
-  --spruce-heading-font-weight: 800;
+  --spruce-weight-heading: 800;
   --spruce-border-radius-lg: 0.725rem;
   --spruce-border-radius-sm: 0.325rem;
   --spruce-container-width: 84rem;

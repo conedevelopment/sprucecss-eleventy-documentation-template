@@ -1,0 +1,46 @@
+{
+  "sidebar": [
+    {
+      "title": "Getting Started",
+      "items": [
+        {
+          "text": "Introduction",
+          "url": "/getting-started/introduction/"
+        },
+        {
+          "text": "Installation",
+          "url": "/getting-started/installation/"
+        },
+        {
+          "text": "Configuration",
+          "url": "/getting-started/configuration/"
+        },
+        {
+          "text": "Customization",
+          "url": "/getting-started/customization/"
+        }
+      ]
+    },
+    {
+      "title": "Spruce CSS",
+      "items": [
+        {
+          "text": "Introduction",
+          "url": "/getting-started/introduction/"
+        },
+        {
+          "text": "Installation",
+          "url": "/getting-started/installation/"
+        },
+        {
+          "text": "Configuration",
+          "url": "/getting-started/configuration/"
+        },
+        {
+          "text": "Customization",
+          "url": "/getting-started/customization/"
+        }
+      ]
+    }
+  ]
+}

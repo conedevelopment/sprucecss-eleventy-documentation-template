@@ -17,60 +17,17 @@
       </button>
     </div>
     <div class="sidebar__body">
-      <div class="sidebar-section">
-        <ul>
-        {%- for post in collections.posts -%}
-            <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-        {%- endfor -%}
-        </ul>
-
-        <h3 class="sidebar-section__title">Getting Started</h3>
-        <nav class="sidebar-section__navigation">
-          <ul>
-            <li><a aria-current="page" href="single.html">Introduction</a></li>
-            <li><a href="single.html">Installation</a></li>
-            <li><a href="single.html">Structure and Code</a></li>
-            <li><a href="single.html">Sass</a></li>
-            <li><a href="single.html">Accessibility</a></li>
-            <li><a href="single.html">Internationalization</a></li>
-            <li><a href="single.html">Print</a></li>
-            <li><a href="single.html">JS</a></li>
-            <li><a href="single.html">Contribution</a></li>
-            <li><a href="single.html">Appendix</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="sidebar-section">
-        <h3 class="sidebar-section__title">Customization</h3>
-        <nav class="sidebar-section__navigation">
-          <ul>
-            <li><a href="single.html">Settings</a></li>
-            <li><a href="single.html">Themes</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="sidebar-section">
-        <h3 class="sidebar-section__title">Sass</h3>
-        <nav class="sidebar-section__navigation">
-          <ul>
-            <li><a href="single.html">Variables</a></li>
-            <li><a href="single.html">Mixins</a></li>
-            <li><a href="single.html">Functions</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="sidebar-section">
-        <h3 class="sidebar-section__title">Elements</h3>
-        <nav class="sidebar-section__navigation">
-          <ul>
-            <li><a href="single.html">Generators</a></li>
-            <li><a href="single.html">Typography</a></li>
-            <li><a href="single.html">Tables</a></li>
-            <li><a href="single.html">Buttons</a></li>
-            <li><a href="single.html">Forms</a></li>
-            <li><a href="single.html">Media</a></li>
-          </ul>
-        </nav>
-      </div>
+        {% for navigation in navigation.sidebar %}
+            <div class="sidebar-section">
+                <h3 class="sidebar-section__title">{{ navigation.title }}</h3>
+                <nav class="sidebar-section__navigation">
+                    <ul>
+                        {% for item in navigation.items %}
+                            <li><a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        {% endfor %}
     </div>
-  </aside>
+</aside>
