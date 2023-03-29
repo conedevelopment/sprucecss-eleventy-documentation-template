@@ -8,16 +8,12 @@
           "url": "/getting-started/introduction/"
         },
         {
-          "text": "Installation",
-          "url": "/getting-started/installation/"
+          "text": "Setup",
+          "url": "/getting-started/setup/"
         },
         {
-          "text": "Configuration",
-          "url": "/getting-started/configuration/"
-        },
-        {
-          "text": "Customization",
-          "url": "/getting-started/customization/"
+          "text": "Dark Mode",
+          "url": "/getting-started/dark-mode/"
         }
       ]
     },
@@ -26,19 +22,23 @@
       "items": [
         {
           "text": "Introduction",
-          "url": "/getting-started/introduction/"
+          "url": "https://sprucecss.com/docs/getting-started/introduction/"
         },
         {
-          "text": "Installation",
-          "url": "/getting-started/installation/"
+          "text": "Themes",
+          "url": "https://sprucecss.com/docs/customization/themes/"
         },
         {
-          "text": "Configuration",
-          "url": "/getting-started/configuration/"
+          "text": "Mixins",
+          "url": "https://sprucecss.com/docs/sass/mixins/"
         },
         {
-          "text": "Customization",
-          "url": "/getting-started/customization/"
+          "text": "Forms",
+          "url": "https://sprucecss.com/docs/elements/forms/"
+        },
+        {
+          "text": "Components",
+          "url": "https://sprucecss.com/ui/getting-started/introduction/"
         }
       ]
     }

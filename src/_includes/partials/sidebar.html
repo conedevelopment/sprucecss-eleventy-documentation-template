@@ -17,13 +17,14 @@
       </button>
     </div>
     <div class="sidebar__body">
-        {% for navigation in navigation.sidebar %}
+        {% set navPages = collections.all | eleventyNavigation %}
+        {% for navigation in navPages %}
             <div class="sidebar-section">
-                <h3 class="sidebar-section__title">{{ navigation.title }}</h3>
+                <h3 class="sidebar-section__title">{{ navigation.key }}</h3>
                 <nav class="sidebar-section__navigation">
                     <ul>
-                        {% for item in navigation.items %}
-                            <li><a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a></li>
+                        {% for item in navigation.children %}
+                            <li><a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.key }}</a></li>
                         {% endfor %}
                     </ul>
                 </nav>

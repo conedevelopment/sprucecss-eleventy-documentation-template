@@ -1,4 +1,8 @@
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
 module.exports = config => {
+  config.addPlugin(eleventyNavigationPlugin);
+
   // Put robots.txt in root
   config.addPassthroughCopy({ './src/robots.txt': '/robots.txt' });
 
@@ -8,9 +12,9 @@ module.exports = config => {
   config.addPassthroughCopy('./src/js/');
   config.addPassthroughCopy('./src/font/');
 
-  // Returns post items, sorted by issue order
-  config.addCollection('posts', collection => {
-    return [...collection.getFilteredByGlob('./src/posts/*.md')];
+  // Returns content items, sorted by issue order
+  config.addCollection('content', collection => {
+    return [...collection.getFilteredByGlob('./src/content/*.md')];
   });
 
   return {
