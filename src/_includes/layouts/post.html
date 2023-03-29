@@ -3,11 +3,16 @@
 {% block content %}
 <div class="l-post">
     <div class="post-heading">
+      {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(title, { includeSelf: true }) %}
       <ol class="breadcrumb-list post-heading__breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><span aria-current="page">Why Mountains Is No Friend to Small Business</span></li>
-      </ol>
+        <li><a href="/">Home</a></li>
+        {%- for entry in breadcrumbs %}
+          <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+          </li>
+        {%- endfor %}
+        </ol>
+
       <h1 class="post-heading__title">{{ title }}</h1>
     </div>
     <div class="l-post__toc toc" aria-labelledby="toc-title">
