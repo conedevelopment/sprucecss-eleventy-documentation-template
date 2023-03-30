@@ -3,7 +3,7 @@
 .sidebar-section {
   &__title {
     color: color(heading);
-    font-size: config('size-base', $typography);
+    font-size: config('font-size-base', $typography);
     margin-block: 0;
   }
 

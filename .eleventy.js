@@ -12,6 +12,13 @@ module.exports = config => {
   config.addPassthroughCopy('./src/js/');
   config.addPassthroughCopy('./src/font/');
 
+  config.addFilter('parentFilter', function(collection, parent) {
+    console.log('######', parent);
+    if (!parent) return collection;
+      const filtered = collection.filter(item => item.data.eleventyNavigation.parent == parent)
+      return filtered;
+  });
+
   // Returns content items, sorted by issue order
   config.addCollection('content', collection => {
     return [...collection.getFilteredByGlob('./src/content/*.md')];

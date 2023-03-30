@@ -3,10 +3,17 @@
 {% block content %}
 <div class="l-post">
     <div class="post-heading">
-      <h1 class="post-heading__title">{{ title }} - LIST</h1>
+        {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(title, { includeSelf: true }) %}
+        {% include "partials/breadcrumbs.html" %}
+      <h1 class="post-heading__title">{{ title }}</h1>
     </div>
-    <div class="l-post__content post-content">
-        {{ content | safe }}
+    <div class="l-post__list">
+        {{ eleventyNavigation.key }}
+        <hr>
+
+        {% for post in collections.all | parentFilter(eleventyNavigation.key) %}
+            {{ post.data.title }}
+        {% endfor %}
     </div>
   </div>
 {% endblock %}

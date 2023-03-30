@@ -446,9 +446,15 @@ template {
 }
 
 :root {
-  --spruce-family-base: Open Sans, sans-serif;
-  --spruce-family-cursive: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Consolas, DejaVu Sans Mono, monospace;
-  --spruce-family-heading: Manrope, sans-serif;
+  --spruce-font-family-base: Open Sans, sans-serif;
+  --spruce-font-family-cursive: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Consolas, DejaVu Sans Mono, monospace;
+  --spruce-font-family-heading: Manrope, sans-serif;
+  --spruce-font-size-base: 1rem;
+  --spruce-font-size-lead: clamp(1.35rem, 2vw, 1.15rem);
+  --spruce-font-size-lg: 1.125rem;
+  --spruce-font-size-ratio: 1.25;
+  --spruce-font-size-sm: 0.875rem;
+  --spruce-font-weight-heading: 800;
   --spruce-inline-border-radius: 0.325rem;
   --spruce-inline-padding: 0.1em 0.3em;
   --spruce-line-height-base: 1.8;
@@ -456,12 +462,6 @@ template {
   --spruce-line-height-lg: 1.8;
   --spruce-line-height-md: 1.5;
   --spruce-line-height-sm: 1.2;
-  --spruce-size-base: 1rem;
-  --spruce-size-lead: clamp(1.35rem, 2vw, 1.15rem);
-  --spruce-size-lg: 1.125rem;
-  --spruce-size-ratio: 1.25;
-  --spruce-size-sm: 0.875rem;
-  --spruce-weight-heading: 800;
   --spruce-border-radius-lg: 0.725rem;
   --spruce-border-radius-sm: 0.325rem;
   --spruce-container-width: 84rem;
@@ -637,8 +637,8 @@ html {
 }
 
 body {
-  font-family: var(--spruce-family-base);
-  font-size: var(--spruce-size-base);
+  font-family: var(--spruce-font-family-base);
+  font-size: var(--spruce-font-size-base);
   line-height: var(--spruce-line-height-base);
 }
 
@@ -661,8 +661,8 @@ h4,
 h5,
 h6 {
   color: var(--spruce-base-color-heading);
-  font-family: var(--spruce-family-heading);
-  font-weight: var(--spruce-weight-heading);
+  font-family: var(--spruce-font-family-heading);
+  font-weight: var(--spruce-font-weight-heading);
   line-height: var(--spruce-line-height-heading);
 }
 
@@ -789,7 +789,7 @@ samp {
 }
 
 .lead {
-  font-size: var(--spruce-size-lead);
+  font-size: var(--spruce-font-size-lead);
 }
 
 .btn {
@@ -1004,7 +1004,6 @@ html[dir=rtl] .form-control--valid, html[dir=rtl] .form-control--invalid {
 .form-control--sm {
   --webkit-date-line-height: 1.36;
   --spruce-border-radius: 0.35em;
-  --spruce-font-size: 0.875rem;
   --spruce-padding: 0.25em 0.5em;
 }
 .form-control--sm[type=color] {
@@ -1015,7 +1014,6 @@ html[dir=rtl] .form-control--valid, html[dir=rtl] .form-control--invalid {
 }
 .form-control--lg {
   --webkit-date-line-height: 1.387;
-  --spruce-font-size: 1.125rem;
   --spruce-padding: 0.65em 1em;
 }
 .form-control--lg[type=color] {
@@ -1319,7 +1317,7 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
   padding: 0;
   align-items: center;
   display: flex;
-  font-family: var(--spruce-family-heading);
+  font-family: var(--spruce-font-family-heading);
   max-width: 100%;
   overflow-x: auto;
   white-space: nowrap;
@@ -1407,7 +1405,7 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
   max-width: 18ch;
 }
 .post-heading__description {
-  font-size: var(--spruce-size-lead);
+  font-size: var(--spruce-font-size-lead);
   max-width: 50ch;
 }
 
@@ -1554,7 +1552,7 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 
 .sidebar-section__title {
   color: var(--spruce-base-color-heading);
-  font-size: var(--spruce-size-base);
+  font-size: var(--spruce-font-size-base);
   margin-block: 0;
 }
 .sidebar-section__navigation {
@@ -1607,7 +1605,7 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 
 .card__serial-number {
   color: var(--spruce-base-color-primary);
-  font-family: var(--spruce-family-heading);
+  font-family: var(--spruce-font-family-heading);
   font-size: clamp(2.8rem, 4vw + 1rem, 4rem);
   font-weight: 800;
   line-height: 0.8;

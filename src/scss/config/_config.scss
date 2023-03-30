@@ -40,9 +40,9 @@ $color-secondary: hsl(186deg 100% 60%);
   ),
   $dark-colors: dark.$colors,
   $typography: (
-    'family-base': #{'Open Sans', sans-serif},
-    'family-heading': #{'Manrope', sans-serif},
-    'weight-heading': 800,
+    'font-family-base': #{'Open Sans', sans-serif},
+    'font-family-heading': #{'Manrope', sans-serif},
+    'font-weight-heading': 800,
   ),
   $settings: (
     'css-custom-properties': true,

@@ -15,7 +15,7 @@
 
   &__serial-number {
     color: color(primary);
-    font-family: config('family-heading', $typography);
+    font-family: config('font-family-heading', $typography);
     font-size: responsive-font-size(4rem, 30, '4vw + 1rem');
     font-weight: 800;
     line-height: 0.8;

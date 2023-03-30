@@ -10,7 +10,7 @@
   }
 
   &__description {
-    font-size: config('size-lead', $typography);
+    font-size: config('font-size-lead', $typography);
     max-width: 50ch;
   }
 }
