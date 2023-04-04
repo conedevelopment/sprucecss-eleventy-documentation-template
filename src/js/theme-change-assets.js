@@ -11,8 +11,6 @@
     });
   }
 
-  console.log(htmlElement.getAttribute('data-theme-mode') === 'system' ? systemMode : htmlElement.getAttribute('data-theme-mode'));
-
   changeAssets(htmlElement.getAttribute('data-theme-mode') === 'system' ? systemMode : htmlElement.getAttribute('data-theme-mode'));
 
   const observer = new MutationObserver(() => {

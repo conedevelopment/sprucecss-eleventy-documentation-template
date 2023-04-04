@@ -4,7 +4,7 @@ summary: 'Today more people and experts write about accessibility. For the bette
 date: '2022-07-24'
 eleventyNavigation:
   key: Dark Mode
-  parent: Getting Started
+  parent: Customization
   order: 3
 ---
 

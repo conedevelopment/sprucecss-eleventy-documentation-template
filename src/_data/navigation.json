@@ -1,5 +1,5 @@
 {
-  "sidebar": [
+  "footer": [
     {
       "title": "Getting Started",
       "items": [
@@ -10,35 +10,15 @@
         {
           "text": "Setup",
           "url": "/getting-started/setup/"
-        },
-        {
-          "text": "Dark Mode",
-          "url": "/getting-started/dark-mode/"
         }
       ]
     },
     {
-      "title": "Spruce CSS",
+      "title": "Customization",
       "items": [
         {
-          "text": "Introduction",
-          "url": "https://sprucecss.com/docs/getting-started/introduction/"
-        },
-        {
-          "text": "Themes",
-          "url": "https://sprucecss.com/docs/customization/themes/"
-        },
-        {
-          "text": "Mixins",
-          "url": "https://sprucecss.com/docs/sass/mixins/"
-        },
-        {
-          "text": "Forms",
-          "url": "https://sprucecss.com/docs/elements/forms/"
-        },
-        {
-          "text": "Components",
-          "url": "https://sprucecss.com/ui/getting-started/introduction/"
+          "text": "Dark Mode",
+          "url": "/customization/dark-mode/"
         }
       ]
     }

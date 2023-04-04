@@ -13,10 +13,9 @@ module.exports = config => {
   config.addPassthroughCopy('./src/font/');
 
   config.addFilter('parentFilter', function(collection, parent) {
-    console.log('######', parent);
     if (!parent) return collection;
-      const filtered = collection.filter(item => item.data.eleventyNavigation.parent == parent)
-      return filtered;
+      const filtered = collection.filter(item => item.data.eleventyNavigation?.parent == parent);
+      return filtered.sort((a, b) => a.data.eleventyNavigation.order - b.data.eleventyNavigation.order);
   });
 
   // Returns content items, sorted by issue order
