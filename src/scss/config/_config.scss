@@ -39,6 +39,21 @@ $color-secondary: hsl(186deg 100% 60%);
     )
   ),
   $dark-colors: dark.$colors,
+  $generators: (
+    'form': (
+      'file-btn': false,
+      'form-check': false,
+      'form-control': false,
+      'form-description': false,
+      'form-feedback': false,
+      'form-fieldset': false,
+      'form-group': false,
+      'form-label': false,
+      'form-range': false,
+      'form-row': false,
+      'form-switch': false,
+    )
+  ),
   $typography: (
     'font-family-base': #{'Open Sans', sans-serif},
     'font-family-heading': #{'Manrope', sans-serif},

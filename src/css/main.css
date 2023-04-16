@@ -370,8 +370,8 @@ template {
   --spruce-base-color-code-background: hsl(224, 94%, 97%);
   --spruce-base-color-code-foreground: hsl(205, 100%, 2%);
   --spruce-base-color-heading: hsl(232, 68%, 11%);
-  --spruce-base-color-link-hover: #0007cc;
   --spruce-base-color-link: hsl(238, 100%, 50%);
+  --spruce-base-color-link-hover: #0007cc;
   --spruce-base-color-mark-background: hsl(50, 100%, 80%);
   --spruce-base-color-mark-foreground: hsl(205, 100%, 2%);
   --spruce-base-color-marker: hsl(238, 100%, 50%);
@@ -390,16 +390,16 @@ template {
 }
 
 :root {
-  --spruce-form-color-background-disabled: hsl(0, 0%, 95%);
   --spruce-form-color-background: hsl(0, 0%, 100%);
+  --spruce-form-color-background-disabled: hsl(0, 0%, 95%);
+  --spruce-form-color-border: hsl(260, 4%, 70%);
   --spruce-form-color-border-disabled: hsl(0, 0%, 90%);
   --spruce-form-color-border-focus: hsl(238, 100%, 50%);
-  --spruce-form-color-border: hsl(260, 4%, 70%);
   --spruce-form-color-check-background: hsl(238, 100%, 50%);
   --spruce-form-color-check-focus-ring: hsl(238, 100%, 50%);
   --spruce-form-color-check-foreground: hsl(0, 0%, 100%);
-  --spruce-form-color-invalid-focus-ring: rgba(219, 41, 41, 0.25);
   --spruce-form-color-invalid: hsl(0, 71%, 51%);
+  --spruce-form-color-invalid-focus-ring: rgba(219, 41, 41, 0.25);
   --spruce-form-color-label: hsl(205, 100%, 2%);
   --spruce-form-color-legend: hsl(205, 100%, 2%);
   --spruce-form-color-placeholder: hsl(208, 7%, 40%);
@@ -409,8 +409,8 @@ template {
   --spruce-form-color-ring-focus: rgba(0, 9, 255, 0.25);
   --spruce-form-color-select-foreground: hsl(205, 100%, 2%);
   --spruce-form-color-text: hsl(208, 7%, 30%);
-  --spruce-form-color-valid-focus-ring: rgba(0, 168, 84, 0.25);
   --spruce-form-color-valid: hsl(150, 100%, 33%);
+  --spruce-form-color-valid-focus-ring: rgba(0, 168, 84, 0.25);
 }
 
 :root {
@@ -666,33 +666,27 @@ h6 {
   line-height: var(--spruce-line-height-heading);
 }
 
-h1,
-.h1 {
+h1 {
   font-size: clamp(2.0751953125rem, 2vw + 1rem, 2.44140625rem);
 }
 
-h2,
-.h2 {
+h2 {
   font-size: clamp(1.66015625rem, 2vw + 1rem, 1.953125rem);
 }
 
-h3,
-.h3 {
+h3 {
   font-size: clamp(1.328125rem, 2vw + 1rem, 1.5625rem);
 }
 
-h4,
-.h4 {
+h4 {
   font-size: clamp(1.0625rem, 2vw + 1rem, 1.25rem);
 }
 
-h5,
-.h5 {
+h5 {
   font-size: 1rem;
 }
 
-h6,
-.h6 {
+h6 {
   font-size: 1rem;
 }
 
@@ -790,6 +784,35 @@ samp {
 
 .lead {
   font-size: var(--spruce-font-size-lead);
+}
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+.h1 {
+  font-size: clamp(2.0751953125rem, 2vw + 1rem, 2.44140625rem);
+}
+
+.h2 {
+  font-size: clamp(1.66015625rem, 2vw + 1rem, 1.953125rem);
+}
+
+.h3 {
+  font-size: clamp(1.328125rem, 2vw + 1rem, 1.5625rem);
+}
+
+.h4 {
+  font-size: clamp(1.0625rem, 2vw + 1rem, 1.25rem);
+}
+
+.h5 {
+  font-size: 1rem;
+}
+
+.h6 {
+  font-size: 1rem;
 }
 
 .btn {
@@ -894,6 +917,21 @@ samp {
   color: var(--spruce-btn-color-primary-foreground);
 }
 
+.btn--secondary {
+  background-color: var(--spruce-btn-color-secondary-background);
+  border-color: var(--spruce-btn-color-secondary-background);
+  color: var(--spruce-btn-color-secondary-foreground);
+}
+.btn--secondary:focus-visible {
+  outline: 2px solid var(--spruce-btn-color-secondary-background);
+  outline-offset: 2px;
+}
+.btn--secondary:hover {
+  background-color: var(--spruce-btn-color-secondary-background-hover);
+  border-color: var(--spruce-btn-color-secondary-background-hover);
+  color: var(--spruce-btn-color-secondary-foreground);
+}
+
 .btn--outline-primary {
   background-color: transparent;
   border-color: var(--spruce-btn-color-primary-background);
@@ -908,130 +946,18 @@ samp {
   color: var(--spruce-btn-color-primary-foreground);
 }
 
-.form-control {
-  --webkit-date-line-height: 1.375;
-  --spruce-font-size: 1rem;
-  --spruce-line-height: 1.5;
-  --spruce-padding: 0.5em 0.75em;
-  --spruce-border-width: 1px;
-  --spruce-border-radius: 0.325rem;
-  --spruce-textarea-height: 6rem;
-  appearance: none;
-  background-color: var(--spruce-form-color-background);
-  border: var(--spruce-border-width) solid var(--spruce-form-color-border);
-  border-radius: var(--spruce-border-radius);
-  box-sizing: border-box;
-  color: var(--spruce-form-color-text);
-  display: block;
-  font-size: var(--spruce-font-size);
-  line-height: var(--spruce-line-height);
-  padding: var(--spruce-padding);
-  transition-duration: var(--spruce-duration);
-  transition-property: border, box-shadow;
-  transition-timing-function: var(--spruce-timing-function);
-  width: 100%;
+.btn--outline-secondary {
+  background-color: transparent;
+  border-color: var(--spruce-btn-color-secondary-background);
+  color: var(--spruce-btn-color-secondary-background);
 }
-.form-control::placeholder {
-  color: var(--spruce-form-color-placeholder);
+.btn--outline-secondary:focus-visible {
+  outline: 2px solid var(--spruce-btn-color-secondary-background);
+  outline-offset: 2px;
 }
-.form-control::-webkit-datetime-edit {
-  line-height: var(--webkit-date-line-height);
-}
-.form-control:focus {
-  border-color: var(--spruce-form-color-border-focus);
-  box-shadow: 0 0 0 0.25rem var(--spruce-form-color-ring-focus);
-  outline: 2px solid transparent;
-}
-.form-control[type=color] {
-  --spruce-aspect-ratio: 1;
-  --spruce-height: 100%;
-  --spruce-padding: 0.5em;
-  --spruce-width: 2.625rem;
-  aspect-ratio: var(--spruce-aspect-ratio);
-  height: var(--spruce-height);
-  padding: var(--spruce-padding);
-  width: var(--spruce-width);
-}
-.form-control[type=color]::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-.form-control[type=color]::-moz-color-swatch {
-  border: 0;
-  border-radius: var(--spruce-border-radius);
-}
-.form-control[type=color]::-webkit-color-swatch {
-  border: 0;
-  border-radius: var(--spruce-border-radius);
-}
-.form-control[disabled], .form-control[disabled=true] {
-  background-color: var(--spruce-form-color-background-disabled);
-  border-color: var(--spruce-form-color-border-disabled);
-  cursor: not-allowed;
-}
-textarea.form-control {
-  height: var(--spruce-textarea-height);
-  min-height: var(--spruce-textarea-height);
-  resize: vertical;
-}
-
-.form-control--valid, .form-control--invalid {
-  background-position: center right 0.5em;
-  background-repeat: no-repeat;
-  background-size: 1.25em auto;
-  padding-inline-end: 2em;
-}
-html[dir=rtl] .form-control--valid, html[dir=rtl] .form-control--invalid {
-  background-position: center left 0.5em;
-}
-.form-control--valid {
-  background-image: url('data:image/svg+xml,%3csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"%3e%3cpath d="M12,2c5.519,0 10,4.481 10,10c0,5.519 -4.481,10 -10,10c-5.519,0 -10,-4.481 -10,-10c0,-5.519 4.481,-10 10,-10Zm0,1.667c4.599,-0 8.333,3.734 8.333,8.333c0,4.599 -3.734,8.333 -8.333,8.333c-4.599,0 -8.333,-3.734 -8.333,-8.333c-0,-4.599 3.734,-8.333 8.333,-8.333Zm-1.476,10.182l-2.984,-2.984c-0.065,-0.065 -0.17,-0.065 -0.235,0l-0.943,0.943c-0.065,0.065 -0.065,0.171 -0,0.236l4.043,4.042c0.033,0.033 0.076,0.05 0.119,0.049c0.044,0.001 0.087,-0.016 0.12,-0.049l6.994,-6.994c0.065,-0.065 0.065,-0.17 0,-0.235l-0.943,-0.943c-0.065,-0.065 -0.17,-0.065 -0.235,-0l-5.936,5.935Z" style="fill:hsl%28150, 100%, 33%%29;"/%3e%3c/svg%3e');
-  border-color: var(--spruce-alert-color-success);
-}
-.form-control--valid:focus {
-  border-color: var(--spruce-form-color-valid);
-  box-shadow: 0 0 0 0.25rem var(--spruce-form-color-valid-focus-ring);
-  outline: 2px solid transparent;
-}
-.form-control--invalid {
-  background-image: url('data:image/svg+xml,%3csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"%3e%3cpath d="M12,2c5.519,0 10,4.481 10,10c0,5.519 -4.481,10 -10,10c-5.519,0 -10,-4.481 -10,-10c0,-5.519 4.481,-10 10,-10Zm0,1.667c4.599,-0 8.333,3.734 8.333,8.333c0,4.599 -3.734,8.333 -8.333,8.333c-4.599,0 -8.333,-3.734 -8.333,-8.333c-0,-4.599 3.734,-8.333 8.333,-8.333Zm0.813,11.649c-0,-0.081 -0.065,-0.146 -0.146,-0.146l-1.334,0c-0.081,0 -0.146,0.065 -0.146,0.146l0,1.169c0,0.08 0.065,0.146 0.146,0.146l1.334,-0c0.081,-0 0.146,-0.066 0.146,-0.146l-0,-1.169Zm-0,-7.784c-0,-0.09 -0.073,-0.163 -0.163,-0.163l-1.3,0c-0.09,0 -0.163,0.073 -0.163,0.163l0,6.351c0,0.09 0.073,0.163 0.163,0.163l1.3,-0c0.09,-0 0.163,-0.073 0.163,-0.163l-0,-6.351Z" style="fill:hsl%280, 71%, 51%%29;"/%3e%3c/svg%3e');
-  border-color: var(--spruce-alert-color-danger);
-}
-.form-control--invalid:focus {
-  border-color: var(--spruce-form-color-invalid);
-  box-shadow: 0 0 0 0.25rem var(--spruce-form-color-invalid-focus-ring);
-  outline: 2px solid transparent;
-}
-.form-control--sm {
-  --webkit-date-line-height: 1.36;
-  --spruce-border-radius: 0.35em;
-  --spruce-padding: 0.25em 0.5em;
-}
-.form-control--sm[type=color] {
-  --spruce-aspect-ratio: 1;
-  --spruce-height: 100%;
-  --spruce-padding: 0.25em;
-  --spruce-width: 1.925rem;
-}
-.form-control--lg {
-  --webkit-date-line-height: 1.387;
-  --spruce-padding: 0.65em 1em;
-}
-.form-control--lg[type=color] {
-  --spruce-aspect-ratio: 1;
-  --spruce-height: 100%;
-  --spruce-padding: 0.5em;
-  --spruce-width: 3.204rem;
-}
-
-select.form-control:not([multiple]):not([size]) {
-  background-image: url('data:image/svg+xml,%3csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3e%3cpath d="M12,12.507l-3.816,-3.815c-0.171,-0.172 -0.45,-0.172 -0.622,-0l-0.933,0.933c-0.172,0.172 -0.172,0.451 0,0.623l5.06,5.06c0.172,0.172 0.45,0.172 0.622,0l5.06,-5.06c0.172,-0.172 0.172,-0.451 -0,-0.623l-0.933,-0.933c-0.172,-0.172 -0.451,-0.172 -0.622,-0l-3.816,3.815Z" style="fill:hsl%28205, 100%, 2%%29;"/%3e%3c/svg%3e');
-  background-position: center right 0.5em;
-  background-repeat: no-repeat;
-  background-size: 1.25em auto;
-  padding-inline-end: 2em;
-}
-html[dir=rtl] select.form-control:not([multiple]):not([size]) {
-  background-position: center left 0.5em;
+.btn--outline-secondary:hover {
+  background-color: var(--spruce-btn-color-secondary-background);
+  color: var(--spruce-btn-color-secondary-foreground);
 }
 
 :root[data-theme-mode=dark] {

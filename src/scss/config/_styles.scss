@@ -1,14 +1,3 @@
 @use 'sprucecss/scss/spruce' as *;
 
-@include generate-content;
-@include generate-btn('.btn');
-
-.btn--primary { @include btn-variant(primary); }
-.btn--outline-primary { @include btn-variant-outline(primary); }
-
-@include generate-form-control(
-  '.form-control',
-  true,
-  true,
-  true
-);
+@include generate-styles;
