@@ -4,17 +4,17 @@
   $this: &;
 
   @include a11y-card-link('.card__link', true);
-  background-color: color(background, card);
+  background-color: color('background', 'card');
   border-radius: config('border-radius-sm', $display);
   box-shadow: get-css-variable(--box-shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 20rem;
-  padding: spacer(l) spacer-clamp(m, l);
+  padding: spacer('l') spacer-clamp('m', 'l');
 
   &__serial-number {
-    color: color(primary);
+    color: color('primary');
     font-family: config('font-family-heading', $typography);
     font-size: responsive-font-size(4rem, 30, '4vw + 1rem');
     font-weight: 800;
@@ -22,7 +22,7 @@
   }
 
   &__title {
-    font-size: font-size(h3);
-    margin-block: spacer(m) 0;
+    font-size: font-size('h3');
+    margin-block: spacer('m') 0;
   }
 }

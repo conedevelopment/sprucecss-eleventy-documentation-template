@@ -6,18 +6,18 @@
   display: grid;
   grid-template-columns: var(--gtc);
 
-  @include breakpoint(sm) {
+  @include breakpoint('sm') {
     --gtc: minmax(0, 15rem) minmax(0, 1fr);
     gap: get-css-variable(--container-gap);
   }
-  @include breakpoint(md) {--gtc: minmax(0, 17.5rem) minmax(0, 1fr); }
-  @include breakpoint(lg) { --gtc: minmax(0, 20rem) minmax(0, 1fr); }
+  @include breakpoint('md') {--gtc: minmax(0, 17.5rem) minmax(0, 1fr); }
+  @include breakpoint('lg') { --gtc: minmax(0, 20rem) minmax(0, 1fr); }
 
   &__sidebar {
-    @include breakpoint(sm) {
-      border-inline-end: 1px solid color(border);
-      inset-block-start: spacer(l);
-      max-height: calc(100vh - #{spacer(l)} * 2);
+    @include breakpoint('sm') {
+      border-inline-end: 1px solid color('border');
+      inset-block-start: spacer('l');
+      max-height: calc(100vh - #{spacer('l')} * 2);
       position: sticky;
     }
   }

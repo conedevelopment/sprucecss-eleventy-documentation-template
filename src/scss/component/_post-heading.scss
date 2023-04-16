@@ -1,7 +1,7 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .post-heading {
-  @include layout-stack(s);
+  @include layout-stack('s');
 
   &__title {
     font-size: responsive-font-size(3.5rem, 30, '4.5vw');

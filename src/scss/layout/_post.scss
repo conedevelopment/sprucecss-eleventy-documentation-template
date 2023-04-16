@@ -6,23 +6,23 @@
   display: grid;
   gap: get-css-variable(--container-gap);
   grid-template-columns: var(--gtc);
-  margin-block-start: spacer-clamp(xl, xxl);
+  margin-block-start: spacer-clamp('xl', 'xxl');
 
-  @include breakpoint(md) { --gtc: minmax(0, 1fr) minmax(0, 15rem); }
+  @include breakpoint('md') { --gtc: minmax(0, 1fr) minmax(0, 15rem); }
 
   &__toc {
-    @include breakpoint(md) {
+    @include breakpoint('md') {
       order: 2;
     }
 
     .toc {
-      inset-block-start: spacer(l);
+      inset-block-start: spacer('l');
       position: sticky;
     }
   }
 
   .post-heading {
-    @include breakpoint(md) {
+    @include breakpoint('md') {
       grid-column: 1 / 3;
     }
   }

@@ -15,8 +15,8 @@
     margin-block: 0;
 
     + li::before {
-      border-block-end: 2px solid color(separator, breadcrumb);
-      border-inline-end: 2px solid color(separator, breadcrumb);
+      border-block-end: 2px solid color('separator', 'breadcrumb');
+      border-inline-end: 2px solid color('separator', 'breadcrumb');
       content: '';
       display: inline-flex;
       height: 0.4em;

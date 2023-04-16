@@ -1,25 +1,25 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .toc {
-  @include layout-stack(s);
+  @include layout-stack('s');
 
   &__title {
-    font-size: font-size(h4);
+    font-size: font-size('h4');
   }
 
   &__navigation {
     ol {
       @include clear-list;
-      @include layout-stack(xs);
+      @include layout-stack('xs');
     }
 
     a {
-      color: color(text);
+      color: color('text');
       text-decoration: none;
 
       &:hover,
       &:focus {
-        color: color(primary);
+        color: color('primary');
       }
     }
   }

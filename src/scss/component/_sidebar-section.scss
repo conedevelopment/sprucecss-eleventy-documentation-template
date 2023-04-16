@@ -2,13 +2,13 @@
 
 .sidebar-section {
   &__title {
-    color: color(heading);
+    color: color('heading');
     font-size: config('font-size-base', $typography);
     margin-block: 0;
   }
 
   &__navigation {
-    border-inline-start: 1px solid color(border);
+    border-inline-start: 1px solid color('border');
     font-size: 1rem;
     margin-block-start: 1rem;
     padding-inline-start: 1rem;
@@ -22,12 +22,12 @@
       text-decoration: none;
 
       &[aria-current='page'] {
-        color: color(heading);
+        color: color('heading');
         font-weight: 700;
         position: relative;
 
         &::before {
-          background-color: color(primary);
+          background-color: color('primary');
           border-radius: 0 config('border-radius-sm', $display) config('border-radius-sm', $display) 0;
           bottom: 0;
           content: '';

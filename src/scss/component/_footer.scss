@@ -4,7 +4,7 @@
   --logo-height: 4rem;
   --logo-width: 4rem;
 
-  @include layout-grid(spacer(l), 12rem);
+  @include layout-grid('l', 12rem);
   padding-block: get-css-variable(--section-gap);
 
   &__logo {
@@ -16,32 +16,32 @@
   &__socials {
     align-items: center;
     display: flex;
-    gap: spacer(s);
+    gap: spacer('s');
 
     a {
-      color: color(heading);
+      color: color('heading');
       display: inline-flex;
 
       &:hover,
       &:focus {
-        color: color(primary);
+        color: color('primary');
       }
     }
 
     svg {
-      --dimenstion: 1.25rem;
-      height: var(--dimenstion);
-      width: var(--dimenstion);
+      --dimension: 1.25rem;
+      height: var(--dimension);
+      width: var(--dimension);
     }
   }
 
   &__title {
-    font-size: font-size(h4);
+    font-size: font-size('h4');
   }
 
   &__navigation {
     @include clear-list;
-    @include layout-stack(xs);
+    @include layout-stack('xs');
 
     a {
       color: color(text);
@@ -51,7 +51,7 @@
       &:focus,
       &:active,
       &[aria-current='page'] {
-        color: color(primary);
+        color: color('primary');
       }
 
       &[aria-current='page'] {
@@ -61,6 +61,6 @@
   }
 
   &__column {
-    @include layout-stack(m);
+    @include layout-stack('m');
   }
 }

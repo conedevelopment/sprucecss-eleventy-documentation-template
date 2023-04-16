@@ -4,12 +4,12 @@
   @include a11y-card-link('.open-search__btn', true);
   align-items: center;
   display: flex;
-  gap: spacer(xs);
+  gap: spacer('xs');
 
   &__icon {
-    --dimenstion: 1rem;
-    color: color(icon, search);
-    height: var(--dimenstion);
-    width: var(--dimenstion);
+    --dimension: 1rem;
+    color: color('icon', 'search');
+    height: var(--dimension);
+    width: var(--dimension);
   }
 }

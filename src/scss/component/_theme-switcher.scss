@@ -1,7 +1,7 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .theme-switcher {
-  color: color(text);
+  color: color('text');
   display: inline-flex;
   position: relative;
 
