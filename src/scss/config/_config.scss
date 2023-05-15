@@ -21,22 +21,35 @@ $color-secondary: hsl(186deg 100% 60%);
       'border': hsl(0deg 0% 0% / 5%),
       'code-background': hsl(224deg 94% 97%),
       'heading': hsl(232deg 68% 11%),
-      'text': hsl(208deg 22% 34%)
+      'text': hsl(208deg 22% 34%),
     ),
     'breadcrumb': (
-      'separator': hsl(0deg 0% 80%)
+      'separator': hsl(0deg 0% 80%),
     ),
     'card': (
-      'background': hsl(0deg 0% 100%)
+      'background': hsl(0deg 0% 100%),
     ),
     'search': (
-      'icon': hsl(229deg 26% 48% / 25%)
+      'icon': hsl(229deg 26% 48% / 25%),
     ),
     'scrollbar': (
       'thumb-background': hsl(229deg 26% 48% / 15%),
       'thumb-background-hover':	hsl(0deg 0% 0% / 25%),
-      'track-background':	hsl(226deg 100% 87% / 15%)
-    )
+      'track-background':	hsl(226deg 100% 87% / 15%),
+    ),
+    'prism': (
+      'color': hsl(243deg 14% 29%),
+      'background': hsl(0deg 0% 98%),
+      'comment': hsl(225deg 14% 46%),
+      'punctuation': hsl(279deg 50% 53%),
+      'namespace': hsl(173deg 100% 24%),
+      'deleted': hsl(1deg 83% 63% / 56%),
+      'boolean': hsl(0deg 44% 53%),
+      'number': hsl(315deg 90% 35%),
+      'constant': hsl(221deg 57% 52%),
+      'class-name': hsl(0deg 0% 7%),
+      'regex': hsl(1deg 48% 59%),
+    ),
   ),
   $dark-colors: dark.$colors,
   $generators: (
@@ -61,5 +74,5 @@ $color-secondary: hsl(186deg 100% 60%);
   ),
   $settings: (
     'css-custom-properties': true,
-  )
+  ),
 );

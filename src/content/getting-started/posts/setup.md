@@ -8,6 +8,32 @@ eleventyNavigation:
   order: 2
 ---
 
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam mollis finibus. Curabitur tincidunt gravida tortor id porttitor.</p>
+We use `eleventy --serve` and compile Sass with sass-cli with npm scripts.
 
-**Nulla venenatis feugiat elit ut mollis.** In venenatis dui libero, vitae ornare nulla fringilla ut. Fusce eu elit sit amet sapien feugiat accumsan id a tortor. Curabitur nec blandit risus, sit amet faucibus ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas quis nulla ac risus vulputate luctus. Nunc nec mollis nulla. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque nec feugiat nibh. Aenean mattis consectetur luctus. Donec augue lorem, interdum quis quam vel, tincidunt pulvinar mi.
+## Clone the repository
+
+Today more people and experts write about accessibility. For the better progression it is a good idea to read them.
+
+## Install the dependencies
+
+In the `package.json` file, you will find all of the dependencies (and scripts) to install them using the following command:
+
+```shell
+npm install
+```
+
+## Run the development mode
+
+To run the development mode, use the `npm script`.   This script will also watch for changes.
+
+```shell
+npm start
+```
+
+## Run the production mode
+
+Before you go live, you should use the production script to compress the Sass files.
+
+```shell
+npm run prod
+```
