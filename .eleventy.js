@@ -2,10 +2,12 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const pluginTOC = require('eleventy-plugin-toc');
 
 module.exports = config => {
   config.addPlugin(eleventyNavigationPlugin);
   config.addPlugin(syntaxHighlight);
+  config.addPlugin(pluginTOC);
 
   config.addPassthroughCopy({ './src/robots.txt': '/robots.txt' });
   config.addPassthroughCopy('./src/img/**');
@@ -23,21 +25,16 @@ module.exports = config => {
     return [...collection.getFilteredByGlob('./src/content/*.md')];
   });
 
-  const markdownItOptions = {
-    html: true,
-  }
-
-  // Options for the `markdown-it-anchor` library
-  const markdownItAnchorOptions = {
-    permalink: true,
-  }
-
-  const markdownLib = markdownIt(markdownItOptions).use(
+  const markdownLib = markdownIt({ html: false }).use(
     markdownItAnchor,
-    markdownItAnchorOptions
+    {
+      permalink: true,
+      permalinkClass: "direct-link",
+      permalinkSymbol: "#"
+    }
   )
 
-  config.setLibrary("md", markdownLib)
+  config.setLibrary("md", markdownLib);
 
   return {
     markdownTemplateEngine: 'njk',

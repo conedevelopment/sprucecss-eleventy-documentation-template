@@ -11,12 +11,7 @@
       <section class="toc" aria-labelledby="toc-title">
         <h3 class="toc__title" id="toc-title">On this page</h3>
         <nav class="toc__navigation">
-          <ol>
-            <li><a href="#categories">Categories</a></li>
-            <li><a href="#patterns-and-components">Patterns and Components</a></li>
-            <li><a href="#spruce-css-is-needed-but-you-can-switch-it">Spruce CSS Is Needed, but You Can Switch It</a></li>
-            <li><a href="#contribution">Contribution</a></li>
-          </ol>
+            {{ content | toc | safe }}
         </nav>
       </section>
     </div>
