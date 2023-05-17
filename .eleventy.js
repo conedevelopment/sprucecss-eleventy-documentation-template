@@ -3,6 +3,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const pluginTOC = require('eleventy-plugin-toc');
+const { execSync } = require('child_process');
 
 module.exports = config => {
   config.addPlugin(eleventyNavigationPlugin);
@@ -29,12 +30,16 @@ module.exports = config => {
     markdownItAnchor,
     {
       permalink: true,
-      permalinkClass: "direct-link",
-      permalinkSymbol: "#"
+      permalinkClass: 'direct-link',
+      permalinkSymbol: '#'
     }
   )
 
-  config.setLibrary("md", markdownLib);
+  config.setLibrary('md', markdownLib);
+
+  config.on('eleventy.after', () => {
+    execSync(`npx pagefind --source dist --glob \"**/*.html\"`, { encoding: 'utf-8' })
+  });
 
   return {
     markdownTemplateEngine: 'njk',
@@ -43,6 +48,7 @@ module.exports = config => {
     dir: {
       input: 'src',
       output: 'dist'
-    }
+    },
+    passthroughFileCopy: true
   };
 };

@@ -17,7 +17,7 @@ $color-secondary: hsl(186deg 100% 60%);
   $color-secondary: $color-secondary,
   $colors: (
     'base': (
-      'background': hsl(270deg 100% 99%),
+      // 'background': hsl(270deg 100% 99%),
       'border': hsl(0deg 0% 0% / 5%),
       'code-background': hsl(224deg 94% 97%),
       'heading': hsl(232deg 68% 11%),
@@ -65,12 +65,11 @@ $color-secondary: hsl(186deg 100% 60%);
       'form-range': false,
       'form-row': false,
       'form-switch': false,
-    )
+    ),
   ),
   $typography: (
     'font-family-base': #{'Open Sans', sans-serif},
     'font-family-heading': #{'Manrope', sans-serif},
-    'font-weight-heading': 800,
   ),
   $settings: (
     'css-custom-properties': true,

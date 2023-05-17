@@ -4,30 +4,42 @@
 <html lang="en">
     <head>
         <script src="/js/theme-detection.js?{{ assetHash }}"></script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% include "partials/preload.html" %}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
-        {% include "partials/meta-info.html" %}
-        <link rel="stylesheet" href="/css/main.css?{{ assetHash }}">
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            href="{{ site.url }}/feed.xml"
+        />
+        {% include "partials/meta.html" %}
+        <link rel="stylesheet" href="/css/main.css?{{ assetHash }}" />
     </head>
     <body>
-        <a class="btn btn--primary skip-link" href="#content">Skip to content</a>
-
-        <div class="container container--wide">
-            <div class="l-main">
-                {% include "partials/sidebar.html" %}
-                <div class="l-main__body">
-                    {% include "partials/header.html" %}
-                    <main id="content">
-                        {% block content %}{% endblock %}
-                    </main>
-                    {% include "partials/footer.html" %}
+        <div class="site-wrapper">
+            <a class="btn btn--primary skip-link" href="#content">Skip to content</a>
+            <div class="container container--wide">
+                <div class="l-main">
+                    {% include "partials/sidebar.html" %}
+                    <div class="l-main__body">
+                        {% include "partials/header.html" %}
+                        <main id="content">{% block content %}{% endblock %}</main>
+                        {% include "partials/footer.html" %}
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="modal-backdrop">
+            <div class="modal">
+                <div id="search" class="search"></div>
+            </div>
+        </div>
+
+        <script src="/_pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
         <script src="/js/theme-change-assets.js?{{ assetHash }}"></script>
         <script src="/js/navigation.js?{{ assetHash }}"></script>
         <script src="/js/theme-switcher.js?{{ assetHash }}"></script>
+        <script src="/js/modal.js?{{ assetHash }}"></script>
     </body>
 </html>
