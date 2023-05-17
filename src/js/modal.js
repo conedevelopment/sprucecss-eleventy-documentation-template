@@ -6,18 +6,32 @@
 
   if (!button || !modal) return;
 
-  function handleKeyDown(event) {
-    if (event.code === 'Escape') {
-      siteWrapper.removeAttribute('inert');
-      modal.classList.remove('modal-backdrop--open');
-      button.focus();
-    }
-  }
-
-  button.addEventListener('click', () => {
+  function openModal() {
     siteWrapper.setAttribute('inert', '');
     modal.classList.add('modal-backdrop--open');
     input.focus();
+  }
+
+  function closeModal() {
+    siteWrapper.removeAttribute('inert');
+    modal.classList.remove('modal-backdrop--open');
+    button.focus();
+  }
+
+  function handleKeyDown(event) {
+    if (event.code === 'Escape') {
+      closeModal();
+    }
+  }
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === e.currentTarget) {
+      closeModal();
+    }
+  });
+
+  button.addEventListener('click', () => {
+    openModal();
   });
 
   window.addEventListener('keydown', handleKeyDown);
