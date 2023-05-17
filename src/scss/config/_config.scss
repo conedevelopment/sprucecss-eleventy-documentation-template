@@ -17,7 +17,6 @@ $color-secondary: hsl(186deg 100% 60%);
   $color-secondary: $color-secondary,
   $colors: (
     'base': (
-      // 'background': hsl(270deg 100% 99%),
       'border': hsl(0deg 0% 0% / 5%),
       'code-background': hsl(224deg 94% 97%),
       'heading': hsl(232deg 68% 11%),
@@ -29,6 +28,9 @@ $color-secondary: hsl(186deg 100% 60%);
     'card': (
       'background': hsl(0deg 0% 100%),
     ),
+    'footer': (
+      'background': hsl(224deg 94% 98%),
+    ),
     'search': (
       'icon': hsl(229deg 26% 48% / 25%),
     ),
@@ -39,7 +41,7 @@ $color-secondary: hsl(186deg 100% 60%);
     ),
     'prism': (
       'color': hsl(243deg 14% 29%),
-      'background': hsl(0deg 0% 98%),
+      'background': hsl(224deg 94% 99%),
       'comment': hsl(225deg 14% 46%),
       'punctuation': hsl(279deg 50% 53%),
       'namespace': hsl(173deg 100% 24%),
@@ -70,6 +72,7 @@ $color-secondary: hsl(186deg 100% 60%);
   $typography: (
     'font-family-base': #{'Open Sans', sans-serif},
     'font-family-heading': #{'Manrope', sans-serif},
+    'font-size-lead': clamp(1.1rem, 2vw, 1.25rem),
   ),
   $settings: (
     'css-custom-properties': true,

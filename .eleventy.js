@@ -30,7 +30,7 @@ module.exports = config => {
     markdownItAnchor,
     {
       permalink: true,
-      permalinkClass: 'direct-link',
+      permalinkClass: 'anchor',
       permalinkSymbol: '#'
     }
   )

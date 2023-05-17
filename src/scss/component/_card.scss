@@ -5,8 +5,8 @@
 
   @include a11y-card-link('.card__link', true);
   background-color: color('background', 'card');
+  border: 1px solid color('border');
   border-radius: config('border-radius-sm', $display);
-  box-shadow: get-css-variable(--box-shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -9,7 +9,7 @@
   height: var(--height);
   justify-content: space-between;
   order: 2;
-  padding-block: spacer('m');
+  padding-block: 2rem;
 
   @include breakpoint('sm') {
     order: -1;

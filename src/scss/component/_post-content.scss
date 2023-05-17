@@ -24,6 +24,23 @@
     margin-top: spacer('s');
   }
 
+  h2[id] {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+
+    &:hover .anchor,
+    &:focus-within .anchor {
+      opacity: 1;
+    }
+
+    .anchor {
+      font-weight: 600;
+      opacity: 0;
+      text-decoration: none;
+    }
+  }
+
   img,
   iframe {
     border-radius: config('border-radius-sm', $display);

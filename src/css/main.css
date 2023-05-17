@@ -3,35 +3,35 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  src: url("../font/manrope-v13-latin-ext_latin-regular.woff2") format("woff2");
+  src: url("../../font/manrope-v14-latin-regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 600;
-  src: url("../font/manrope-v13-latin-ext_latin-600.woff2") format("woff2");
+  src: url("../../font/manrope-v14-latin-600.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
-  src: url("../font/manrope-v13-latin-ext_latin-700.woff2") format("woff2");
+  src: url("../../font/manrope-v14-latin-800.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../font/open-sans-v34-latin-regular.woff2") format("woff2");
+  src: url("../../font/open-sans-v35-latin-regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../font/open-sans-v34-latin-700.woff2") format("woff2");
+  src: url("../../font/open-sans-v35-latin-700.woff2") format("woff2");
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -428,12 +428,16 @@ template {
 }
 
 :root {
+  --spruce-footer-color-background: hsl(224, 94%, 98%);
+}
+
+:root {
   --spruce-search-color-icon: hsla(229, 26%, 48%, 0.25);
 }
 
 :root {
   --spruce-prism-color-color: hsl(243, 14%, 29%);
-  --spruce-prism-color-background: hsl(0, 0%, 98%);
+  --spruce-prism-color-background: hsl(224, 94%, 99%);
   --spruce-prism-color-comment: hsl(225, 14%, 46%);
   --spruce-prism-color-punctuation: hsl(279, 50%, 53%);
   --spruce-prism-color-namespace: hsl(173, 100%, 24%);
@@ -450,7 +454,7 @@ template {
   --spruce-font-family-cursive: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Consolas, DejaVu Sans Mono, monospace;
   --spruce-font-family-heading: Manrope, sans-serif;
   --spruce-font-size-base: 1rem;
-  --spruce-font-size-lead: clamp(1.15rem, 2vw, 1.35rem);
+  --spruce-font-size-lead: clamp(1.1rem, 2vw, 1.25rem);
   --spruce-font-size-lg: 1.125rem;
   --spruce-font-size-ratio: 1.25;
   --spruce-font-size-sm: 0.875rem;
@@ -1021,7 +1025,7 @@ samp {
 }
 
 :root[data-theme-mode=dark] {
-  --spruce-footer-color-background: hsl(207, 97%, 6%);
+  --spruce-footer-color-background: hsl(245, 38%, 10%);
 }
 
 :root[data-theme-mode=dark] {
@@ -1030,6 +1034,20 @@ samp {
 
 :root[data-theme-mode=dark] {
   --spruce-tab-color-background: hsl(207, 84%, 10%);
+}
+
+:root[data-theme-mode=dark] {
+  --spruce-prism-color-color: hsl(217, 34%, 88%);
+  --spruce-prism-color-background: hsl(207, 83%, 10%);
+  --spruce-prism-color-comment: hsl(180, 9%, 55%);
+  --spruce-prism-color-punctuation: hsl(276, 68%, 75%);
+  --spruce-prism-color-namespace: hsl(197, 31%, 77%);
+  --spruce-prism-color-deleted: hsla(1, 83%, 63%, 0.56);
+  --spruce-prism-color-boolean: hsl(350, 100%, 67%);
+  --spruce-prism-color-number: hsl(14, 90%, 70%);
+  --spruce-prism-color-constant: hsl(221, 100%, 75%);
+  --spruce-prism-color-class-name: hsl(33, 100%, 77%);
+  --spruce-prism-color-regex: hsl(217, 34%, 88%);
 }
 
 :root[data-theme-mode=dark] {
@@ -1081,7 +1099,7 @@ samp {
   padding-inline: var(--container-gap);
 }
 .container--wide {
-  --container-width: 110rem;
+  --container-width: 100rem;
 }
 .container--narrow {
   --container-width: 50rem;
@@ -1091,11 +1109,12 @@ samp {
   --gtc: minmax(0, 1fr);
   display: grid;
   grid-template-columns: var(--gtc);
+  margin-block-end: clamp(4.5rem, 5vw, 7rem);
 }
 @media (min-width: 48em) {
   .l-main {
     --gtc: minmax(0, 15rem) minmax(0, 1fr);
-    gap: var(--spruce-container-gap);
+    gap: calc(var(--spruce-container-gap) * 1.5);
   }
 }
 @media (min-width: 64em) {
@@ -1168,6 +1187,27 @@ samp {
   }
 }
 
+.l-list {
+  --gtc: minmax(0, 1fr);
+  display: grid;
+  gap: var(--spruce-container-gap);
+  grid-template-columns: var(--gtc);
+  margin-block-start: clamp(4.5rem, 5vw, 7rem);
+}
+@media (min-width: 64em) {
+  .l-list {
+    --gtc: minmax(0, 1fr) minmax(0, 15rem);
+  }
+}
+.l-list__inner {
+  grid-column: 1/4;
+}
+@media (min-width: 64em) {
+  .l-list .post-heading {
+    grid-column: 1/3;
+  }
+}
+
 .skip-link {
   inset: -50vh auto auto 1.5rem;
   position: fixed;
@@ -1186,7 +1226,7 @@ samp {
   height: var(--height);
   justify-content: space-between;
   order: 2;
-  padding-block: 1.5rem;
+  padding-block: 2rem;
 }
 @media (min-width: 48em) {
   .header {
@@ -1326,7 +1366,7 @@ samp {
   margin-block-start: 1rem;
 }
 .post-heading__title {
-  font-size: clamp(2.45rem, 4.5vw, 3.5rem);
+  font-size: clamp(2.625rem, 4.5vw, 3.75rem);
   line-height: var(--spruce-line-height-sm);
   max-width: 18ch;
 }
@@ -1360,6 +1400,19 @@ samp {
 .post-content h5 + *,
 .post-content h6 + * {
   margin-top: 1rem;
+}
+.post-content h2[id] {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+.post-content h2[id]:hover .anchor, .post-content h2[id]:focus-within .anchor {
+  opacity: 1;
+}
+.post-content h2[id] .anchor {
+  font-weight: 600;
+  opacity: 0;
+  text-decoration: none;
 }
 .post-content img,
 .post-content iframe {
@@ -1515,8 +1568,8 @@ samp {
 .card {
   position: relative;
   background-color: var(--spruce-card-color-background);
+  border: 1px solid var(--spruce-base-color-border);
   border-radius: var(--spruce-border-radius-sm);
-  box-shadow: var(--spruce-box-shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1829,12 +1882,15 @@ textarea.pagefind-ui__search-input {
 .footer {
   --logo-height: 4rem;
   --logo-width: 4rem;
-  display: grid;
-  gap: 3rem;
+  background-color: var(--spruce-footer-color-background);
   padding-block: var(--spruce-section-gap);
 }
+.footer__inner {
+  display: grid;
+  gap: 3rem;
+}
 @supports (width: min(12rem, 100%)) {
-  .footer {
+  .footer__inner {
     grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
   }
 }

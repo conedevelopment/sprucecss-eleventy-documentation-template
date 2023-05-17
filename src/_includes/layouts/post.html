@@ -1,5 +1,5 @@
 {% extends "layouts/base.html" %} {% block content %}
-<div class="l-post">
+<div class="l-post" data-pagefind-body>
     <div class="post-heading">
         {% set breadcrumbs = collections.all |
         eleventyNavigationBreadcrumb(title, { includeSelf: true }) %} {% include
@@ -14,6 +14,6 @@
         </section>
     </div>
     {% endif %}
-    <div class="l-post__content post-content" data-pagefind-body>{{ content | safe }}</div>
+    <div class="l-post__content post-content">{{ content | safe }}</div>
 </div>
 {% endblock %}

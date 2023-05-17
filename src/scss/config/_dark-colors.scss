@@ -65,13 +65,26 @@ $colors: (
     'valid-shadow': color.adjust($dark-color-success, $alpha: -0.75),
   ),
   'footer': (
-    'background': hsl(207deg 97% 6%),
+    'background': hsl(245deg 38% 10%),
   ),
   'invoice': (
     'background': hsl(234deg 49% 6%),
   ),
   'tab': (
     'background': hsl(207deg 84% 10%),
+  ),
+  'prism': (
+    'color': hsl(217deg 34% 88%),
+    'background': hsl(207deg 83% 10%),
+    'comment': hsl(180deg 9% 55%),
+    'punctuation': hsl(276deg 68% 75%),
+    'namespace': hsl(197deg 31% 77%),
+    'deleted': hsl(1deg 83% 63% / 56%),
+    'boolean': hsl(350deg 100% 67%),
+    'number': hsl(14deg 90% 70%),
+    'constant': hsl(221deg 100% 75%),
+    'class-name': hsl(33deg 100% 77%),
+    'regex': hsl(217deg 34% 88%),
   ),
   'table': (
     'border': $dark-color-gray-dark,

@@ -4,8 +4,13 @@
   --logo-height: 4rem;
   --logo-width: 4rem;
 
-  @include layout-grid('l', 12rem);
+  background-color: color('background', 'footer');
   padding-block: get-css-variable(--section-gap);
+
+  &__inner {
+    @include layout-grid('l', 12rem);
+
+  }
 
   &__logo {
     display: flex;

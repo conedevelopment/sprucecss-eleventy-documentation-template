@@ -5,10 +5,11 @@
 
   display: grid;
   grid-template-columns: var(--gtc);
+  margin-block-end: spacer-clamp('xl', 'xxl');
 
   @include breakpoint('sm') {
     --gtc: minmax(0, 15rem) minmax(0, 1fr);
-    gap: get-css-variable(--container-gap);
+    gap: calc(#{get-css-variable(--container-gap)} * 1.5);
   }
   @include breakpoint('md') {--gtc: minmax(0, 17.5rem) minmax(0, 1fr); }
   @include breakpoint('lg') { --gtc: minmax(0, 20rem) minmax(0, 1fr); }
