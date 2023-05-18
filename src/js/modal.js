@@ -31,7 +31,7 @@
     }
   }
 
-  modal.addEventListener('click', function(e) {
+  modal.addEventListener('click', (e) => {
     if (e.target === e.currentTarget) {
       closeModal();
     }

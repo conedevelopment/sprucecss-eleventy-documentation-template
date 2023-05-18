@@ -12,7 +12,7 @@
       if (localStorage.getItem('preferred-theme') === 'system' || localStorage.getItem('preferred-theme') === null) {
         setTheme(e.matches ? 'dark' : 'light');
       }
-  });
+    });
 
   setTheme(preferredTheme || systemMode);
 })();
