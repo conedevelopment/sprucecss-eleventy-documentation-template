@@ -1,4 +1,0 @@
-{% set previousPost = collections.posts | getPreviousCollectionItem %}
-{% set nextPost = collections.posts | getNextCollectionItem %}
-{% if previousPost %}Previous Blog Post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
-{% if nextPost %}Next Blog Post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}

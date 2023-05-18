@@ -1,0 +1,64 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.post-navigation {
+  align-items: center;
+  border-block-start: 1px solid color(border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: spacer(m);
+  justify-content: space-between;
+  margin-block-start: spacer(xl);
+  padding-block-start: spacer(m);
+}
+
+.post-navigation-item {
+  $this: &;
+
+  align-items: center;
+  display: flex;
+  gap: spacer(s);
+  text-decoration: none;
+
+  &:hover {
+    #{$this}__icon {
+      background-color: color('icon-background-hover', 'navigation');
+      color: color('icon-foreground-hover', 'navigation');
+    }
+  }
+
+  &--next {
+    margin-inline-start: auto;
+    text-align: right;
+  }
+
+  &__icon {
+    @include transition;
+    align-items: center;
+    background-color: color('icon-background', 'navigation');
+    border-radius: var(--doc-border-radius-md);
+    color: color('icon-foreground', 'navigation');
+    display: flex;
+    flex-shrink: 0;
+    height: 3rem;
+    justify-content: center;
+    width: 3rem;
+
+    svg {
+      --dimension: 1rem;
+
+      height: var(--dimension);
+      width: var(--dimension);
+    }
+  }
+
+  &__caption {
+    color: color(text);
+    line-height: config('line-height-md', $typography);
+  }
+
+  &__title {
+    color: color(primary);
+    display: block;
+    font-weight: 700;
+  }
+}
