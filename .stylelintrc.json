@@ -1,7 +1,6 @@
 {
   "extends": "stylelint-config-sass-guidelines",
   "rules": {
-    "function-parentheses-space-inside": "never-single-line",
     "max-nesting-depth": 4,
     "selector-no-vendor-prefix": [true,
       {

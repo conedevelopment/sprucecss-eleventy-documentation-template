@@ -13,7 +13,7 @@
   body::before { display: none; }
   .card { border: 1px solid color(border); }
 
-  select.form-control:not([multiple]):not([size]) {
+  select.form-control:not([multiple]):not([size]) { /* stylelint-disable-line */
     @include field-icon(
       config('select', $form-icon, false),
       color('select-foreground', 'form', true, $dark-colors)

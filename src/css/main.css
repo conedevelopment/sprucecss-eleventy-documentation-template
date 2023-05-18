@@ -1095,7 +1095,7 @@ samp {
 [data-theme-mode=dark] .card {
   border: 1px solid var(--spruce-base-color-border);
 }
-[data-theme-mode=dark] select.form-control:not([multiple]):not([size]) {
+[data-theme-mode=dark] select.form-control:not([multiple]):not([size]) { /* stylelint-disable-line */
   background-image: url('data:image/svg+xml,%3csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3e%3cpath d="M12,12.507l-3.816,-3.815c-0.171,-0.172 -0.45,-0.172 -0.622,-0l-0.933,0.933c-0.172,0.172 -0.172,0.451 0,0.623l5.06,5.06c0.172,0.172 0.45,0.172 0.622,0l5.06,-5.06c0.172,-0.172 0.172,-0.451 -0,-0.623l-0.933,-0.933c-0.172,-0.172 -0.451,-0.172 -0.622,-0l-3.816,3.815Z" style="fill:hsl%280, 0%, 100%%29;"/%3e%3c/svg%3e');
 }
 
