@@ -18,9 +18,14 @@
     button.focus();
   }
 
-  function handleKeyDown(event) {
-    if (event.code === 'Escape') {
+  function handleKeyDown(e) {
+    if (e.code === 'Escape') {
       closeModal();
+    }
+
+    if (e.ctrlKey && e.code === 'KeyK') {
+      e.preventDefault();
+      openModal();
     }
   }
 
