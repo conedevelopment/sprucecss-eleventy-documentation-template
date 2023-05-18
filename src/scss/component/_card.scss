@@ -3,14 +3,11 @@
 .card {
   $this: &;
 
+  @include layout-stack('s');
   @include a11y-card-link('.card__link', true);
   background-color: color('background', 'card');
   border: 1px solid color('border');
   border-radius: config('border-radius-sm', $display);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 20rem;
   padding: spacer('l') spacer-clamp('m', 'l');
 
   &__serial-number {
@@ -23,6 +20,5 @@
 
   &__title {
     font-size: font-size('h3');
-    margin-block: spacer('m') 0;
   }
 }

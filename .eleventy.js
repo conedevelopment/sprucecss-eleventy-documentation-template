@@ -6,6 +6,11 @@ const pluginTOC = require('eleventy-plugin-toc');
 const { execSync } = require('child_process');
 
 module.exports = config => {
+  config.addFilter('debugger', (...args) => {
+    console.log(...args)
+    debugger;
+  });
+
   config.addPlugin(eleventyNavigationPlugin);
   config.addPlugin(syntaxHighlight);
   config.addPlugin(pluginTOC);
@@ -22,8 +27,9 @@ module.exports = config => {
       return filtered.sort((a, b) => a.data.eleventyNavigation.order - b.data.eleventyNavigation.order);
   });
 
-  config.addCollection('content', collection => {
-    return [...collection.getFilteredByGlob('./src/content/*.md')];
+  config.addCollection('posts', collection => {
+    const items = collection.getFilteredByGlob('./src/posts/**/posts/*.md');
+    return items.sort((a, b) => a.data.eleventyNavigation.order - b.data.eleventyNavigation.order);
   });
 
   const markdownLib = markdownIt({ html: false }).use(
@@ -33,7 +39,7 @@ module.exports = config => {
       permalinkClass: 'anchor',
       permalinkSymbol: '#'
     }
-  )
+  );
 
   config.setLibrary('md', markdownLib);
 
