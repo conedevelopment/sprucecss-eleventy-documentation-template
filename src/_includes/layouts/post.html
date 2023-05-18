@@ -16,9 +16,5 @@
         {% endif %}
         <div class="l-post__content post-content">{{ content | safe }}</div>
     </div>
-    {% set previousPost = collections.posts | getPreviousCollectionItem %}
-    {% set nextPost = collections.posts | getNextCollectionItem %}
-    {{ nextPost }}
-    {% if previousPost %}Previous Blog Post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
-    {% if nextPost %}Next Blog Post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
+    {% include "partials/related-posts.html" %}
 {% endblock %}
