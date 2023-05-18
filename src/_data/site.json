@@ -1,13 +1,13 @@
 {
   "authorEmail": "hello@conedevelopment.com",
   "authorName": "Cone",
-  "copyright": "Some rights reserved",
+  "copyright": "Some rights reserved.",
   "name": "Eleventy Documentation Theme",
   "slogen": "An Eleventy theme for documentation sites",
   "social": {
     "twitter": "https://twitter.com/conedevelopment",
     "github": "https://github.com/conedevelopment",
-    "discord": "https://github.com/conedevelopment"
+    "discord": ""
   },
   "url": "https://eleventy-documentation.sprucecss.com"
 }

@@ -14,18 +14,24 @@
                     />
                 </a>
                 <div class="footer__socials">
-                    <a href="#">
-                        {% svgIcon './src/img/icon/github.svg' %}
-                    </a>
-                    <a href="#">
-                        {% svgIcon './src/img/icon/discord.svg' %}
-                    </a>
-                    <a href="#">
-                        {% svgIcon './src/img/icon/twitter.svg' %}
-                    </a>
+                    {% if (site.social.github) %}
+                        <a href="{{ site.social.github }}">
+                            {% svgIcon './src/img/icon/github.svg' %}
+                        </a>
+                    {% endif %}
+                    {% if (site.social.discord) %}
+                        <a href="{{ site.social.discord }}">
+                            {% svgIcon './src/img/icon/discord.svg' %}
+                        </a>
+                    {% endif %}
+                    {% if (site.social.twitter) %}
+                        <a href="{{ site.social.twitter }}">
+                            {% svgIcon './src/img/icon/twitter.svg' %}
+                        </a>
+                    {% endif %}
                 </div>
                 <p class="footer__copyright">
-                    © 2023 - Some rights are reserved.
+                    © {{ global.year() }} - {{ site.copyright }}
                 </p>
             </div>
             <div class="footer__column">
