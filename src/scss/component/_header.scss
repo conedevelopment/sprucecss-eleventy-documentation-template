@@ -51,7 +51,10 @@
     }
 
     a {
+      align-items: center;
       color: color('heading');
+      display: flex;
+      gap: spacer('xs');
       text-decoration: none;
 
       &:hover {
@@ -61,6 +64,13 @@
       &[aria-current='page'] {
         font-weight: 700;
       }
+    }
+
+    svg {
+      --dimension: 0.65em;
+      color: color('arrow', 'navigation');
+      height: var(--dimension);
+      width: var(--dimension);
     }
   }
 }

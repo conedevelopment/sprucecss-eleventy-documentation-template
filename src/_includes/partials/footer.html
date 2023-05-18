@@ -34,44 +34,37 @@
                     © {{ global.year() }} - {{ site.copyright }}
                 </p>
             </div>
+            {% for block in navigation.footer %}
             <div class="footer__column">
-                <h3 class="footer__title" id="footer-title-01">
-                    Getting Started
+                <h3 class="footer__title" id="footer-title-{{ block.title | slugify }}">
+                    {{ block.title }}
                 </h3>
+
                 <ul
                     class="footer__navigation"
-                    aria-labelledby="footer-title-01"
+                    aria-labelledby="footer-title-{{ block.title | slugify }}"
                 >
-                    <li><a href="#">Introduction</a></li>
-                    <li><a href="#">Installation</a></li>
-                    <li><a href="#">Structure and Code</a></li>
-                    <li><a href="#">Sass</a></li>
+                    {% for item in block.items %}
+                    <li>
+                        <a
+                            href="{{ item.url }}"
+                            {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                            {% if item.external %}
+                                target="_blank"
+                                rel="noopener"
+                            {% endif %}
+                        >
+                            {{ item.caption }}
+                            {% if item.external %}
+                                <span class="sr-only">Open in new window</span>
+                                {% svgIcon './src/img/icon/arrow-outward.svg', 'btn__icon' %}
+                            {% endif %}
+                        </a>
+                    </li>
+                    {% endfor %}
                 </ul>
             </div>
-            <div class="footer__column">
-                <h3 class="footer__title" id="footer-title-02">Elements</h3>
-                <ul
-                    class="footer__navigation"
-                    aria-labelledby="footer-title-02"
-                >
-                    <li><a href="#">Typography</a></li>
-                    <li><a href="#">Tables</a></li>
-                    <li><a href="#">Buttons</a></li>
-                    <li><a href="#">Forms</a></li>
-                </ul>
-            </div>
-            <div class="footer__column">
-                <h3 class="footer__title" id="footer-title-03">More From Us</h3>
-                <ul
-                    class="footer__navigation"
-                    aria-labelledby="footer-title-03"
-                >
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Pine - A web development blog</a></li>
-                    <li><a href="#">Root - An admin package for Laravel</a></li>
-                    <li><a href="#">Bite-Sized Accessibility</a></li>
-                </ul>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </footer>

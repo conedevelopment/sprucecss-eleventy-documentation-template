@@ -1,11 +1,29 @@
 <header class="header">
     <div class="header__column">
-        <nav class="header__navigation">
-            <ul>
-                <li><a href="#">Guides</a></li>
-                <li><a href="#">Integrations</a></li>
-            </ul>
-        </nav>
+        {% if navigation.header.length > 0 %}
+            <nav class="header__navigation">
+                <ul>
+                    {% for item in navigation.header %}
+                    <li>
+                        <a
+                            href="{{ item.url }}"
+                            {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                            {% if item.external %}
+                                target="_blank"
+                                rel="noopener"
+                            {% endif %}
+                        >
+                            {{ item.caption }}
+                            {% if item.external %}
+                                <span class="sr-only">Open in new window</span>
+                                {% svgIcon './src/img/icon/arrow-outward.svg', 'btn__icon' %}
+                            {% endif %}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        {% endif %}
     </div>
     <div class="header__actions">
         {% include "partials/search-toggle.html" %}

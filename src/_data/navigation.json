@@ -1,24 +1,104 @@
 {
+  "header": [
+    {
+      "caption": "Home",
+      "url": "/",
+      "external": false
+    },
+    {
+      "caption": "Blog",
+      "url": "/blog/",
+      "external": false
+    },
+    {
+      "caption": "About",
+      "url": "/about/",
+      "external": false
+    },
+    {
+      "caption": "Contact",
+      "url": "/contact/",
+      "external": false
+    },
+    {
+      "caption": "GitHub",
+      "url": "https://github.com/conedevelopment/sprucecss-eleventy-starter",
+      "external": true
+    }
+  ],
   "footer": [
     {
       "title": "Getting Started",
       "items": [
         {
-          "text": "Introduction",
-          "url": "/getting-started/introduction/"
+          "caption": "Introduction",
+          "url": "https://sprucecss.com/docs/getting-started/introduction/",
+          "external": true
         },
         {
-          "text": "Setup",
-          "url": "/getting-started/setup/"
+          "caption": "Installation",
+          "url": "https://sprucecss.com/docs/getting-started/installation/",
+          "external": true
+        },
+        {
+          "caption": "Structure and Code",
+          "url": "https://sprucecss.com/docs/getting-started/structure-and-code/",
+          "external": true
+        },
+        {
+          "caption": "Sass",
+          "url": "https://sprucecss.com/docs/getting-started/sass/",
+          "external": true
         }
       ]
     },
     {
-      "title": "Customization",
+      "title": "Elements",
       "items": [
         {
-          "text": "Dark Mode",
-          "url": "/customization/dark-mode/"
+          "caption": "Typography",
+          "url": "https://sprucecss.com/docs/elements/typography/",
+          "external": true
+        },
+        {
+          "caption": "Tables",
+          "url": "https://sprucecss.com/docs/elements/tables/",
+          "external": true
+        },
+        {
+          "caption": "Buttons",
+          "url": "https://sprucecss.com/docs/elements/buttons/",
+          "external": true
+        },
+        {
+          "caption": "Forms",
+          "url": "https://sprucecss.com/docs/elements/forms/",
+          "external": true
+        }
+      ]
+    },
+    {
+      "title": "More From Us",
+      "items": [
+        {
+          "caption": "Services",
+          "url": "https://conedevelopment.com/services/",
+          "external": true
+        },
+        {
+          "caption": "Pine development blog",
+          "url": "https://pineco.de/",
+          "external": true
+        },
+        {
+          "caption": "Root Laravel admin",
+          "url": "https://root.conedevelopment.com/",
+          "external": true
+        },
+        {
+          "caption": "Bite-Sized Accessibility",
+          "url": "https://bite-sized-a11y.com/",
+          "external": true
         }
       ]
     }
