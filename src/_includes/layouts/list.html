@@ -10,6 +10,7 @@
             {% set posts = collections.all | parentFilter(eleventyNavigation.key) %}
             {% for post in posts %}
                 <div class="card">
+                    <span class="card__serial-number"></span>
                     <h2 class="card__title">{{ post.data.title }}</h2>
                     <p>{{ post.data.summary }}</p>
                     <a href="{{ post.url }}" class="btn btn--primary">Read More</a>

@@ -1115,7 +1115,7 @@ samp {
   padding-inline: var(--container-gap);
 }
 .container--wide {
-  --container-width: 100rem;
+  --container-width: 95rem;
 }
 .container--narrow {
   --container-width: 50rem;
@@ -1161,6 +1161,7 @@ samp {
 
 .l-card {
   --columns: 1;
+  counter-reset: card;
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
@@ -1185,12 +1186,12 @@ samp {
   grid-template-columns: var(--gtc);
   margin-block-start: clamp(4.5rem, 5vw, 7rem);
 }
-@media (min-width: 64em) {
+@media (min-width: 80em) {
   .l-post {
     --gtc: minmax(0, 1fr) minmax(0, 15rem);
   }
 }
-@media (min-width: 64em) {
+@media (min-width: 80em) {
   .l-post__toc {
     order: 2;
   }
@@ -1199,7 +1200,7 @@ samp {
   inset-block-start: 3rem;
   position: sticky;
 }
-@media (min-width: 64em) {
+@media (min-width: 80em) {
   .l-post .post-heading {
     grid-column: 1/3;
   }
@@ -1208,9 +1209,9 @@ samp {
 .l-list {
   --gtc: minmax(0, 1fr);
   display: grid;
-  gap: var(--spruce-container-gap);
+  gap: 3rem;
   grid-template-columns: var(--gtc);
-  margin-block-start: clamp(4.5rem, 5vw, 7rem);
+  margin-block-start: clamp(3rem, 5vw, 7rem);
 }
 @media (min-width: 64em) {
   .l-list {
@@ -1589,9 +1590,6 @@ samp {
   height: var(--logo-height);
   width: var(--logo-width);
 }
-.sidebar__toggle {
-  border-radius: 2rem;
-}
 @media (min-width: 48em) {
   .sidebar__toggle {
     display: none;
@@ -1697,6 +1695,10 @@ samp {
   font-size: clamp(2.8rem, 4vw + 1rem, 4rem);
   font-weight: 800;
   line-height: 0.8;
+}
+.card__serial-number::before {
+  content: counter(card, decimal-leading-zero);
+  counter-increment: card;
 }
 .card__title {
   font-size: clamp(1.328125rem, 2vw + 1rem, 1.5625rem);

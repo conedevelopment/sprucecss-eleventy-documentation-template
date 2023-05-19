@@ -1,60 +1,28 @@
 {% extends "layouts/base.html" %} {% block content %}
 <div class="l-front-page">
     <div class="post-heading">
-        <h1 class="post-heading__title">
-            Eleventy Theme Made for Documentation
-        </h1>
-        <p class="post-heading__description">
-            Do you work on a project that requires a documentation? This theme
-            is for you. It's a simple, clean and responsive theme for Eleventy.
-        </p>
+        {% if (title) %}
+            <h1 class="post-heading__title">
+                {{ title }}
+            </h1>
+        {% endif %}
+        {% if (description) %}
+            <p class="post-heading__description">
+                {{ description }}
+            </p>
+        {% endif %}
     </div>
-    <div class="l-card">
-        <div class="card">
-            <span class="card__serial-number">01</span>
-            <h2 class="card__title">Introduction</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-                soluta eum mollitia reprehenderit praesentium hic.
-            </p>
-            <a class="btn btn--primary" href="#">Read More</a>
+    {% if cards %}
+        <div class="l-card">
+            {% for card in cards %}
+                <div class="card">
+                    <span class="card__serial-number"></span>
+                    <h2 class="card__title">{{ card.title }}</h2>
+                    <p>{{ card.description }}</p>
+                    <a class="btn btn--primary" href="{{ card.url }}">Read More</a>
+                </div>
+            {% endfor %}
         </div>
-        <div class="card">
-            <span class="card__serial-number">02</span>
-            <h2 class="card__title">Themes</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-                soluta eum mollitia reprehenderit praesentium hic.
-            </p>
-            <a class="btn btn--primary" href="#">Read More</a>
-        </div>
-        <div class="card">
-            <span class="card__serial-number">03</span>
-            <h2 class="card__title">Mixins</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-                soluta eum mollitia reprehenderit praesentium hic.
-            </p>
-            <a class="btn btn--primary" href="#">Read More</a>
-        </div>
-        <div class="card">
-            <span class="card__serial-number">04</span>
-            <h2 class="card__title">Typography</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-                soluta eum mollitia reprehenderit praesentium hic.
-            </p>
-            <a class="btn btn--primary" href="#">Read More</a>
-        </div>
-        <div class="card">
-            <span class="card__serial-number">05</span>
-            <h2 class="card__title">Buttons</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-                soluta eum mollitia reprehenderit praesentium hic.
-            </p>
-            <a class="btn btn--primary" href="#">Read More</a>
-        </div>
-    </div>
+    {% endif %}
 </div>
 {% endblock %}

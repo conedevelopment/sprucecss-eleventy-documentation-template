@@ -8,10 +8,12 @@
   grid-template-columns: var(--gtc);
   margin-block-start: spacer-clamp('xl', 'xxl');
 
-  @include breakpoint('md') { --gtc: minmax(0, 1fr) minmax(0, 15rem); }
+  @include breakpoint('lg') {
+    --gtc: minmax(0, 1fr) minmax(0, 15rem);
+  }
 
   &__toc {
-    @include breakpoint('md') {
+    @include breakpoint('lg') {
       order: 2;
     }
 
@@ -22,7 +24,7 @@
   }
 
   .post-heading {
-    @include breakpoint('md') {
+    @include breakpoint('lg') {
       grid-column: 1 / 3;
     }
   }

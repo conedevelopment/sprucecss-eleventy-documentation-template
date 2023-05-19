@@ -1,10 +1,10 @@
 ---
-title: 'Dark Mode'
+title: 'Spruce CSS'
 summary: 'Today more people and experts write about accessibility. For the better progression it is a good idea to read them.'
 date: '2023-04-26'
 eleventyNavigation:
-  key: Dark Mode
-  parent: Customization
+  key: 'Spruce CSS'
+  parent: 'Customization'
   order: 3
 ---
 

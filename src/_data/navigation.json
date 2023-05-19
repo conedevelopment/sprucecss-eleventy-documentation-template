@@ -1,28 +1,13 @@
 {
   "header": [
     {
-      "caption": "Home",
-      "url": "/",
-      "external": false
+      "caption": "Spruce CSS",
+      "url": "https://sprucecss.com",
+      "external": true
     },
     {
-      "caption": "Blog",
-      "url": "/blog/",
-      "external": false
-    },
-    {
-      "caption": "About",
-      "url": "/about/",
-      "external": false
-    },
-    {
-      "caption": "Contact",
-      "url": "/contact/",
-      "external": false
-    },
-    {
-      "caption": "GitHub",
-      "url": "https://github.com/conedevelopment/sprucecss-eleventy-starter",
+      "caption": "Cone",
+      "url": "https://conedevelopment.com",
       "external": true
     }
   ],

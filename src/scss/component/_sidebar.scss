@@ -33,8 +33,6 @@
   }
 
   &__toggle {
-    border-radius: 2rem;
-
     @include breakpoint('sm') {
       display: none;
     }

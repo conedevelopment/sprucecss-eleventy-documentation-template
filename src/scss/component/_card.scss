@@ -16,6 +16,11 @@
     font-size: responsive-font-size(4rem, 30, '4vw + 1rem');
     font-weight: 800;
     line-height: 0.8;
+
+    &::before {
+      content: counter(card, decimal-leading-zero);
+      counter-increment: card;
+    }
   }
 
   &__title {

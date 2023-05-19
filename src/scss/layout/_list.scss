@@ -4,9 +4,9 @@
   --gtc: minmax(0, 1fr);
 
   display: grid;
-  gap: get-css-variable(--container-gap);
+  gap: spacer('l');
   grid-template-columns: var(--gtc);
-  margin-block-start: spacer-clamp('xl', 'xxl');
+  margin-block-start: spacer-clamp('l', 'xxl');
 
   @include breakpoint('md') {
     --gtc: minmax(0, 1fr) minmax(0, 15rem);
