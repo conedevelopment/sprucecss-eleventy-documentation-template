@@ -10,7 +10,7 @@ eleventyNavigation:
 
 Welcome to the first officially released template of Spruce CSS. It happens that it is a documentation template built on [Eleventy](https://www.11ty.dev/).
 
-## About the Templete
+## About the Template
 
 We created a documentation template because it is a relatively straightforward design.
 
@@ -19,3 +19,5 @@ It follows a simple structure with two levels. We think it is helpful for any OS
 ## Spruce CSS
 
 The template is built on [Spruce CSS](https://sprucecss.com/), a small and customizable CSS framework.
+
+![The logo of Spruce CSS](/img/cover/sprucecss.png)

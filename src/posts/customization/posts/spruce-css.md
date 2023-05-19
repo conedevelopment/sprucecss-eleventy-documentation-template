@@ -5,7 +5,7 @@ date: '2023-04-26'
 eleventyNavigation:
   key: 'Spruce CSS'
   parent: 'Customization'
-  order: 3
+  order: 6
 ---
 
 **Nulla venenatis feugiat elit ut mollis.** In venenatis dui libero, vitae ornare nulla fringilla ut. Fusce eu elit sit amet sapien feugiat accumsan id a tortor. Curabitur nec blandit risus, sit amet faucibus ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas quis nulla ac risus vulputate luctus.
