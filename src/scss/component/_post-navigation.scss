@@ -28,7 +28,7 @@
 
   &--next {
     margin-inline-start: auto;
-    text-align: right;
+    text-align: end;
   }
 
   &__icon {
@@ -52,13 +52,13 @@
   }
 
   &__caption {
-    color: color(text);
+    color: color('text');
     line-height: config('line-height-md', $typography);
   }
 
   &__title {
     color: color('primary');
-    display: block;
+    display: flex;
     font-weight: 700;
   }
 }

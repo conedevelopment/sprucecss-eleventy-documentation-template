@@ -58,7 +58,7 @@ $colors: (
     'label': $dark-color-white,
     'legend': $dark-color-white,
     'placeholder': hsl(0deg 0% 60%),
-    'select-foreground': hsl(0 0% 100%),
+    'select-foreground': hsl(0deg 0% 100%),
     'shadow-focus': color.adjust($dark-color-primary, $alpha: -0.75),
     'text': $dark-color-gray,
     'valid': $dark-color-success,
@@ -72,13 +72,17 @@ $colors: (
   ),
   'navigation': (
     'arrow': hsl(0deg 0% 100% / 15%),
+    'icon-background': hsl(245deg 38% 10%),
+    'icon-background-hover': $dark-color-primary,
+    'icon-foreground': $dark-color-primary,
+    'icon-foreground-hover': hsl(186deg 100% 5%),
   ),
   'tab': (
     'background': hsl(207deg 84% 10%),
   ),
   'prism': (
     'color': hsl(217deg 34% 88%),
-    'background': hsl(207deg 83% 10%),
+    'background': hsl(245deg 38% 7%),
     'comment': hsl(180deg 9% 55%),
     'punctuation': hsl(276deg 68% 75%),
     'namespace': hsl(197deg 31% 77%),
