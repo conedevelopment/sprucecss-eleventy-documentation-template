@@ -33,6 +33,10 @@ $color-secondary: hsl(186deg 100% 60%);
     ),
     'navigation': (
       'arrow': hsl(0deg 0% 0% / 15%),
+      'icon-background': hsl(224deg 94% 98%),
+      'icon-background-hover': $color-primary,
+      'icon-foreground': $color-primary,
+      'icon-foreground-hover': hsl(0deg 0% 100%),
     ),
     'search': (
       'icon': hsl(229deg 26% 48% / 25%),
