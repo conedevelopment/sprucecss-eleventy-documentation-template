@@ -14,11 +14,19 @@
   &__title {
     font-size: responsive-font-size(3.5rem, 30, '4.5vw');
     line-height: config('line-height-sm', $typography);
-    max-width: 18ch;
+    margin-block-start: spacer('xs');
+    max-width: 20ch;
   }
 
   &__description {
     font-size: config('font-size-lead', $typography);
-    max-width: 50ch;
+    max-width: 60ch;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacer('s');
+    margin-block-start: spacer('m');
   }
 }

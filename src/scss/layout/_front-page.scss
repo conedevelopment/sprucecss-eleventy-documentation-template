@@ -2,7 +2,7 @@
 
 .l-front-page {
   display: grid;
-  gap: spacer('l');
+  gap: spacer('xl');
   grid-template-columns: minmax(0, 1fr);
-  margin-block: spacer-clamp('m', 'l') spacer-clamp('l', 'xl');
+  margin-block-end: spacer-clamp('l', 'xl');
 }

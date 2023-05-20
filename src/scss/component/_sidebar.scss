@@ -11,10 +11,8 @@
 
   &__footer {
     align-items: center;
-    border-block-start: 1px solid color('border');
     display: flex;
     justify-content: space-between;
-    padding-block: spacer('m');
   }
 
   &__body {

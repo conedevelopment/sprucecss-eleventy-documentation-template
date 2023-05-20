@@ -1,5 +1,5 @@
 ---
-title: "Eleventy Theme Made for Documentation"
+title: "Document your next project a little bit better."
 description: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
 layout: "layouts/front-page.html"
 cards:

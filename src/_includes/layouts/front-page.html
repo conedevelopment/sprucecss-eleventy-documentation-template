@@ -12,18 +12,55 @@
                 {{ description }}
             </p>
         {% endif %}
+        <div class="post-heading__actions">
+            <a class="btn btn--lg btn--primary" href="#">Introduction</a>
+            <a class="btn btn--lg btn--outline-primary" href="#">Realeses</a>
+        </div>
     </div>
     {% if cards %}
-        <div class="l-card">
-            {% for card in cards %}
-                <div class="card">
-                    <span class="card__serial-number"></span>
-                    <h2 class="card__title">{{ card.title }}</h2>
-                    <p>{{ card.description }}</p>
-                    <a class="btn btn--primary" href="{{ card.url }}">Read More</a>
-                </div>
-            {% endfor %}
+        <div class="l-front-page__section">
+            <h2>Overview</h2>
+            <div class="l-card">
+                {% for card in cards %}
+                    <div class="card">
+                        <span class="card__serial-number"></span>
+                        <h2 class="card__title">{{ card.title }}</h2>
+                        <p>{{ card.description }}</p>
+                        <a class="btn btn--primary" href="{{ card.url }}">
+                            Read More
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     {% endif %}
-</div>
+    <div class="l-front-page__section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion-list--boxed">
+            <div class="accordion-card accordion-card--box">
+                <h3 class="accordion-card__title">Why Make Another CSS Framework?</h3>
+                <div class="accordion-card__content">
+                    <p>As you may know, there are many CSS frameworks (hundreds of them, and a lot of them are not maintained today). Everybody can choose one that suits their work style or project requirements. So why make another one? It is certainly not because we can do it better but because we want to do it our way. We want to be in control and make decisions.</p>
+                </div>
+            </div>
+            <div class="accordion-card accordion-card--box">
+                <h3 class="accordion-card__title">It Is Opinionated</h3>
+                <div class="accordion-card__content">
+                    <p>Each system is opinionated but on a different level; this is valid for Spruce too. We don’t want to vote for (strictly) any particular solution (because there is always more than one), but we will show you what we think is the best for us (and maybe for you too). We don’t believe there is a good or bad solution, but we can learn from any of them.</p>
+                </div>
+            </div>
+            <div class="accordion-card accordion-card--box">
+                <h3 class="accordion-card__title">We Left the Grid Out</h3>
+                <div class="accordion-card__content">
+                    <p>One controversial decision we made with Spruce is to leave a classical grid system out. Because of the late CSS layout model developments like Flexbox and Grid, we think it can be eliminated; this doesn’t mean that we won’t show you how to make layouts with ease, but we try to make it the modern way.</p>
+                </div>
+            </div>
+            <div class="accordion-card accordion-card--box">
+                <h3 class="accordion-card__title">Coding Style Guide and Practices</h3>
+                <div class="accordion-card__content">
+                    <p>Where it is possible, we use elements and/or attributes to style elements, but it is still a class-based framework.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
