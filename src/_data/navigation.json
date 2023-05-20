@@ -1,13 +1,18 @@
 {
   "header": [
     {
-      "caption": "Spruce CSS",
-      "url": "https://sprucecss.com",
-      "external": true
+      "caption": "FAQ",
+      "url": "/faq/",
+      "external": false
     },
     {
-      "caption": "Cone",
-      "url": "https://conedevelopment.com",
+      "caption": "Releases",
+      "url": "/releases/",
+      "external": false
+    },
+    {
+      "caption": "Spruce CSS",
+      "url": "https://sprucecss.com",
       "external": true
     }
   ],

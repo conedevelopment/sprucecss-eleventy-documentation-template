@@ -16,15 +16,15 @@
         <div class="site-wrapper">
             <a class="btn btn--primary skip-link" href="#content">Skip to content</a>
             <div class="container container--wide">
+                {% include "partials/header.html" %}
                 <div class="l-main">
                     {% include "partials/sidebar.html" %}
                     <div class="l-main__body">
-                        {% include "partials/header.html" %}
                         <main id="content">{% block content %}{% endblock %}</main>
+                        {% include "partials/footer.html" %}
                     </div>
                 </div>
             </div>
-            {% include "partials/footer.html" %}
         </div>
         {% include "partials/search-modal.html" %}
 

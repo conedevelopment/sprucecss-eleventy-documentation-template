@@ -1,70 +1,35 @@
 <footer class="footer">
-    <div class="container container--wide">
-        <div class="footer__inner">
-            <div class="footer__column">
-                <a class="footer__logo" href="#">
-                    <img
-                        src="/img/cone-docs-logo-dark.svg"
-                        alt="{{ site.name }}"
-                        width="72"
-                        height="72"
-                        data-theme-mode="data-theme-mode"
-                        data-light-asset="/img/cone-docs-logo-dark.svg"
-                        data-dark-asset="/img/cone-docs-logo-light.svg"
-                    />
-                </a>
-                <div class="footer__socials">
-                    {% if (site.social.github) %}
-                        <a href="{{ site.social.github }}">
-                            {% svgIcon './src/img/icon/github.svg' %}
-                        </a>
-                    {% endif %}
-                    {% if (site.social.discord) %}
-                        <a href="{{ site.social.discord }}">
-                            {% svgIcon './src/img/icon/discord.svg' %}
-                        </a>
-                    {% endif %}
-                    {% if (site.social.twitter) %}
-                        <a href="{{ site.social.twitter }}">
-                            {% svgIcon './src/img/icon/twitter.svg' %}
-                        </a>
-                    {% endif %}
-                </div>
-                <p class="footer__copyright">
-                    © {{ global.year() }} - {{ site.copyright }}
-                </p>
-            </div>
-            {% for block in navigation.footer %}
-            <div class="footer__column">
-                <h3 class="footer__title" id="footer-title-{{ block.title | slugify }}">
-                    {{ block.title }}
-                </h3>
+    <div class="footer__inner">
+        {% for block in navigation.footer %}
+        <div class="footer__column">
+            <h3 class="footer__title" id="footer-title-{{ block.title | slugify }}">
+                {{ block.title }}
+            </h3>
 
-                <ul
-                    class="footer__navigation"
-                    aria-labelledby="footer-title-{{ block.title | slugify }}"
-                >
-                    {% for item in block.items %}
-                    <li>
-                        <a
-                            href="{{ item.url }}"
-                            {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
-                            {% if item.external %}
-                                target="_blank"
-                                rel="noopener"
-                            {% endif %}
-                        >
-                            {{ item.caption }}
-                            {% if item.external %}
-                                <span class="sr-only">Open in new window</span>
-                                {% svgIcon './src/img/icon/arrow-outward.svg', 'btn__icon' %}
-                            {% endif %}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endfor %}
+            <ul
+                class="footer__navigation"
+                aria-labelledby="footer-title-{{ block.title | slugify }}"
+            >
+                {% for item in block.items %}
+                <li>
+                    <a
+                        href="{{ item.url }}"
+                        {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                        {% if item.external %}
+                            target="_blank"
+                            rel="noopener"
+                        {% endif %}
+                    >
+                        {{ item.caption }}
+                        {% if item.external %}
+                            <span class="sr-only">Open in new window</span>
+                            {% svgIcon './src/img/icon/arrow-outward.svg', 'btn__icon' %}
+                        {% endif %}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
+        {% endfor %}
     </div>
 </footer>

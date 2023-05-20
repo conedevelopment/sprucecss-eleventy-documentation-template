@@ -1,6 +1,12 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .sidebar-section {
+  &--navigation {
+    @include breakpoint('sm') {
+      display: none;
+    }
+  }
+
   &__title {
     color: color('heading');
     font-size: config('font-size-base', $typography);
@@ -18,7 +24,10 @@
     }
 
     a {
+      align-items: center;
       color: color(text);
+      display: flex;
+      gap: spacer('xs');
       text-decoration: none;
 
       &[aria-current='page'] {
@@ -36,6 +45,12 @@
           top: 0;
           width: 0.3rem;
         }
+      }
+      svg {
+        --dimension: 0.65em;
+        color: color('arrow', 'navigation');
+        height: var(--dimension);
+        width: var(--dimension);
       }
     }
   }

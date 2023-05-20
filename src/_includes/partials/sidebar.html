@@ -1,21 +1,33 @@
 <aside class="sidebar l-main__sidebar">
-    <div class="sidebar__header">
-        <a class="sidebar__logo" href="/">
-            <img
-                src="/img/cone-docs-logo-dark.svg"
-                alt="{{ site.name }}"
-                height="72"
-                width="72"
-                data-theme-mode="data-theme-mode"
-                data-light-asset="/img/cone-docs-logo-dark.svg"
-                data-dark-asset="/img/cone-docs-logo-light.svg"
-            >
-        </a>
-        <button class="btn btn--primary btn--icon sidebar__toggle" data-action="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toogle navigation">
-            {% svgIcon './src/img/icon/menu.svg', 'btn__icon' %}
-        </button>
-    </div>
     <div class="sidebar__body">
+        {% if navigation.header.length > 0 %}
+            <div class="sidebar-section sidebar-section--navigation">
+                <h3 class="sidebar-section__title">Navigation</h3>
+                <nav class="sidebar-section__navigation">
+                    <ul>
+                        {% for item in navigation.header %}
+                        <li>
+                            <a
+                                href="{{ item.url }}"
+                                {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                                {% if item.external %}
+                                    target="_blank"
+                                    rel="noopener"
+                                {% endif %}
+                            >
+                                {{ item.caption }}
+                                {% if item.external %}
+                                    <span class="sr-only">Open in new window</span>
+                                    {% svgIcon './src/img/icon/arrow-outward.svg', 'btn__icon' %}
+                                {% endif %}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        {% endif %}
+
         {% set navPages = collections.all | eleventyNavigation %}
         {% for navigation in navPages %}
             <div class="sidebar-section">
@@ -29,5 +41,8 @@
                 </nav>
             </div>
         {% endfor %}
+    </div>
+    <div class="sidebar__footer">
+        © {{ global.year() }} - {{ site.copyright }}
     </div>
 </aside>

@@ -4,5 +4,5 @@
   display: grid;
   gap: spacer('l');
   grid-template-columns: minmax(0, 1fr);
-  margin-block-start: spacer-clamp('xl', 'xxl');
+  margin-block: spacer-clamp('m', 'l') spacer-clamp('l', 'xl');
 }

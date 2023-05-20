@@ -4,8 +4,8 @@
   --logo-height: 4rem;
   --logo-width: 4rem;
 
-  background-color: color('background', 'footer');
-  padding-block: get-css-variable(--section-gap);
+  border-block-start: 1px solid color('border');
+  padding-block-start: spacer-clamp('l', 'xl');
 
   &__inner {
     @include layout-grid('l', 12rem);
@@ -16,28 +16,6 @@
     display: flex;
     height: var(--logo-height);
     width: var(--logo-width);
-  }
-
-  &__socials {
-    align-items: center;
-    display: flex;
-    gap: spacer('s');
-
-    a {
-      color: color('heading');
-      display: inline-flex;
-
-      &:hover,
-      &:focus {
-        color: color('primary');
-      }
-    }
-
-    svg {
-      --dimension: 1.25rem;
-      height: var(--dimension);
-      width: var(--dimension);
-    }
   }
 
   &__title {

@@ -39,6 +39,6 @@
     @include text-ellipsis(1);
     display: inline-block;
     text-align: start;
-    width: 30ch;
+    max-width: 30ch;
   }
 }

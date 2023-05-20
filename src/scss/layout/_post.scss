@@ -6,7 +6,6 @@
   display: grid;
   gap: get-css-variable(--container-gap);
   grid-template-columns: var(--gtc);
-  margin-block-start: spacer-clamp('xl', 'xxl');
 
   @include breakpoint('lg') {
     --gtc: minmax(0, 1fr) minmax(0, 15rem);

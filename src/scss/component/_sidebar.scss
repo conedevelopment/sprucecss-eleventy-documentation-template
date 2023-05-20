@@ -1,59 +1,34 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .sidebar {
-  --logo-height: 3.5rem;
-  --logo-width: 3.5rem;
-
   display: flex;
   flex-direction: column;
   gap: spacer('m');
-  margin-block: spacer('m') 0;
 
   @include breakpoint('sm') {
-    margin-block: spacer('l');
     padding-inline-end: get-css-variable(--container-gap);
   }
 
-  &__header {
+  &__footer {
     align-items: center;
+    border-block-start: 1px solid color('border');
     display: flex;
-    height: var(--logo-height);
     justify-content: space-between;
-
-    @include breakpoint('md') {
-      --logo-height: 4rem;
-      --logo-width: 4rem;
-    }
-  }
-
-  &__logo {
-    display: inline-flex;
-    height: var(--logo-height);
-    width: var(--logo-width);
-  }
-
-  &__toggle {
-    @include breakpoint('sm') {
-      display: none;
-    }
+    padding-block: spacer('m');
   }
 
   &__body {
-    @include layout-stack('m');
     @include scrollbar(
       $border-radius: 0.05rem
     );
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: spacer('m');
     flex-grow: 1;
     max-height: calc(100vh - var(--dimension) - #{spacer('m')} * 3);
     overflow-y: auto;
 
-    &--open {
-      display: block;
-    }
-
     @include breakpoint('sm') {
-      display: block;
       max-height: initial;
     }
   }

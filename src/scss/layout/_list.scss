@@ -6,7 +6,6 @@
   display: grid;
   gap: spacer('l');
   grid-template-columns: var(--gtc);
-  margin-block-start: spacer-clamp('l', 'xxl');
 
   @include breakpoint('md') {
     --gtc: minmax(0, 1fr) minmax(0, 15rem);
