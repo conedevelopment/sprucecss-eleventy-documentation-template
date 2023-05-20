@@ -354,16 +354,16 @@ template {
   --spruce-base-color-blockquote-border: hsl(238, 100%, 50%);
   --spruce-base-color-border: hsla(0, 0%, 0%, 0.05);
   --spruce-base-color-code-background: hsl(224, 94%, 97%);
-  --spruce-base-color-code-foreground: hsl(205, 100%, 2%);
+  --spruce-base-color-code-foreground: hsl(245, 31%, 21%);
   --spruce-base-color-heading: hsl(232, 68%, 11%);
   --spruce-base-color-link: hsl(238, 100%, 50%);
   --spruce-base-color-link-hover: #0007cc;
   --spruce-base-color-mark-background: hsl(50, 100%, 80%);
-  --spruce-base-color-mark-foreground: hsl(205, 100%, 2%);
+  --spruce-base-color-mark-foreground: hsl(245, 31%, 21%);
   --spruce-base-color-marker: hsl(238, 100%, 50%);
   --spruce-base-color-primary: hsl(238, 100%, 50%);
   --spruce-base-color-secondary: hsl(186, 100%, 60%);
-  --spruce-base-color-text: hsl(208, 22%, 34%);
+  --spruce-base-color-text: hsl(208, 21%, 39%);
 }
 
 :root {
@@ -386,14 +386,14 @@ template {
   --spruce-form-color-check-foreground: hsl(0, 0%, 100%);
   --spruce-form-color-invalid: hsl(0, 71%, 51%);
   --spruce-form-color-invalid-focus-ring: rgba(219, 41, 41, 0.25);
-  --spruce-form-color-label: hsl(205, 100%, 2%);
-  --spruce-form-color-legend: hsl(205, 100%, 2%);
+  --spruce-form-color-label: hsl(245, 31%, 21%);
+  --spruce-form-color-legend: hsl(245, 31%, 21%);
   --spruce-form-color-placeholder: hsl(208, 7%, 40%);
   --spruce-form-color-range-thumb-background: hsl(238, 100%, 50%);
   --spruce-form-color-range-thumb-focus-ring: hsl(238, 100%, 50%);
   --spruce-form-color-range-track-background: hsl(215, 63%, 93%);
   --spruce-form-color-ring-focus: rgba(0, 9, 255, 0.25);
-  --spruce-form-color-select-foreground: hsl(205, 100%, 2%);
+  --spruce-form-color-select-foreground: hsl(245, 31%, 21%);
   --spruce-form-color-text: hsl(208, 9%, 42%);
   --spruce-form-color-valid: hsl(150, 100%, 33%);
   --spruce-form-color-valid-focus-ring: rgba(0, 168, 84, 0.25);
@@ -413,7 +413,7 @@ template {
 :root {
   --spruce-table-color-border: hsl(215, 63%, 93%);
   --spruce-table-color-caption: hsl(208, 9%, 42%);
-  --spruce-table-color-heading: hsl(205, 100%, 2%);
+  --spruce-table-color-heading: hsl(245, 31%, 21%);
   --spruce-table-color-hover: hsla(0, 0%, 0%, 0.05);
   --spruce-table-color-stripe: hsla(0, 0%, 0%, 0.025);
   --spruce-table-color-text: hsl(208, 9%, 42%);
@@ -1265,7 +1265,7 @@ samp {
 }
 .header__logo img {
   display: inline-flex;
-  height: 1.75rem;
+  height: 2rem;
   width: auto;
 }
 .header__toggle {

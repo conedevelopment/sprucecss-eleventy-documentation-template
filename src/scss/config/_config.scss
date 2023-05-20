@@ -13,6 +13,7 @@ $color-secondary: hsl(186deg 100% 60%);
     'padding-sm': 0.6em,
     'padding': 0.75em 1.5em,
   ),
+  $color-black: hsl(245 31% 21%),
   $color-primary: $color-primary,
   $color-secondary: $color-secondary,
   $colors: (
@@ -20,7 +21,7 @@ $color-secondary: hsl(186deg 100% 60%);
       'border': hsl(0deg 0% 0% / 5%),
       'code-background': hsl(224deg 94% 97%),
       'heading': hsl(232deg 68% 11%),
-      'text': hsl(208deg 22% 34%),
+      'text': hsl(208, 21%, 39%),
     ),
     'breadcrumb': (
       'separator': hsl(0deg 0% 80%),
