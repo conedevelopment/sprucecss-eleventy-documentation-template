@@ -26,7 +26,7 @@
     a {
       align-items: center;
       color: color(text);
-      display: flex;
+      display: inline-flex;
       gap: spacer('xs');
       text-decoration: none;
 
@@ -46,6 +46,7 @@
           width: 0.3rem;
         }
       }
+
       svg {
         --dimension: 0.65em;
         color: color('arrow', 'navigation');

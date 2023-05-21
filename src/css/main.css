@@ -1679,7 +1679,7 @@ samp {
 .sidebar-section__navigation a {
   align-items: center;
   color: var(--spruce-base-color-text);
-  display: flex;
+  display: inline-flex;
   gap: 0.5rem;
   text-decoration: none;
 }
