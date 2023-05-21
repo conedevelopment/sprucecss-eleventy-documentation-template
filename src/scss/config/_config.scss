@@ -8,10 +8,11 @@ $color-secondary: hsl(186deg 100% 60%);
   $btn: (
     'font-family': #{'Manrope', sans-serif},
     'font-weight': 700,
-    'icon-padding-sm': 0.6em,
-    'padding-lg': 1em 2em,
-    'padding-sm': 0.6em,
     'padding': 0.75em 1.5em,
+  ),
+  $btn-lg: (
+    'font-size': 1rem,
+    'padding': 1em 1.75em,
   ),
   $color-black: hsl(245 31% 21%),
   $color-primary: $color-primary,

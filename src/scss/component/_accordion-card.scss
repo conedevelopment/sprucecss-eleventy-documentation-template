@@ -60,10 +60,10 @@
     svg {
       --dimension: 1.75rem;
 
-      background-color: color('primary');
+      background-color: color('primary-background', 'btn');
       block-size: var(--dimension);
       border-radius: config('border-radius-sm', $display);
-      color: hsl(0 0% 100%);
+      color: color('primary-foreground', 'btn');
       flex-shrink: 0;
       inline-size: var(--dimension);
     }

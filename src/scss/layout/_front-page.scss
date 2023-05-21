@@ -5,4 +5,8 @@
   gap: spacer('xl');
   grid-template-columns: minmax(0, 1fr);
   margin-block-end: spacer-clamp('l', 'xl');
+
+  &__section {
+    @include layout-stack;
+  }
 }

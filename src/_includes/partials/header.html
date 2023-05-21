@@ -1,15 +1,7 @@
 <header class="header">
     <div class="header__column">
         <a class="header__logo" href="/">
-            <img
-                alt="{{ site.name }}"
-                data-dark-asset="/img/cone-docs-logo-beta-light.svg"
-                data-light-asset="/img/cone-docs-logo-beta-dark.svg"
-                data-theme-mode="data-theme-mode"
-                height="72"
-                src="/img/cone-docs-logo-beta-dark.svg"
-                width="72"
-            >
+            {% svgIcon './src/img/cone-docs-logo-beta.svg' %}
         </a>
         {% if navigation.header.length > 0 %}
             <nav class="header__navigation">

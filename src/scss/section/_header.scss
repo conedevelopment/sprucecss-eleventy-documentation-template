@@ -30,7 +30,8 @@
   &__logo {
     display: inline-flex;
 
-    img {
+    img,
+    svg {
       display: inline-flex;
       height: 2rem;
       width: auto;

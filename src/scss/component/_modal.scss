@@ -5,6 +5,7 @@
   backdrop-filter: blur(0.35rem);
   display: none;
   inset: 0;
+  padding: spacer('s');
   position: fixed;
 
   &--open {

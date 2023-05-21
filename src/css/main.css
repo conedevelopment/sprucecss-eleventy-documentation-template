@@ -838,9 +838,6 @@ samp {
   --spruce-outline-width: 1px;
   --spruce-padding: 0.75em 1.5em;
   --spruce-shadow-width: 0.25rem;
-  --spruce-icon-padding-sm: 0.6em;
-  --spruce-padding-lg: 1em 2em;
-  --spruce-padding-sm: 0.6em;
   align-items: center;
   border-radius: var(--spruce-border-radius);
   border-style: solid;
@@ -904,10 +901,10 @@ samp {
 }
 
 .btn--lg {
-  --spruce-font-size: 1.15rem;
+  --spruce-font-size: 1rem;
   --spruce-gap: 0.5rem;
   --spruce-icon-padding: 0.9em;
-  --spruce-padding: 0.9em 1.15em;
+  --spruce-padding: 1em 1.75em;
 }
 
 .btn--block {
@@ -1185,6 +1182,13 @@ samp {
   grid-template-columns: minmax(0, 1fr);
   margin-block-end: clamp(3rem, 5vw, 4.5rem);
 }
+.l-front-page__section > * {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+.l-front-page__section > * + * {
+  margin-block-start: 1.5rem;
+}
 
 .l-post {
   --gtc: minmax(0, 1fr);
@@ -1263,7 +1267,8 @@ samp {
 .header__logo {
   display: inline-flex;
 }
-.header__logo img {
+.header__logo img,
+.header__logo svg {
   display: inline-flex;
   height: 2rem;
   width: auto;
@@ -1867,6 +1872,7 @@ pre[class*=language-] {
   backdrop-filter: blur(0.35rem);
   display: none;
   inset: 0;
+  padding: 1rem;
   position: fixed;
 }
 .modal-backdrop--open {
@@ -2079,10 +2085,10 @@ textarea.pagefind-ui__search-input {
 }
 .accordion-card__toggle svg {
   --dimension: 1.75rem;
-  background-color: var(--spruce-base-color-primary);
+  background-color: var(--spruce-btn-color-primary-background);
   block-size: var(--dimension);
   border-radius: var(--spruce-border-radius-sm);
-  color: hsl(0, 0%, 100%);
+  color: var(--spruce-btn-color-primary-foreground);
   flex-shrink: 0;
   inline-size: var(--dimension);
 }

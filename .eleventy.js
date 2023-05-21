@@ -73,10 +73,6 @@ module.exports = config => {
     execSync(`npx pagefind --source dist --glob \"**/*.html\"`, { encoding: 'utf-8' })
   });
 
-  config.setServerOptions({
-    showAllHosts: true,
-  });
-
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
