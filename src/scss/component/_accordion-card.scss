@@ -49,10 +49,10 @@
     &:focus-visible {
       svg {
         @include focus-ring(
-          $type: config('focus-ring-type', $btn),
+          $type: config('focus-ring-type', $btn, false),
           $ring-color: color('primary'),
-          $ring-width: config('focus-ring-width', $btn),
-          $ring-offset: config('focus-ring-offset', $btn)
+          $ring-width: config('focus-ring-width', $btn, false),
+          $ring-offset: config('focus-ring-offset', $btn, false)
         );
       }
     }

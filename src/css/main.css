@@ -2083,6 +2083,10 @@ textarea.pagefind-ui__search-input {
   padding-block: 1.5rem;
   text-align: start;
 }
+.accordion-card__toggle:focus-visible svg {
+  outline: 2px solid var(--spruce-base-color-primary);
+  outline-offset: 2px;
+}
 .accordion-card__toggle svg {
   --dimension: 1.75rem;
   background-color: var(--spruce-btn-color-primary-background);
