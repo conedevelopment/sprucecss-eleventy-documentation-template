@@ -1,6 +1,6 @@
 ---
 title: "Frequently Asked Questions"
-description: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
+summary: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
 layout: "layouts/faq.html"
 faqs:
 - title: "Introduction"

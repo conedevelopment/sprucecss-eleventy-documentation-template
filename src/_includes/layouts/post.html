@@ -2,11 +2,8 @@
 
 {% block content %}
     <div class="l-post" data-pagefind-body>
-        <div class="post-heading">
-            {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(title, { includeSelf: true }) %}
-            {% include "partials/breadcrumbs.html" %}
-            <h1 class="post-heading__title">{{ title }}</h1>
-        </div>
+        {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(title, { includeSelf: true }) %}
+        {% include "partials/post-heading.html" %}
         {% if content | toc %}
         <div class="l-post__toc toc" aria-labelledby="toc-title">
             <section class="toc" aria-labelledby="toc-title">

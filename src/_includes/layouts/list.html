@@ -1,11 +1,8 @@
 {% extends "layouts/base.html" %}
 {% block content %}
     <div class="l-list">
-        <div class="post-heading">
-            {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(title, { includeSelf: true }) %}
-            {% include "partials/breadcrumbs.html" %}
-            <h1 class="post-heading__title">{{ title }}</h1>
-        </div>
+        {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(title, { includeSelf: true }) %}
+        {% include "partials/post-heading.html" %}
         <div class="l-list__inner l-card">
             {% set posts = collections.all | parentFilter(eleventyNavigation.key) %}
             {% for post in posts %}

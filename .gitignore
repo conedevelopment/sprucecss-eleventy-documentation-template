@@ -174,7 +174,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-# Generated folders
-assets/css
-html/

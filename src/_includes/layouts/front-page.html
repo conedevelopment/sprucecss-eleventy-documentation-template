@@ -1,22 +1,6 @@
 {% extends "layouts/base.html" %} {% block content %}
 <div class="l-front-page">
-    <div class="post-heading">
-        <p class="post-heading__headline">Eleventy / Spruce CSS</p>
-        {% if (title) %}
-            <h1 class="post-heading__title">
-                {{ title }}
-            </h1>
-        {% endif %}
-        {% if (description) %}
-            <p class="post-heading__description">
-                {{ description }}
-            </p>
-        {% endif %}
-        <div class="post-heading__actions">
-            <a class="btn btn--lg btn--primary" href="#">Introduction</a>
-            <a class="btn btn--lg btn--outline-primary" href="#">Changelog</a>
-        </div>
-    </div>
+    {% include "partials/post-heading.html" %}
     {% if overview %}
         <div class="l-front-page__section">
             <h2>Overview</h2>

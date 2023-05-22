@@ -1,6 +1,14 @@
 ---
 title: "Document your next project a little bit better."
-description: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
+headline: "Eleventy / Spruce CSS"
+btns:
+    - caption: "Introduction"
+      url: "/getting-started/introduction/"
+      type: "regular"
+    - caption: "Changelog"
+      url: "/getting-started/changelog/"
+      type: "outline"
+summary: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
 layout: "layouts/front-page.html"
 overview:
     - title: "Getting Started"

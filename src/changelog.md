@@ -1,6 +1,6 @@
 ---
 title: "Changelog"
-description: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
+summary: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
 layout: "layouts/changelog.html"
 changelog:
     - date: "2023-02-02"
