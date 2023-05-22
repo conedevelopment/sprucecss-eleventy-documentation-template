@@ -42,7 +42,7 @@
                     <div class="accordion-card accordion-card--box">
                         <h3 class="accordion-card__title">{{ faq.title }}</h3>
                         <div class="accordion-card__content">
-                            <p>{% markdownRender faq.description %}</p>
+                            {% markdownRender faq.description %}
                         </div>
                     </div>
                 {% endfor %}

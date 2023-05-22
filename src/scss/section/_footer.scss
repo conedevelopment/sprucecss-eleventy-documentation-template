@@ -5,6 +5,7 @@
   --logo-width: 4rem;
 
   border-block-start: 1px solid color('border');
+  margin-block-start: spacer-clamp('l', 'xl');
   padding-block-start: spacer-clamp('l', 'xl');
 
   &__inner {

@@ -3,6 +3,8 @@ title: "Frequently Asked Questions"
 description: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
 layout: "layouts/faq.html"
 faqs:
+- title: "Introduction"
+  items:
     - title: "Why Make Another CSS Framework?"
       description: "As you may know, there are many CSS frameworks (hundreds of them, and a lot of them are not maintained today). Everybody can choose one that [suits](https://conedevelopment.com) their work style or project requirements. So why make another one? It is certainly not because we can do it better but because we want to do it our way. We want to be in control and make decisions."
     - title: "It Is Opinionated"

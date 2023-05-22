@@ -15,17 +15,21 @@
             {% endif %}
         </div>
         <div class="l-list__inner l-list__inner--faq">
-            <div class="l-front-page__section">
-                <h2>Frequently Asked Questions</h2>
-                {% for faq in faqs %}
-                    <div class="accordion-card accordion-card--box">
-                        <h3 class="accordion-card__title">{{ faq.title }}</h3>
-                        <div class="accordion-card__content">
-                            <p>{% markdownRender faq.description %}</p>
+            {% for faq in faqs %}
+                <div class="l-front-page__section">
+                    {% if faq.title %}
+                        <h2>{{ faq.title }}</h2>
+                    {% endif %}
+                    {% for post in faq.items %}
+                        <div class="accordion-card accordion-card--box">
+                            <h3 class="accordion-card__title">{{ post.title }}</h3>
+                            <div class="accordion-card__content">
+                                {% markdownRender post.description %}
+                            </div>
                         </div>
-                    </div>
-                {% endfor %}
-            </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

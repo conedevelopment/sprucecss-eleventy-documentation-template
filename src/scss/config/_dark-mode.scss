@@ -6,12 +6,7 @@
 );
 
 [data-theme-mode='dark'] {
-  @include selection('primary');
-
   color-scheme: dark;
-
-  body::before { display: none; }
-  .card { border: 1px solid color(border); }
 
   select.form-control:not([multiple]):not([size]) { /* stylelint-disable-line */
     @include field-icon(

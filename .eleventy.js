@@ -56,8 +56,7 @@ module.exports = config => {
 
   config.addAsyncShortcode('markdownRender', async (children) => {
     const md = new markdownIt();
-    const content = md.render(children);
-    return `<div>${content}</div>`
+    return md.render(children);
   });
 
   if (isProduction) {

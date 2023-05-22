@@ -1,0 +1,24 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.changelog-item {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: spacer('m') spacer('l');
+
+  &__date {
+    background-color: color('primary-background', 'btn');
+    border-radius: config('border-radius-sm', $display);
+    color: color('primary-foreground', 'btn');
+    display: inline-flex;
+    flex-shrink: 0;
+    font-weight: 700;
+    padding: spacer('xxs') spacer('s');
+  }
+
+  ul {
+    p {
+      margin-block: 0;
+    }
+  }
+}
