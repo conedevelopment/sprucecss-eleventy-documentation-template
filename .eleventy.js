@@ -1,24 +1,21 @@
 const { execSync } = require('child_process');
-const { parse, stringify } = require('himalaya');
 const dateFilter = require('./src/filters/date-filter.js');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
-const Image = require('@11ty/eleventy-img');
 const isProduction = process.env.NODE_ENV === 'production';
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const pluginTOC = require('eleventy-plugin-toc');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
+const parentFilter = require('./src/filters/parent-filter.js');
+const markdownRenderShortcode = require('./src/shortcodes/markdown-render.js');
+const svgIconShortcode = require('./src/shortcodes/svg-icon.js');
 
 module.exports = config => {
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
-  config.addFilter('parentFilter', function(collection, parent) {
-    if (!parent) return collection;
-      const filtered = collection.filter(item => item.data.eleventyNavigation?.parent == parent);
-      return filtered.sort((a, b) => a.data.eleventyNavigation.order - b.data.eleventyNavigation.order);
-  });
+  config.addFilter('parentFilter', parentFilter);
   config.addFilter('debugger', (...args) => {
     console.log(...args);
     debugger;
@@ -39,25 +36,8 @@ module.exports = config => {
     return items.sort((a, b) => a.data.eleventyNavigation.order - b.data.eleventyNavigation.order);
   });
 
-  config.addAsyncShortcode('svgIcon', async (src, cls) => {
-    const metadata = await Image(src, {
-      formats: ['svg'],
-      dryRun: true,
-    });
-    const svg = parse(metadata.svg[0].buffer.toString());
-
-    svg[0].attributes.push({
-      key: 'class',
-      value: cls ? cls : 'icon'
-    });
-
-    return stringify(svg);
-  });
-
-  config.addAsyncShortcode('markdownRender', async (children) => {
-    const md = new markdownIt();
-    return md.render(children);
-  });
+  config.addAsyncShortcode('svgIcon', svgIconShortcode);
+  config.addAsyncShortcode('markdownRender', markdownRenderShortcode);
 
   if (isProduction) {
     config.addTransform('htmlmin', htmlMinTransform);
