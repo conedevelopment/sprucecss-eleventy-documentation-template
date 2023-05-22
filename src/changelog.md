@@ -1,7 +1,7 @@
 ---
-title: "Eleventy Theme Made for Documentation"
+title: "Changelog"
 description: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
-layout: "layouts/front-page.html"
+layout: "layouts/changelog.html"
 cards:
     - title: "Getting Started"
       url: "/getting-started/"

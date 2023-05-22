@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+    <div class="l-list" data-pagefind-body>
+        <div class="post-heading">
+            {% set breadcrumbs = [{
+                "title": title,
+                "url": page.url
+            }] %}
+            {% include "partials/breadcrumbs.html" %}
+            <h1 class="post-heading__title">{{ title }}</h1>
+            {% if (description) %}
+                <p class="post-heading__description">
+                    {{ description }}
+                </p>
+            {% endif %}
+        </div>
+        <div class="l-list__inner l-list__inner--faq">
+            <div class="changelog">
+                <div class="changelog-item">
+                    <p class="changelog-item__date">2023-05-21</p>
+                    <div class="changelog-item__body">
+                        <h2 class="changelog-item__title">v0.1.0</h2>
+                        <ul>
+                            <li>Initial release</li>
+                            <li>Initial release</li>
+                            <li>Initial release</li>
+                            <li>Initial release</li>
+                            <li>Initial release</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

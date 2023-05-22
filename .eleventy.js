@@ -20,7 +20,7 @@ module.exports = config => {
       return filtered.sort((a, b) => a.data.eleventyNavigation.order - b.data.eleventyNavigation.order);
   });
   config.addFilter('debugger', (...args) => {
-    console.log(...args)
+    console.log(...args);
     debugger;
   });
 
@@ -39,7 +39,7 @@ module.exports = config => {
     return items.sort((a, b) => a.data.eleventyNavigation.order - b.data.eleventyNavigation.order);
   });
 
-  config.addNunjucksAsyncShortcode('svgIcon', async (src, cls) => {
+  config.addAsyncShortcode('svgIcon', async (src, cls) => {
     const metadata = await Image(src, {
       formats: ['svg'],
       dryRun: true,
@@ -52,6 +52,12 @@ module.exports = config => {
     });
 
     return stringify(svg);
+  });
+
+  config.addAsyncShortcode('markdownRender', async (children) => {
+    const md = new markdownIt();
+    const content = md.render(children);
+    return `<div>${content}</div>`
   });
 
   if (isProduction) {
@@ -72,6 +78,14 @@ module.exports = config => {
   config.on('eleventy.after', () => {
     execSync(`npx pagefind --source dist --glob \"**/*.html\"`, { encoding: 'utf-8' })
   });
+
+  const options = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+
+  config.setLibrary('md', markdownIt(options));
 
   return {
     markdownTemplateEngine: 'njk',
