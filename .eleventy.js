@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { execSync } = require('child_process');
 const dateFilter = require('./src/filters/date-filter.js');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
