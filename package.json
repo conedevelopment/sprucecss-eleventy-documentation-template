@@ -5,8 +5,8 @@
   "main": ".eleventy.js",
   "scripts": {
     "delete:dist": "del-cli --force dist",
-    "eleventy:dev": "npx eleventy --serve",
-    "eleventy:prod": "npx eleventy",
+    "eleventy:dev": "npx @11ty/eleventy --serve",
+    "eleventy:prod": "npx @11ty/eleventy",
     "js:lint": "npx eslint \"src/**/*.js\"",
     "js:lint:fix": "npx eslint \"src/**/*.js**\" --fix",
     "prod": "npm-run-all delete:dist eleventy:prod sass:prod",
