@@ -1440,6 +1440,9 @@ samp {
   transform: rotate(45deg);
 }
 
+.breadcrumb-list a {
+  text-decoration: none;
+}
 .breadcrumb-list [aria-current=page] {
   overflow: hidden;
   text-overflow: ellipsis;

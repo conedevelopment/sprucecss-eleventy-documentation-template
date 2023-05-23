@@ -13,6 +13,7 @@
     localStorage.setItem('preferred-theme', theme);
     document.documentElement.setAttribute('data-theme-mode', theme === 'system' ? systemMode : theme);
     themeSwitcher.setAttribute('data-theme-mode', theme);
+    themeSwitcher.querySelector(`.theme-switcher__${theme}-mode`).focus();
   });
 
   themeSwitcher.setAttribute('data-theme-mode', preferredTheme);
