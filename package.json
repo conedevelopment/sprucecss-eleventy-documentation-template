@@ -20,6 +20,7 @@
     "@11ty/eleventy-img": "^3.1.0",
     "himalaya": "^1.1.0",
     "html-minifier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
     "moment": "^2.29.4"
   },
   "devDependencies": {
@@ -32,7 +33,6 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
     "markdown-it-anchor": "^8.6.7",
-    "npm-run-all": "^4.1.5",
     "pagefind": "^0.12.0",
     "sass": "^1.62.1",
     "sprucecss": "^2.0.0",
