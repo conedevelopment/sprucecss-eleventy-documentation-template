@@ -1572,6 +1572,9 @@ samp {
 .post-content a > code {
   color: var(--spruce-base-color-link);
 }
+.post-content strong {
+  color: var(--spruce-base-color-heading);
+}
 
 .toc > * {
   margin-block-end: 0;

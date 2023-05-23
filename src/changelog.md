@@ -1,11 +1,11 @@
 ---
 title: "Changelog"
-summary: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
 layout: "layouts/changelog.html"
 changelog:
-    - date: "2023-02-02"
-      title: "v0.2.0"
+    - date: "2023-05-24"
+      title: "v1.1.0"
       items:
+        - "**This is a test changelog record for demonstration.**"
         - "**Improvement:** add `$btn-font-family` to control the button's font family."
         - "**Improvement:** add `$heading-font-weight` to control the heading's font-weight."
         - "**Improvement:** rename some keys in the `$colors` map (`mark-color` : `mark-foreground`, `code-color` : `code-foreground`)."
@@ -15,8 +15,8 @@ changelog:
         - "Modify the [`scrollbar()`](https://sprucecss.com/docs/sass/mixins#scrollbar) mixin to accept hover thumb background-color value."
         - "Make `$breakpoints` overwriteable by key."
         - "Modify `font-size()` and `responsive-font-size()` function to accept optimal size value. The optimal value will fallback to a global settnigs under the `$settings` map."
-    - date: "2023-02-11"
-      title: "v0.1.0"
+    - date: "2023-05-23"
+      title: "v1.0.0"
       items:
-        - "Initial commit"
+        - "Initial release"
 ---

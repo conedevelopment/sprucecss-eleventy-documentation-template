@@ -1,20 +1,23 @@
 ---
-title: 'Content Management'
-summary: 'Today more people and experts write about accessibility. For the better progression it is a good idea to read them.'
-date: '2022-07-22'
+title: "Content Management"
+summary: "Today more people and experts write about accessibility. For the better progression it is a good idea to read them."
+date: "2023-05-23"
 eleventyNavigation:
   key: Content Management
   parent: Getting Started
   order: 5
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam mollis finibus. Curabitur tincidunt gravida tortor id porttitor.
+Adding content to the template is easy as almost everything is in Eleventy.
 
-**Nulla venenatis feugiat elit ut mollis.** In venenatis dui libero, vitae ornare nulla fringilla ut. Fusce eu elit sit amet sapien feugiat accumsan id a tortor. Curabitur nec blandit risus, sit amet faucibus ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas quis nulla ac risus vulputate luctus. Nunc nec mollis nulla. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque nec feugiat nibh. Aenean mattis consectetur luctus. Donec augue lorem, interdum quis quam vel, tincidunt pulvinar mi.
+## The Basic Structure
 
-Cras egestas eu elit sit amet suscipit. Vestibulum egestas risus elit, quis consequat lectus fringilla quis. Cras nec urna tincidunt, semper justo nec, elementum turpis. Praesent vehicula scelerisque lacus quis egestas. In commodo ac nisi fringilla accumsan.
+Our base folder for the documentation pages is the `posts` folder. You must follow the folder structure, which means the `category` here. If you create a folder, you must make a list page with the same name as the folder. You must also create another `posts` folder under the `category` folder where your posts go. You must create the `posts.json` file that will parameter your `layout` and `permalink` values.
 
-- Proin rutrum tempus fringilla. Vestibulum vehicula mi sit amet neque aliquam, sit amet rhoncus velit placerat. Sed in nibh orci.
-- Quisque sit amet odio ipsum. Vivamus euismod, ex a mollis euismod, tellus arcu malesuada sem, a pulvinar arcu lacus eu ante.
-- In elementum, nisi ut malesuada lobortis, tortor dolor posuere tellus, id tempor neque mi a urna. Donec non posuere metus.
-- Duis eget viverra sapien, quis iaculis risus. Nunc quis nisi vitae turpis interdum tristique. Sed egestas feugiat accumsan. Donec quis enim purus.
+## Eleventy Navigation
+
+The theme utilizes the [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/), so you must explicitly set up the hierarchy. This is needed for the automatic sidebar navigation, the navigation order, and breadcrumb generation.
+
+## Other Pages
+
+To create simple pages, make a file directly under the `src` folder and configure it with the available front matter.

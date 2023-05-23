@@ -1,7 +1,7 @@
 ---
-title: 'Setup'
-summary: 'Today more people and experts write about accessibility. For the better progression it is a good idea to read them.'
-date: '2022-07-24'
+title: "Setup"
+summary: "We use eleventy --serve and compile Sass with sass-cli with npm scripts."
+date: "2023-05-23"
 eleventyNavigation:
   key: Setup
   parent: Getting Started
@@ -37,3 +37,7 @@ Before you go live, you should use the production script to compress the Sass fi
 ```shell
 npm run prod
 ```
+
+## Additional Scripts
+
+You can find some more npm scripts in the [package.json](https://github.com/conedevelopment/sprucecss-eleventy-documentation-template/blob/main/package.json) that can be helpful.

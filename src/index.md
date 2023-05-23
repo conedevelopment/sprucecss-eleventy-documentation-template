@@ -20,10 +20,9 @@ overview:
       description: "Built on the top of Spruce CSS, you can easily customize its look."
 faqs:
     - title: "Where Can I Find the Documentation?"
-      description: "This demo page - and repository - is also the documentation of this 11ty theme."
+      description: "This demo page - and repository - is also the documentation of the theme."
     - title: "What's Included?"
       description: "Although it is a smaller project (theme) just to handle documentation, you get some [practical features](/getting-started/features/)."
     - title: "How Can I Manage the Content?"
-      description: "
-This theme works with markdown files you can edit directly (without any CMS). Check out the [related page](/getting-started/content-management/)."
+      description: "This theme works with markdown files you can edit directly (without any CMS). Check out the [related page](/getting-started/content-management/)."
 ---

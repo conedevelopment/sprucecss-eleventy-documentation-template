@@ -22,47 +22,42 @@
       "items": [
         {
           "caption": "Introduction",
-          "url": "https://sprucecss.com/docs/getting-started/introduction/",
-          "external": true
+          "url": "/getting-started/introduction/",
+          "external": false
         },
         {
-          "caption": "Installation",
-          "url": "https://sprucecss.com/docs/getting-started/installation/",
-          "external": true
+          "caption": "Features",
+          "url": "/getting-started/features/",
+          "external": false
         },
         {
-          "caption": "Structure and Code",
-          "url": "https://sprucecss.com/docs/getting-started/structure-and-code/",
-          "external": true
+          "caption": "Structure",
+          "url": "/getting-started/structure/",
+          "external": false
         },
         {
-          "caption": "Sass",
-          "url": "https://sprucecss.com/docs/getting-started/sass/",
-          "external": true
+          "caption": "Setup",
+          "url": "/getting-started/setup/",
+          "external": false
         }
       ]
     },
     {
-      "title": "Elements",
+      "title": "Spruce CSS",
       "items": [
         {
-          "caption": "Typography",
-          "url": "https://sprucecss.com/docs/elements/typography/",
+          "caption": "Introduction",
+          "url": "https://sprucecss.com/docs/getting-started/introduction/",
           "external": true
         },
         {
-          "caption": "Tables",
-          "url": "https://sprucecss.com/docs/elements/tables/",
+          "caption": "Themes",
+          "url": "https://sprucecss.com/docs/customization/themes/",
           "external": true
         },
         {
-          "caption": "Buttons",
-          "url": "https://sprucecss.com/docs/elements/buttons/",
-          "external": true
-        },
-        {
-          "caption": "Forms",
-          "url": "https://sprucecss.com/docs/elements/forms/",
+          "caption": "Components",
+          "url": "https://sprucecss.com/ui/getting-started/introduction/",
           "external": true
         }
       ]

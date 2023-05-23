@@ -1,18 +1,24 @@
 ---
-title: 'Spruce CSS'
-summary: 'Today more people and experts write about accessibility. For the better progression it is a good idea to read them.'
-date: '2023-04-26'
+title: "Spruce CSS"
+date: "2023-05-23"
 eleventyNavigation:
-  key: 'Spruce CSS'
-  parent: 'Customization'
+  key: "Spruce CSS"
+  parent: "Customization"
   order: 6
 ---
 
-**Nulla venenatis feugiat elit ut mollis.** In venenatis dui libero, vitae ornare nulla fringilla ut. Fusce eu elit sit amet sapien feugiat accumsan id a tortor. Curabitur nec blandit risus, sit amet faucibus ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas quis nulla ac risus vulputate luctus.
+**Spruce CSS is an open-source, lightweight and modernish CSS design system, framework built on Sass. Give your project a solid foundation.**
 
-Nunc nec mollis nulla. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque nec feugiat nibh. Aenean mattis consectetur luctus. Donec augue lorem, interdum quis quam vel, tincidunt pulvinar mi.
+## What is Spruce CSS?
 
-- Proin rutrum tempus fringilla. Vestibulum vehicula mi sit amet neque aliquam, sit amet rhoncus velit placerat. Sed in nibh orci.
-- Quisque sit amet odio ipsum. Vivamus euismod, ex a mollis euismod, tellus arcu malesuada sem, a pulvinar arcu lacus eu ante.
-- In elementum, nisi ut malesuada lobortis, tortor dolor posuere tellus, id tempor neque mi a urna. Donec non posuere metus.
-- Duis eget viverra sapien, quis iaculis risus. Nunc quis nisi vitae turpis interdum tristique. Sed egestas feugiat accumsan. Donec quis enim purus.
+- It is a Sass-based, small framework that operates with just a few utility classes.
+- It takes advantage of the Sass members: variables, mixins, and functions.
+- It embraces Sass modules, so it uses @use and namespacing for import.
+- Spruce is a good choice if you prefer writing CSS instead of HTML. It uses just a few classic utility classes.
+- It is a relatively small (~7kb gzipped) framework with a smaller learning curve. The codebase is small but can add more to any project with the available mixins and functions.
+- It is that bunch of code you keep manually carrying from project to project.
+- It is themeable. You can create different themes using CSS custom properties like a dark one.
+- The generated CSS code is separated from the framework. You can use only the tools (variables, mixins, functions) in your project [without the generated styles](https://sprucecss.com/docs/elements/generators).
+- Include just a few components. For UI, we have a separate project named [Spruce UI](/ui/getting-started/introduction), where you can find drop-in components.
+- [It comes with dark-mode](https://sprucecss.com/docs/customization/themes) (or any theme mode) support. It uses CSS custom properties, so it isn’t that hard to create a new color theme.
+- It doesn’t come with a classical grid system.

@@ -1,16 +1,20 @@
----
-title: "Features"
-summary: "We tried to make a simple but well-structured theme. Managing the content is straightforward but still comes with some helpful features."
-date: "2023-05-23"
-eleventyNavigation:
-  key: Features
-  parent: Getting Started
-  order: 2
----
+<p>
+  <a href="https://sprucecss.com/#gh-light-mode-only">
+    <br/>
+    <img src="./.github/spruce-logo-dark.svg" alt="Spruce CSS" width="160">
+    <br/>
+  </a>
+  <a href="https://sprucecss.com/#gh-dark-mode-only">
+    <br/>
+    <img src="./.github/spruce-logo-light.svg" alt="Spruce CSS" width="160">
+    <br/>
+  </a>
+</p>
 
-We tried to make a simple but well-structured theme. Managing the content is straightforward but still comes with some helpful features.
+**Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy.**
 
-## Eleventy
+## Features
+
 - [svgIcon](https://github.com/conedevelopment/sprucecss-eleventy-documentation-template/blob/main/src/shortcodes/svg-icon.js) shortcode: render any SVG icon inline and add optional classes.
 - [markdownRenderer](https://github.com/conedevelopment/sprucecss-eleventy-documentation-template/blob/main/src/shortcodes/markdown-render.js): render any string (markdown) into HTML.
 - Breadcrumb navigation built on [11ty Navigation Plugin](https://www.11ty.dev/docs/plugins/navigation/).
@@ -21,10 +25,5 @@ We tried to make a simple but well-structured theme. Managing the content is str
 - Changelog template.
 - Static search integration with [pagefind](https://pagefind.app/).
 - Code highlighting.
-
-## CSS Customization
-
-The template utilizes Spruce CSS and some of its components. You can learn more about the customization on the [official documentation](https://sprucecss.com/).
-
 - RTL support.
 - Dark mode.

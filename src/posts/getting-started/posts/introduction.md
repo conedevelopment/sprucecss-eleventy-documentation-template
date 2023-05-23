@@ -1,7 +1,7 @@
 ---
-title: 'Introduction'
-summary: 'Welcome to the first officially released template of Spruce CSS an 11ty based documentation.'
-date: '2023-05-19'
+title: "Introduction"
+summary: "Welcome to the official documentation of SPRUCEDOCS Elventy theme. A small template that you can use to document any of your projects."
+date: "2023-05-23"
 eleventyNavigation:
   key: Introduction
   parent: Getting Started
