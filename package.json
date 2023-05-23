@@ -1,6 +1,6 @@
 {
   "name": "sprucecss-eleventy-documentation-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Cone (https://conedevelopment.com)",
   "main": ".eleventy.js",
   "scripts": {
