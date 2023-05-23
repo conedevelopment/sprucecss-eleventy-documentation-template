@@ -1,7 +1,7 @@
 {% set previousPost = collections.posts | getPreviousCollectionItem %}
 {% set nextPost = collections.posts | getNextCollectionItem %}
 
-<div class="post-navigation">
+<nav class="post-navigation">
     {% if previousPost %}
         <a class="post-navigation-item post-navigation-item--prev" href="{{ previousPost.url }}">
             <span class="post-navigation-item__icon">
@@ -24,4 +24,4 @@
             </span
         ></a>
     {% endif %}
-</div>
+</nav>

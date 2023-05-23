@@ -8,18 +8,20 @@
         {% include "partials/post-heading.html" %}
         <div class="l-list__inner l-list__inner--faq">
             {% for faq in faqs %}
-                <div class="l-front-page__section">
+                <div class="group">
                     {% if faq.title %}
                         <h2>{{ faq.title }}</h2>
                     {% endif %}
-                    {% for post in faq.items %}
-                        <div class="accordion-card accordion-card--box">
-                            <h3 class="accordion-card__title">{{ post.title }}</h3>
-                            <div class="accordion-card__content">
-                                {% markdownRender post.description %}
+                    <div class="accordion-list">
+                        {% for post in faq.items %}
+                            <div class="accordion-card">
+                                <h3 class="accordion-card__title">{{ post.title }}</h3>
+                                <div class="accordion-card__content">
+                                    {% markdownRender post.description %}
+                                </div>
                             </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
                 </div>
             {% endfor %}
         </div>

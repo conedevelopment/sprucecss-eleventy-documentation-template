@@ -1,6 +1,6 @@
 @use 'sprucecss/scss/spruce' as *;
 
-.card {
+.post-card {
   $this: &;
 
   @include layout-stack('s');

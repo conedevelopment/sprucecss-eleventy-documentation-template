@@ -49,4 +49,8 @@
   iframe {
     aspect-ratio: 16 / 9;
   }
+
+  a > code {
+    color: color('link');
+  }
 }

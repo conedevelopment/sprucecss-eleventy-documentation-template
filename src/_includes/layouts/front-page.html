@@ -1,36 +1,39 @@
-{% extends "layouts/base.html" %} {% block content %}
-<div class="l-front-page">
-    {% include "partials/post-heading.html" %}
-    {% if overview %}
-        <div class="l-front-page__section">
-            <h2>Overview</h2>
-            <div class="l-card">
-                {% for card in overview %}
-                    <div class="card">
-                        <span class="card__serial-number"></span>
-                        <h2 class="card__title">{{ card.title }}</h2>
-                        <p>{{ card.description }}</p>
-                        <a class="btn btn--primary" href="{{ card.url }}">
-                            Read More
-                        </a>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    {% endif %}
-    {% if faqs %}
-        <div class="l-front-page__section">
-            <h2>Frequently Asked Questions</h2>
-            <div class="accordion-list--boxed">
-                {% for faq in faqs %}
-                    <div class="accordion-card accordion-card--box">
-                        <h3 class="accordion-card__title">{{ faq.title }}</h3>
-                        <div class="accordion-card__content">
-                            {% markdownRender faq.description %}
+{% extends "layouts/base.html" %}
+{% block content %}
+    <div class="l-front-page">
+        {% include "partials/post-heading.html" %}
+        {% if overview %}
+            <div class="group">
+                <h2>Overview</h2>
+                <div class="l-card">
+                    {% for post in overview %}
+                        <div class="post-card">
+                            <span class="post-card__serial-number"></span>
+                            <h2 class="post-card__title">{{ post.title }}</h2>
+                            <p>{{ post.description }}</p>
+                            <a class="btn btn--primary" href="{{ post.url }}">
+                                Read More
+                                <span class="sr-only">{{ post.title }}</span>
+                            </a>
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-    {% endif %}
+        {% endif %}
+        {% if faqs %}
+            <div class="group">
+                <h2>Frequently Asked Questions</h2>
+                <div class="accordion-list">
+                    {% for faq in faqs %}
+                        <div class="accordion-card">
+                            <h3 class="accordion-card__title">{{ faq.title }}</h3>
+                            <div class="accordion-card__content">
+                                {% markdownRender faq.description %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
 {% endblock %}

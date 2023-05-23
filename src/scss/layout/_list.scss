@@ -13,6 +13,11 @@
 
   &__inner {
     grid-column: 1 / 3;
+
+    &--changelog,
+    &--faq {
+      @include layout-stack('l');
+    }
   }
 
   .post-heading {

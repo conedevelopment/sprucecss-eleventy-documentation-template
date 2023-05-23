@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-    <div class="l-post" data-pagefind-body>
+    <article class="l-post" data-pagefind-body>
         {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(title, { includeSelf: true }) %}
         {% include "partials/post-heading.html" %}
         {% if content | toc %}
@@ -13,6 +13,6 @@
         </div>
         {% endif %}
         <div class="l-post__content post-content">{{ content | safe }}</div>
-    </div>
+    </article>
     {% include "partials/post-navigation.html" %}
 {% endblock %}

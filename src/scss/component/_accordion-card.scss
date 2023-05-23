@@ -4,24 +4,9 @@
   $this: &;
 
   background-color: color('background');
+  border: 1px solid color('border');
+  border-radius: config('border-radius-sm', $display);
   max-width: 75ch;
-
-  &--box {
-    border: 1px solid color(border);
-    border-radius: config('border-radius-sm', $display);
-
-    #{$this}__title {
-      padding: spacer('m');
-    }
-
-    #{$this}__toggle {
-      padding: spacer('m');
-    }
-
-    #{$this}__content {
-      padding-inline: spacer('m');
-    }
-  }
 
   &--js {
     #{$this}__title {
@@ -33,7 +18,7 @@
     font-family: config('font-family-base', $typography);
     font-size: font-size('h4');
     margin-block: 0;
-    padding-block: spacer('m');
+    padding: spacer('m');
   }
 
   &__toggle {
@@ -43,7 +28,7 @@
     gap: spacer('m');
     inline-size: 100%;
     justify-content: space-between;
-    padding-block: spacer('m');
+    padding: spacer('m');
     text-align: start;
 
     &:focus-visible {
@@ -76,5 +61,6 @@
   &__content {
     @include layout-stack('xs');
     padding-block-end: spacer('m');
+    padding-inline: spacer('m');
   }
 }

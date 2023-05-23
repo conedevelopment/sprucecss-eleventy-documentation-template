@@ -1,13 +1,5 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .accordion-list {
-  &--boxed {
-    @include layout-stack('s');
-  }
-
-  &--stacked {
-    > * + * {
-      border-block-start: 1px solid color('border');
-    }
-  }
+  @include layout-stack('s');
 }

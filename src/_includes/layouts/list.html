@@ -6,11 +6,14 @@
         <div class="l-list__inner l-card">
             {% set posts = collections.all | parentFilter(eleventyNavigation.key) %}
             {% for post in posts %}
-                <div class="card">
-                    <span class="card__serial-number"></span>
-                    <h2 class="card__title">{{ post.data.title }}</h2>
+                <div class="post-card">
+                    <span class="post-card__serial-number"></span>
+                    <h2 class="post-card__title">{{ post.data.title }}</h2>
                     <p>{{ post.data.summary }}</p>
-                    <a href="{{ post.url }}" class="btn btn--primary">Read More</a>
+                    <a href="{{ post.url }}" class="btn btn--primary">
+                        Read More
+                        <span class="sr-only">{{ post.title }}</span>
+                    </a>
                 </div>
             {% endfor %}
         </ol>
