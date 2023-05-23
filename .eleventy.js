@@ -58,14 +58,6 @@ module.exports = config => {
     execSync(`npx pagefind --source dist --glob \"**/*.html\"`, { encoding: 'utf-8' })
   });
 
-  const options = {
-    html: true,
-    breaks: true,
-    linkify: true
-  };
-
-  config.setLibrary('md', markdownIt(options));
-
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
