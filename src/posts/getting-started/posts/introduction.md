@@ -8,16 +8,16 @@ eleventyNavigation:
   order: 1
 ---
 
-Welcome to the first officially released template of Spruce CSS. It happens that it is a documentation template built on [Eleventy](https://www.11ty.dev/).
+Welcome to the official documentation of **SPRUCEDOCS** Elventy theme. A small template that you can use to document any of your projects.
 
 ## About the Template
 
-We created a documentation template because it is a relatively straightforward design.
+A documentation template is always helpful. There are a lot of solutions to make one; we wanted to create our self-hosted version based on our favorite static site generator.
 
-It follows a simple structure with two levels. We think it is helpful for any OSS project documentation, but you can also use it for any notes.
+By structure, it is simple, with two levels and additional custom templates like [FAQ](/faq/) and [Changelog](/changelog/).
 
 ## Spruce CSS
 
-The template is built on [Spruce CSS](https://sprucecss.com/), a small and customizable CSS framework.
+The template is built on [Spruce CSS](https://sprucecss.com/), a small and customizable CSS framework. The main benefit of this is that you can use the Spruce UI components with dark mode and RTL support.
 
-![The logo of Spruce CSS](/img/cover/sprucecss.png)
+![A minimalistic, low-level CSS framework](/img/cover/sprucecss.png)
