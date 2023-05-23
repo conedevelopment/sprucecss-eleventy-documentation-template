@@ -1,6 +1,5 @@
 ---
 title: "Spruce CSS"
-date: "2023-05-23"
 eleventyNavigation:
   key: "Spruce CSS"
   parent: "Customization"

@@ -1,7 +1,6 @@
 ---
 title: "Structure"
 summary: "The structure is a generic Eleventy theme with the standard folder and file names."
-date: "2023-05-23"
 eleventyNavigation:
     key: Structure
     parent: Getting Started

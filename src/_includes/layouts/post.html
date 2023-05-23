@@ -12,7 +12,9 @@
             </section>
         </div>
         {% endif %}
-        <div class="l-post__content post-content">{{ content | safe }}</div>
+        <div class="l-post__content post-content">
+            {{ content | safe }}
+        </div>
     </article>
     {% include "partials/post-navigation.html" %}
 {% endblock %}

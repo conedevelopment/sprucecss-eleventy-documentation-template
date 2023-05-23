@@ -1,7 +1,6 @@
 ---
 title: "Setup"
 summary: "We use eleventy --serve and compile Sass with sass-cli with npm scripts."
-date: "2023-05-23"
 eleventyNavigation:
   key: Setup
   parent: Getting Started

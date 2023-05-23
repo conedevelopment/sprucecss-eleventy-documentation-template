@@ -1,6 +1,5 @@
 ---
 title: "Themes"
-date: "2023-05-23"
 eleventyNavigation:
   key: "Themes"
   parent: "Customization"
