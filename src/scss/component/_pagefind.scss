@@ -5,6 +5,10 @@
 .pagefind-ui {
   position: relative;
 
+  &__search-input {
+    padding: config('padding', $form-control, false) !important;
+  }
+
   &__form {
     @include layout-stack('s');
   }
@@ -13,7 +17,8 @@
     background: none;
     border: 0;
     font-size: config('font-size-sm', $typography);
-    inset: 0.8em 0.5em auto  auto;
+    inset-block-start: 0.8em;
+    inset-inline-end: 0.5em;
     margin-block-start: 0;
     position: absolute;
     text-transform: uppercase;

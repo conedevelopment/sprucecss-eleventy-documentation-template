@@ -37,7 +37,8 @@
 
         &::before {
           background-color: color('primary');
-          border-radius: 0 config('border-radius-sm', $display) config('border-radius-sm', $display) 0;
+          border-start-end-radius: config('border-radius-sm', $display);
+          border-end-end-radius: config('border-radius-sm', $display);
           bottom: 0;
           content: '';
           inline-size: 0.3rem;

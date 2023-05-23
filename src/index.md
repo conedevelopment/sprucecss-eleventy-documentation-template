@@ -6,7 +6,7 @@ btns:
       url: "/getting-started/introduction/"
       type: "regular"
     - caption: "Changelog"
-      url: "/getting-started/changelog/"
+      url: "/changelog/"
       type: "outline"
 summary: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
 layout: "layouts/front-page.html"

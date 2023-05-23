@@ -4,7 +4,6 @@
   @include clear-list;
   align-items: center;
   display: flex;
-  font-family: config('font-family-heading', $typography);
   max-inline-size: 100%;
   overflow-x: auto;
   white-space: nowrap;
@@ -23,22 +22,19 @@
       inline-size: 0.4em;
       margin-inline: 0.75em;
       transform: rotate(-45deg);
-    }
-  }
 
-  a {
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
+      @at-root {
+        [dir='rtl'] & {
+          transform: rotate(45deg);
+        }
+      }
     }
   }
 
   [aria-current='page'] {
     @include text-ellipsis(1);
     display: inline-block;
-    max-inline-size: 30ch;
+    max-inline-size: 20ch;
     text-align: start;
   }
 }

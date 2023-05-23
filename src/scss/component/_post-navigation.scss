@@ -48,6 +48,12 @@
 
       block-size: var(--dimension);
       inline-size: var(--dimension);
+
+      @at-root {
+        [dir='rtl'] & {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
 
