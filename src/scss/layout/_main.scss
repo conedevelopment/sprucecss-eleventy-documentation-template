@@ -4,6 +4,7 @@
   --gtc: minmax(0, 1fr);
 
   display: grid;
+  gap: spacer('l');
   grid-template-columns: var(--gtc);
   margin-block: spacer-clamp('m', 'l') spacer-clamp('l', 'xl');
 

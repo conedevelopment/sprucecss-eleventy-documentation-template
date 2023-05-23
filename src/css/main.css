@@ -1111,6 +1111,7 @@ samp {
 .l-main {
   --gtc: minmax(0, 1fr);
   display: grid;
+  gap: 3rem;
   grid-template-columns: var(--gtc);
   margin-block: clamp(1.5rem, 5vw, 3rem) clamp(3rem, 5vw, 4.5rem);
 }
