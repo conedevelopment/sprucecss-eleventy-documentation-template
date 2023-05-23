@@ -40,18 +40,18 @@
           border-radius: 0 config('border-radius-sm', $display) config('border-radius-sm', $display) 0;
           bottom: 0;
           content: '';
+          inline-size: 0.3rem;
           inset-inline-start: -1rem;
           position: absolute;
           top: 0;
-          width: 0.3rem;
         }
       }
 
       svg {
         --dimension: 0.65em;
+        block-size: var(--dimension);
         color: color('arrow', 'navigation');
-        height: var(--dimension);
-        width: var(--dimension);
+        inline-size: var(--dimension);
       }
     }
   }

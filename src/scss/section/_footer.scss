@@ -1,8 +1,8 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .footer {
-  --logo-height: 4rem;
-  --logo-width: 4rem;
+  --logo-block-size: 4rem;
+  --logo-inline-size: 4rem;
 
   border-block-start: 1px solid color('border');
   margin-block-start: spacer-clamp('l', 'xl');
@@ -14,9 +14,9 @@
   }
 
   &__logo {
+    block-size: var(--logo-block-size);
     display: flex;
-    height: var(--logo-height);
-    width: var(--logo-width);
+    inline-size: var(--logo-inline-size);
   }
 
   &__title {
@@ -47,9 +47,9 @@
 
       svg {
         --dimension: 0.65em;
+        block-size: var(--dimension);
         color: color('arrow', 'navigation');
-        height: var(--dimension);
-        width: var(--dimension);
+        inline-size: var(--dimension);
       }
     }
   }

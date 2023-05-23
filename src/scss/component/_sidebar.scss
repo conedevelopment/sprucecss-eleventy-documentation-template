@@ -21,13 +21,13 @@
     );
     display: flex;
     flex-direction: column;
-    gap: spacer('m');
     flex-grow: 1;
-    max-height: calc(100vh - var(--dimension) - #{spacer('m')} * 3);
+    gap: spacer('m');
+    max-block-size: calc(100vh - var(--dimension) - #{spacer('m')} * 3);
     overflow-y: auto;
 
     @include breakpoint('sm') {
-      max-height: initial;
+      max-block-size: initial;
     }
   }
 }

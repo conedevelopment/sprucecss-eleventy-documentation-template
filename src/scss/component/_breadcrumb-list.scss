@@ -5,7 +5,7 @@
   align-items: center;
   display: flex;
   font-family: config('font-family-heading', $typography);
-  max-width: 100%;
+  max-inline-size: 100%;
   overflow-x: auto;
   white-space: nowrap;
 
@@ -15,14 +15,14 @@
     margin-block: 0;
 
     + li::before {
+      block-size: 0.4em;
       border-block-end: 2px solid color('separator', 'breadcrumb');
       border-inline-end: 2px solid color('separator', 'breadcrumb');
       content: '';
       display: inline-flex;
-      height: 0.4em;
+      inline-size: 0.4em;
       margin-inline: 0.75em;
       transform: rotate(-45deg);
-      width: 0.4em;
     }
   }
 
@@ -38,7 +38,7 @@
   [aria-current='page'] {
     @include text-ellipsis(1);
     display: inline-block;
+    max-inline-size: 30ch;
     text-align: start;
-    max-width: 30ch;
   }
 }

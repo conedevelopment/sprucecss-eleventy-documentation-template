@@ -27,7 +27,7 @@
       border-inline-end: 1px solid color('border');
       display: flex !important;
       inset-block-start: spacer('l');
-      max-height: calc(100vh - #{spacer('l')} * 2);
+      max-block-size: calc(100vh - #{spacer('l')} * 2);
       position: sticky;
     }
 
@@ -39,8 +39,8 @@
   &__body {
     display: flex;
     flex-direction: column;
+    inline-size: 100%;
     margin-inline: auto;
-    max-width: get-css-variable(--max-content-width);
-    width: 100%;
+    max-inline-size: get-css-variable(--max-content-width);
   }
 }

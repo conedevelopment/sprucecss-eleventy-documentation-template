@@ -8,7 +8,7 @@
   }
 
   :is(dd, dl, dl, h1, h2, h3, h4, h5, h6, hr, ul, ol, p, blockquote) {
-    max-width: 40rem;
+    max-inline-size: 40rem;
   }
 
   * + h2,

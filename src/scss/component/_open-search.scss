@@ -8,8 +8,8 @@
 
   &__icon {
     --dimension: 1rem;
+    block-size: var(--dimension);
     color: color('icon', 'search');
-    height: var(--dimension);
-    width: var(--dimension);
+    inline-size: var(--dimension);
   }
 }

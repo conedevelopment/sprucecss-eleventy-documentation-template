@@ -6,7 +6,7 @@
   background-color: color('background');
   border: 1px solid color('border');
   border-radius: config('border-radius-sm', $display);
-  max-width: 75ch;
+  max-inline-size: 75ch;
 
   &--js {
     #{$this}__title {

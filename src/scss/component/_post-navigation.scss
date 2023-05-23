@@ -35,19 +35,19 @@
     @include transition;
     align-items: center;
     background-color: color('icon-background', 'navigation');
+    block-size: 3rem;
     border-radius: config('border-radius', $btn, false);
     color: color('icon-foreground', 'navigation');
     display: flex;
     flex-shrink: 0;
-    height: 3rem;
+    inline-size: 3rem;
     justify-content: center;
-    width: 3rem;
 
     svg {
       --dimension: 1rem;
 
-      height: var(--dimension);
-      width: var(--dimension);
+      block-size: var(--dimension);
+      inline-size: var(--dimension);
     }
   }
 

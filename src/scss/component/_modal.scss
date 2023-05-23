@@ -1,8 +1,8 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .modal-backdrop {
-  background-color: hsl(0deg 0% 0% / 35%);
   backdrop-filter: blur(0.35rem);
+  background-color: hsl(0deg 0% 0% / 35%);
   display: none;
   inset: 0;
   padding: spacer('s');
@@ -17,8 +17,8 @@
   background-color: color('background');
   border-radius: config('border-radius-sm', $display);
   box-shadow: get-css-variable(--box-shadow);
-  padding: spacer-clamp('s', 'm');
   margin-block: 7rem;
   margin-inline: auto;
   max-inline-size: 40rem;
+  padding: spacer-clamp('s', 'm');
 }

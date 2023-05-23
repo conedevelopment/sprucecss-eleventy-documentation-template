@@ -15,12 +15,12 @@
     font-size: responsive-font-size(3.5rem, 30, '4.5vw');
     line-height: config('line-height-sm', $typography);
     margin-block-start: spacer('xs');
-    max-width: 20ch;
+    max-inline-size: 20ch;
   }
 
   &__description {
     font-size: config('font-size-lead', $typography);
-    max-width: 60ch;
+    max-inline-size: 60ch;
   }
 
   &__actions {
