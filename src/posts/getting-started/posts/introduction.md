@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 1
 ---
 
-Welcome to the official documentation of **SPRUCEDOCS** Elventy theme. A small template that you can use to document any of your projects.
+Welcome to the official documentation of **Spruce Docs** Elventy theme. A small template that you can use to document any of your projects.
 
 ## About the Template
 
