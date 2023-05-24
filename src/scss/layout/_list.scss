@@ -7,20 +7,10 @@
   gap: spacer('l');
   grid-template-columns: var(--gtc);
 
-  @include breakpoint('md') {
-    --gtc: minmax(0, 1fr) minmax(0, 15rem);
-  }
-
   &__inner {
-    grid-column: 1 / 3;
-
     &--changelog,
     &--faq {
       @include layout-stack('l');
     }
-  }
-
-  .post-heading {
-    grid-column: 1 / 3;
   }
 }

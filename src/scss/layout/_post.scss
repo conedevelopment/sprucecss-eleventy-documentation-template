@@ -23,6 +23,8 @@
   }
 
   .post-heading {
-    grid-column: 1 / 3;
+    @include breakpoint('lg') {
+      grid-column: 1 / 3;
+    }
   }
 }
