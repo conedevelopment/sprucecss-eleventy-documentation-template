@@ -1,10 +1,15 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .changelog-item {
+  --gtc: minmax(0, 1fr);
   align-items: flex-start;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: spacer('m') spacer('l');
+  grid-template-columns: var(--gtc);
+
+  @include breakpoint('md') {
+    --gtc: minmax(0, 9rem) minmax(0, 1fr);
+  }
 
   &__date {
     background-color: color('primary-background', 'btn');
@@ -13,6 +18,7 @@
     display: inline-flex;
     flex-shrink: 0;
     font-weight: 700;
+    justify-self: start;
     padding: spacer('xxs') spacer('s');
   }
 
