@@ -7,8 +7,6 @@ eleventyNavigation:
   order: 4
 ---
 
-We use `eleventy --serve` and compile Sass with sass-cli with npm scripts.
-
 ## Clone the repository
 
 Today more people and experts write about accessibility. For the better progression it is a good idea to read them.
