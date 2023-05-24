@@ -1,19 +1,21 @@
 <p>
   <a href="https://sprucecss.com/#gh-light-mode-only">
     <br/>
-    <img src="./.github/spruce-logo-dark.svg" alt="Spruce CSS" width="160">
+    <img src="./.github/spruce-logo-dark.svg" alt="Spruce CSS" width="150">
     <br/>
   </a>
   <a href="https://sprucecss.com/#gh-dark-mode-only">
     <br/>
-    <img src="./.github/spruce-logo-light.svg" alt="Spruce CSS" width="160">
+    <img src="./.github/spruce-logo-light.svg" alt="Spruce CSS" width="150">
     <br/>
   </a>
 </p>
 
 **Welcome to the official documentation of **Spruce Docs** Elventy theme. A small template that you can use to document any of your projects.**
 
-<img src="./.github/spruce-docs-preview-mockup.png" style="border-radius: 1rem;" />
+---
+
+![The preview image of the theme.](./.github/spruce-docs-preview-mockup.png)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7560c95-7035-491b-8c3f-94c43bea761e/deploy-status)](https://app.netlify.com/sites/sprucecss-eleventy-documentation/deploys)
 
@@ -24,8 +26,6 @@ By structure, it is simple, with two levels and additional custom templates like
 ## Spruce CSS
 
 The template is built on [Spruce CSS](https://sprucecss.com/), a small and customizable CSS framework. The main benefit of this is that you can use the Spruce UI components with dark mode and RTL support.
-
-![A minimalistic, low-level CSS framework](./.github/sprucecss-cover.png)
 
 ## Features
 
