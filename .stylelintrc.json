@@ -2,6 +2,7 @@
   "extends": "stylelint-config-sass-guidelines",
   "plugins": ["stylelint-order"],
   "rules": {
+    "selector-max-compound-selectors": 5,
     "max-nesting-depth": 4,
     "selector-no-vendor-prefix": [
       true,
