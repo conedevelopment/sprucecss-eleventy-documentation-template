@@ -11,9 +11,9 @@
   </a>
 </p>
 
-**Welcome to the official documentation of **Spruce Docs** Elventy theme. A small template that you can use to document any of your projects.**
+**Welcome to the official documentation of **Spruce Docs** Elventy theme. A small template you can use to document any of your projects.**
 
----
+<br>
 
 ![The preview image of the theme.](./.github/spruce-docs-preview-mockup-2.png)
 
@@ -128,5 +128,7 @@ spruecss-eleventy-documentation-template/
 - **scss**: The Sass files.
 - **shortcodes**: The available shortcodes.
 - **transforms**: The transformations.
+
+<br>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7560c95-7035-491b-8c3f-94c43bea761e/deploy-status)](https://app.netlify.com/sites/sprucecss-eleventy-documentation/deploys)
