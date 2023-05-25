@@ -119,7 +119,7 @@ spruecss-eleventy-documentation-template/
 ```
 
 - **_data**: Some global data, like the name of your site and helpers like the active navigation element or current year.
-- **__includes**:All of the layout and partial templates.
+- **__includes**: All of the layout and partial templates.
 - **css**: The compiled CSS.
 - **filters**: The additional filters that you can use.
 - **font**: The custom fonts.
