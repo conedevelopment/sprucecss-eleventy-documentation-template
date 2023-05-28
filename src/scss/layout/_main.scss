@@ -42,6 +42,6 @@
     flex-direction: column;
     inline-size: 100%;
     margin-inline: auto;
-    max-inline-size: get-css-variable(--max-content-width);
+    max-inline-size: get-css-variable(--max-content-inline-size);
   }
 }

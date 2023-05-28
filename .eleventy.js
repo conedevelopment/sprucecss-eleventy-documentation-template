@@ -45,7 +45,7 @@ module.exports = config => {
     config.addTransform('htmlmin', htmlMinTransform);
   }
 
-  const markdownLib = markdownIt({ html: false }).use(
+  const markdownLib = markdownIt({ html: true }).use(
     markdownItAnchor,
     {
       permalink: true,

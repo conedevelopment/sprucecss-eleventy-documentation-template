@@ -36,7 +36,7 @@
         @include focus-ring(
           $type: config('focus-ring-type', $btn, false),
           $ring-color: color('primary'),
-          $ring-width: config('focus-ring-width', $btn, false),
+          $ring-size: config('focus-ring-size', $btn, false),
           $ring-offset: config('focus-ring-offset', $btn, false)
         );
       }

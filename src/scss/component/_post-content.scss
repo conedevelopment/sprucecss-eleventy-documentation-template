@@ -7,7 +7,7 @@
     font-size: 1.0375rem;
   }
 
-  :is(dd, dl, dl, h1, h2, h3, h4, h5, h6, hr, ul, ol, p, blockquote) {
+  :is(dd, dl, dl, h1, h2, h3:not(.accordion-card__title), h4, h5, h6, hr, ul, ol, p, blockquote) {
     max-inline-size: 40rem;
   }
 
