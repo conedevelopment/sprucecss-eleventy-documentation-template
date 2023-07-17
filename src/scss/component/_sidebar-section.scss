@@ -25,7 +25,7 @@
 
     a {
       align-items: center;
-      color: color(text);
+      color: color('text');
       display: inline-flex;
       gap: spacer('xs');
       text-decoration: none;
@@ -39,10 +39,9 @@
           background-color: color('primary');
           border-end-end-radius: config('border-radius-sm', $display);
           border-start-end-radius: config('border-radius-sm', $display);
-          bottom: 0;
           content: '';
           inline-size: 0.3rem;
-          inset-block-start: 0;
+          inset-block: 0;
           inset-inline-start: -1rem;
           position: absolute;
         }

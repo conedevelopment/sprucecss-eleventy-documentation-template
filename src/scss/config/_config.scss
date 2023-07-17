@@ -24,6 +24,10 @@ $color-secondary: hsl(186deg 100% 60%);
       'heading': hsl(232deg 68% 11%),
       'text': hsl(208, 21%, 39%),
     ),
+    'btn': (
+      'secondary-foreground': color.adjust($color-secondary, $lightness: -50%),
+      'secondary-shadow': color.adjust($color-secondary, $lightness: 20%),
+    ),
     'breadcrumb': (
       'separator': hsl(0deg 0% 80%),
     ),

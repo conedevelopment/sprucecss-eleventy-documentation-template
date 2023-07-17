@@ -35,9 +35,11 @@ $colors: (
     'primary-background': $dark-color-primary,
     'primary-background-hover': hsl(186deg 100% 45%),
     'primary-foreground': hsl(186deg 100% 5%),
+    'primary-shadow': hsl(186deg 100% 25%),
     'secondary-background': $dark-color-secondary,
     'secondary-background-hover': color.adjust($dark-color-secondary, $lightness: 5%),
     'secondary-foreground': $dark-color-white,
+    'secondary-shadow': color.adjust($dark-color-secondary, $lightness: -20%),
   ),
   'card': (
     'background': $dark-color-black,
@@ -67,18 +69,12 @@ $colors: (
   'footer': (
     'background': hsl(245deg 38% 10%),
   ),
-  'invoice': (
-    'background': hsl(234deg 49% 6%),
-  ),
   'navigation': (
     'arrow': hsl(0deg 0% 100% / 15%),
     'icon-background': hsl(245deg 38% 10%),
     'icon-background-hover': $dark-color-primary,
     'icon-foreground': $dark-color-primary,
     'icon-foreground-hover': hsl(186deg 100% 5%),
-  ),
-  'tab': (
-    'background': hsl(207deg 84% 10%),
   ),
   'prism': (
     'color': hsl(217deg 34% 88%),
