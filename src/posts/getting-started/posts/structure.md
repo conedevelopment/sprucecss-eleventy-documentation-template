@@ -2,9 +2,9 @@
 title: "Structure"
 summary: "The structure is a generic Eleventy theme with the standard folder and file names."
 eleventyNavigation:
-    key: Structure
-    parent: Getting Started
-    order: 3
+  key: Structure
+  parent: Getting Started
+  order: 3
 ---
 
 The structure is a generic Eleventy theme with the standard folder and file names.

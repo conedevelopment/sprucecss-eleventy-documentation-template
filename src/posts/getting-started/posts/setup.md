@@ -2,9 +2,9 @@
 title: "Setup"
 summary: "We use eleventy --serve and compile Sass with sass-cli with npm scripts."
 eleventyNavigation:
-    key: Setup
-    parent: Getting Started
-    order: 4
+  key: Setup
+  parent: Getting Started
+  order: 4
 ---
 
 ## Clone the repository

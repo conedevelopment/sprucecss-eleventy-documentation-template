@@ -1,6 +1,6 @@
 ---
 title: "Customization"
 eleventyNavigation:
-  key: Customization
-  order: 2
+    key: Customization
+    order: 2
 ---
