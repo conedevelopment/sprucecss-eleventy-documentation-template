@@ -2,9 +2,9 @@
 title: "Introduction"
 summary: "Welcome to the official documentation of Spruce Docs Elventy theme. A small template that you can use to document any of your projects."
 eleventyNavigation:
-  key: Introduction
-  parent: Getting Started
-  order: 1
+    key: Introduction
+    parent: Getting Started
+    order: 1
 ---
 
 Welcome to the official documentation of **Spruce Docs** Elventy theme. A small template that you can use to document any of your projects.

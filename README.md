@@ -1,13 +1,13 @@
 <p>
-  <a href="https://sprucecss.com/">
-    <br>
-    <picture>
-      <source media="(prefers-color-scheme: light)" srcset="./.github/spruce-logo-dark.svg">
-      <source media="(prefers-color-scheme: dark)" srcset="./.github/spruce-logo-light.svg">
-      <img alt="Spruce CSS" width="140" src="./.github/spruce-logo-dark.svg">
-    </picture>
-    <br>
-  </a>
+    <a href="https://sprucecss.com/">
+        <br>
+        <picture>
+            <source media="(prefers-color-scheme: light)" srcset="./.github/spruce-logo-dark.svg">
+            <source media="(prefers-color-scheme: dark)" srcset="./.github/spruce-logo-light.svg">
+            <img alt="Spruce CSS" width="140" src="./.github/spruce-logo-dark.svg">
+        </picture>
+        <br>
+    </a>
 </p>
 
 **Welcome to the official documentation of **Spruce Docs** Elventy theme. A small template you can use to document any of your projects.**
