@@ -68,6 +68,7 @@ module.exports = config => {
       input: 'src',
       output: 'dist'
     },
-    passthroughFileCopy: true
+    passthroughFileCopy: true,
+    pathPrefix: './',
   };
 };

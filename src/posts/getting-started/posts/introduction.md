@@ -19,4 +19,10 @@ By structure, it is simple, with two levels and additional custom templates like
 
 The template is built on [Spruce CSS](https://sprucecss.com/), a small and customizable CSS framework. The main benefit of this is that you can use the Spruce UI components with dark mode and RTL support.
 
-![A minimalistic, low-level CSS framework](/img/cover/sprucecss.png)
+<img
+  data-theme-mode
+  alt="A minimalistic, low-level CSS framework"
+  src="/img/cover/sprucecss.png"
+  data-light-asset="/img/cover/sprucecss.png"
+  data-dark-asset="/img/cover/sprucecss-light.png"
+/>

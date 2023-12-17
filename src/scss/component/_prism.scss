@@ -2,7 +2,7 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
-  border-radius: config('border-radius-lg', $display);
+  border-radius: config('border-radius-sm', $display);
   color: color('color', 'prism');
   font-family: config('font-family-cursive', $typography);
   font-size: config('font-size-base', $typography);

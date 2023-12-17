@@ -1,5 +1,11 @@
 @use 'sprucecss/scss/spruce' as *;
 
+.no-transition {
+  * {
+    transition: none !important;
+  }
+}
+
 .theme-switcher {
   color: color('text');
   display: inline-flex;
